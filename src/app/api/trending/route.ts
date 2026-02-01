@@ -92,18 +92,20 @@ async function fetchDexScreenerTrending(): Promise<Token[]> {
 }
 
 // Fetch REAL smart money feed from Cielo
-async function fetchCieloFeed(): Promise<FeedItem[]> {
+// Pass list_id to get feed from a specific curated list
+async function fetchCieloFeed(listId?: number): Promise<FeedItem[]> {
   try {
-    const response = await fetch(
-      `https://feed-api.cielo.finance/api/v1/feed?chains=solana&limit=50`,
-      {
-        headers: {
-          'X-API-KEY': CIELO_API_KEY,
-          'Accept': 'application/json'
-        },
-        next: { revalidate: 60 } // 1 minute cache for live data
-      }
-    );
+    const url = listId 
+      ? `https://feed-api.cielo.finance/api/v1/feed?list_id=${listId}&limit=50`
+      : `https://feed-api.cielo.finance/api/v1/feed?chains=solana&limit=50`;
+    
+    const response = await fetch(url, {
+      headers: {
+        'X-API-KEY': CIELO_API_KEY,
+        'Accept': 'application/json'
+      },
+      next: { revalidate: 60 } // 1 minute cache for live data
+    });
     
     if (!response.ok) {
       console.error('Cielo feed error:', response.status);
@@ -113,7 +115,8 @@ async function fetchCieloFeed(): Promise<FeedItem[]> {
     const data = await response.json();
     
     // Extract transactions from feed
-    const transactions = data.transactions || data.data?.transactions || data.items || [];
+    // Cielo API returns { status: 'ok', data: { items: [...] } }
+    const transactions = data.data?.items || data.data?.transactions || data.transactions || data.items || [];
     
     if (!Array.isArray(transactions) || transactions.length === 0) {
       console.log('No transactions in Cielo feed');
@@ -166,17 +169,48 @@ export async function GET(request: Request) {
           lastUpdated: new Date().toISOString()
         });
         
-      // Keep list tabs for now (will fix with Matt later)
+      // Curated lists from Cielo
       case 'soylana-traders':
-      case 'dev-do-something':
-      case 'insidoors':
-      case 'fomo-traders':
+        const soylanaFeed = await fetchCieloFeed(8137);
         return NextResponse.json({
           success: true,
-          type: 'feed', // Show feed instead of static list
-          data: await fetchCieloFeed(),
-          source: 'cielo-feed',
-          note: 'Showing live feed - list view coming soon',
+          type: 'feed',
+          data: soylanaFeed,
+          source: 'cielo-list',
+          list: 'SOYLANA Traders',
+          lastUpdated: new Date().toISOString()
+        });
+        
+      case 'dev-do-something':
+        const devFeed = await fetchCieloFeed(105022);
+        return NextResponse.json({
+          success: true,
+          type: 'feed',
+          data: devFeed,
+          source: 'cielo-list',
+          list: 'Dev Do Something',
+          lastUpdated: new Date().toISOString()
+        });
+        
+      case 'insidoors':
+        const insidersFeed = await fetchCieloFeed(48945);
+        return NextResponse.json({
+          success: true,
+          type: 'feed',
+          data: insidersFeed,
+          source: 'cielo-list',
+          list: 'Insidoors',
+          lastUpdated: new Date().toISOString()
+        });
+        
+      case 'fomo-traders':
+        const fomoFeed = await fetchCieloFeed(105204);
+        return NextResponse.json({
+          success: true,
+          type: 'feed',
+          data: fomoFeed,
+          source: 'cielo-list',
+          list: 'FOMO Traders',
           lastUpdated: new Date().toISOString()
         });
         
