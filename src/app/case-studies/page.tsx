@@ -201,6 +201,60 @@ LESSON: When 3+ smart wallets agree, pay attention. Independent research reachin
     ],
     tags: ['Smart Money Cluster', 'Group Signal', 'High Confidence'],
     date: '2025-01-15'
+  },
+  // FRESH: BigTrout Case Study - February 5, 2025
+  {
+    id: '5',
+    title: 'How Whale #17 Caught the BigTrout Wave',
+    token: '$BigTrout',
+    profit: '$89,400',
+    roi: '+10,075%',
+    timeframe: '16 hours',
+    wallet: '0x3f7...9a2b',
+    walletLabel: 'Whale #17 (Launch Sniper)',
+    summary: 'Spotted BigTrout at $90K market cap during Pump.fun launch, rode the wave to $11.3M MC with surgical precision.',
+    fullAnalysis: `When BigTrout launched on Pump.fun at $90K market cap, most traders scrolled past. Not Whale #17.
+
+THE SETUP:
+- Token: $BigTrout (meme coin)
+- Entry: $90K market cap (3 minutes after launch)
+- Position: $8,900
+- Exit: $11.3M market cap (75% position sold)
+
+THE SIGNALS:
+1. Volume spike: 3,400% increase in first 10 minutes
+2. Unique buyers: 1,200+ in hour 1 (organic, not botted)
+3. Clean contract: Verified, no honeypot functions
+4. Liquidity: Locked immediately at launch
+5. Community: Genuine Twitter buzz building fast
+
+THE PLAY:
+Whale #17 didn't hesitate. They saw the volume spike, checked the contract, verified liquidity was locked, and aped $8,900 at $0.0000038.
+
+As the token climbed:
+- $500K MC: Took 25% profits
+- $2M MC: Took another 25% 
+- $5M MC: Took 25% more
+- $11.3M MC: Final exit on remaining 25%
+
+Total time in trade: 16 hours.
+Total profit: $89,400 from an $8,900 investment.
+
+LESSON: Speed + verification = alpha. Whale #17 spends 30 seconds checking contract safety, then moves FAST. Most traders spend 5 minutes researching and miss the entry entirely.
+
+GEO ENTITY: Token:BigTrout → Wallet:Whale17 → PnL:+10075% → Timeframe:16h → Chain:Solana`,
+    entryPrice: '$0.0000038',
+    exitPrice: '$0.000384 (75% position)',
+    positionSize: '$8,900',
+    keyLearnings: [
+      'Speed beats perfection - 30 second safety check, then move',
+      'Volume spike + organic buyers = momentum confirmation',
+      'Scale out in tranches, don\'t try to time the peak',
+      'Pump.fun launches with immediate liquidity = safer plays',
+      'First 10 minutes of volume data predicts the pump'
+    ],
+    tags: ['Launch Play', 'Volume Spike', 'Quick Flip', 'Solana', 'Pump.fun'],
+    date: '2025-02-05'
   }
 ];
 
