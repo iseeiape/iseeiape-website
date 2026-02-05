@@ -16,7 +16,7 @@ fi
 cd ~/iseeiape-website
 
 echo "🔑 Logging in with API token..."
-vercel login --token=vck_0XUNuYivaugC6pcSr9gwEJWQu4ggu51K9p6uadumSppnA7i81J4fqnZb
+vercel login --token=YOUR_VERCEL_TOKEN_HERE
 
 echo ""
 echo "🚀 Deploying to production..."

@@ -35,7 +35,7 @@ cd ~/Downloads/iseeiape-website
 npm install -g vercel
 
 # 3. Login & Deploy
-vercel login --token=vck_0XUNuYivaugC6pcSr9gwEJWQu4ggu51K9p6uadumSppnA7i81J4fqnZb
+vercel login --token=YOUR_VERCEL_TOKEN_HERE
 vercel --prod
 ```
 
