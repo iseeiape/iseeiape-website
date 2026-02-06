@@ -294,19 +294,19 @@ export default function CaseStudiesPage() {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <div className="bg-gray-800/50 p-4 rounded-xl text-center border border-gray-700">
-            <p className="text-3xl font-bold text-green-400">$329K</p>
+            <p className="text-3xl font-bold text-green-400">$418K</p>
             <p className="text-gray-400 text-sm">Total Profits Tracked</p>
           </div>
           <div className="bg-gray-800/50 p-4 rounded-xl text-center border border-gray-700">
-            <p className="text-3xl font-bold text-orange-400">259%</p>
-            <p className="text-gray-400 text-sm">Avg ROI</p>
+            <p className="text-3xl font-bold text-orange-400">2,222%</p>
+            <p className="text-gray-400 text-sm">Best ROI (BigTrout)</p>
           </div>
           <div className="bg-gray-800/50 p-4 rounded-xl text-center border border-gray-700">
             <p className="text-3xl font-bold text-blue-400">4.2 Days</p>
             <p className="text-gray-400 text-sm">Avg Hold Time</p>
           </div>
           <div className="bg-gray-800/50 p-4 rounded-xl text-center border border-gray-700">
-            <p className="text-3xl font-bold text-purple-400">87%</p>
+            <p className="text-3xl font-bold text-purple-400">100%</p>
             <p className="text-gray-400 text-sm">Win Rate</p>
           </div>
         </div>
