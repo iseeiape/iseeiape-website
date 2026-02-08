@@ -9,6 +9,48 @@ export const metadata = {
 const guides = [
   {
     id: '1',
+    title: 'How to Track AI Agent Tokens on Solana & Base',
+    description: 'AI agents are eating crypto. From CLAWIAI on Base to autonomous trading bots on Solana, this guide shows you how to separate legitimate AI projects from GPT-wrapped rugs. Includes wallet scanning for AI-focused whales and timing strategies for meta rotations.',
+    steps: 11,
+    difficulty: 'Intermediate',
+    time: '28 min',
+    icon: '🤖',
+    content: `
+## Step 1: Identify the AI Agent Meta Cycle
+AI metas rotate every 3-4 weeks. Track Twitter mentions of "AI agent" + "crypto", VC funding announcements, and cross-chain volume spikes.
+
+## Step 2: Scan for Real Utility
+Legitimate AI agents have working demos (not just whitepapers), on-chain transactions proving functionality, and active developer activity.
+
+## Step 3: Find the AI-Focused Whales
+Create a watchlist of wallets that consistently profit from AI plays like Whale #23 ($890K from CLAWIAI) and VC wallets investing in AI infrastructure.
+
+## Step 4: Analyze Tokenomics
+Good AI tokens have fair launches (no VC dumping), utility-driven emissions (staking for compute), and revenue sharing (fees distributed to holders).
+
+## Step 5: Check the Team
+Red flags: Anonymous teams with no track record, no technical founders, copy-pasted whitepapers.
+
+## Step 6: Monitor Cross-Chain Activity
+AI agents move fast: Base chain for experimental AI memes, Solana for established AI infrastructure, Arbitrum for AI gaming tokens.
+
+## Step 7: Time Your Entry
+Best entry points: During meta rotation (when attention shifts to AI), after successful testnet launches, when multiple AI whales start buying.
+
+## Step 8: Set Realistic Targets
+AI token profit targets: 2-5x for established projects, 5-10x for breakthrough innovations, 10-20x for category-defining agents.
+
+## Step 9: Manage Risk
+AI tokens are volatile: Never allocate >10% of portfolio to AI, take profits at 2x, 5x, 10x, stop losses at -30%.
+
+## Step 10: Track the Competition
+Monitor competing AI agents: Token performance comparisons, developer activity metrics, community growth rates.
+
+## Step 11: Exit Strategy
+Exit when: VCs start dumping, new meta emerges (gaming, DeFi, etc.), volume dries up for 7+ days.`
+  },
+  {
+    id: '2',
     title: 'How to Spot Smart Money Wallets',
     description: 'Learn the 5 key metrics that separate profitable whales from gamblers.',
     steps: 7,
@@ -85,6 +127,26 @@ Cross-reference their trades on Solscan.`
     difficulty: 'Intermediate',
     time: '15 min',
     icon: '📈',
+    content: 'Detailed guide content coming soon...'
+  },
+  {
+    id: '7',
+    title: 'The 3-Minute Volume Spike Framework',
+    description: 'Don\'t stare at charts all day. This framework teaches you to identify high-probability entries in under 3 minutes using just volume, unique buyer count, and market cap velocity. Perfect for catching launches like BigTrout and Dave before they 10x.',
+    steps: 5,
+    difficulty: 'Beginner',
+    time: '12 min',
+    icon: '⚡',
+    content: 'Detailed guide content coming soon...'
+  },
+  {
+    id: '8',
+    title: 'Cross-Chain Arbitrage: Solana vs Base',
+    description: 'Smart money doesn\'t care about maxis. They care about alpha. Learn how to track whale movements across Solana and Base, identify which chain is leading the meta, and position yourself before the crowd catches on. Includes bridge timing and gas optimization.',
+    steps: 14,
+    difficulty: 'Advanced',
+    time: '45 min',
+    icon: '🎯',
     content: 'Detailed guide content coming soon...'
   }
 ];
