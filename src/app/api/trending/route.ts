@@ -1,5 +1,6 @@
 // API route with DexScreener + Cielo Feed (real-time smart money)
 import { NextResponse } from 'next/server';
+import { cachedFetch } from '@/lib/cache';
 
 const CIELO_API_KEY = process.env.CIELO_API_KEY || '93771acc-c2fc-455d-b8e7-263ccd61da4a';
 
@@ -37,16 +38,16 @@ async function fetchDexScreenerTrending(): Promise<Token[]> {
     
     for (const query of queries) {
       try {
-        const response = await fetch(`https://api.dexscreener.com/latest/dex/search?q=${query}`, {
-          next: { revalidate: 120 }
-        });
+        // Use cached fetch with 2 minute TTL
+        const data = await cachedFetch(
+          `https://api.dexscreener.com/latest/dex/search?q=${query}`,
+          undefined,
+          120000 // 2 minutes
+        );
         
-        if (response.ok) {
-          const data = await response.json();
-          if (data.pairs && Array.isArray(data.pairs)) {
-            const solanaPairs = data.pairs.filter((p: any) => p.chainId === 'solana');
-            allPairs = [...allPairs, ...solanaPairs];
-          }
+        if (data.pairs && Array.isArray(data.pairs)) {
+          const solanaPairs = data.pairs.filter((p: any) => p.chainId === 'solana');
+          allPairs = [...allPairs, ...solanaPairs];
         }
       } catch (e) {
         console.log(`Query ${query} failed`);
@@ -99,20 +100,20 @@ async function fetchCieloFeed(listId?: number): Promise<FeedItem[]> {
       ? `https://feed-api.cielo.finance/api/v1/feed?list_id=${listId}&limit=50`
       : `https://feed-api.cielo.finance/api/v1/feed?chains=solana&limit=50`;
     
-    const response = await fetch(url, {
+    const options = {
       headers: {
         'X-API-KEY': CIELO_API_KEY,
         'Accept': 'application/json'
-      },
-      next: { revalidate: 60 } // 1 minute cache for live data
-    });
+      }
+    };
     
-    if (!response.ok) {
-      console.error('Cielo feed error:', response.status);
+    // Use cached fetch with 1 minute TTL for live data
+    const data = await cachedFetch(url, options, 60000);
+    
+    if (!data || data.error) {
+      console.error('Cielo feed error:', data?.error);
       return getDemoFeed();
     }
-    
-    const data = await response.json();
     
     // Extract transactions from feed
     // Cielo API returns { status: 'ok', data: { items: [...] } }

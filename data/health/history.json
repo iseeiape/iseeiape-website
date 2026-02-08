@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "timestamp": "2026-02-08T22:04:50.574Z",
+      "results": [
+        {
+          "service": "dexscreener",
+          "status": "healthy",
+          "statusCode": 200,
+          "responseTime": 125,
+          "timestamp": "2026-02-08T22:04:50.268Z"
+        },
+        {
+          "service": "cielo",
+          "status": "healthy",
+          "statusCode": 200,
+          "hasData": true,
+          "responseTime": 414,
+          "timestamp": "2026-02-08T22:04:50.572Z"
+        },
+        {
+          "service": "website-api",
+          "status": "healthy",
+          "statusCode": 200,
+          "note": "API route exists and appears valid",
+          "hasCieloKey": true,
+          "hasDexScreener": true,
+          "responseTime": 101,
+          "timestamp": "2026-02-08T22:04:50.260Z"
+        }
+      ]
+    }
+  ],
+  "lastUpdated": "2026-02-08T22:04:50.574Z"
+}

@@ -30,6 +30,9 @@ export default function Home() {
               <Link href="/tools" className="text-gray-400 hover:text-white transition-colors">
                 Tools
               </Link>
+              <Link href="/analytics" className="text-gray-400 hover:text-white transition-colors">
+                📊 Analytics
+              </Link>
             </div>
             <a
               href="https://t.me/iseeiape"

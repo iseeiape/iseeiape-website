@@ -143,7 +143,20 @@ export default function TrendingPage() {
           <div className="grid gap-3">
             {(data as Token[])?.map((token, i) => (
               <div key={token.id}
-                onClick={() => window.open(`https://app.cielo.finance/trading/${token.ca}?ref_code=iseeiape`, '_blank')}
+                onClick={() => {
+                  // Track analytics
+                  fetch('/api/analytics/track', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                      type: 'token_click',
+                      target: token.ca,
+                      source: `trending:${activeTab}:${token.symbol}`
+                    })
+                  }).catch(() => {}); // Silently fail
+                  
+                  window.open(`https://app.cielo.finance/trading/${token.ca}?ref_code=iseeiape`, '_blank');
+                }}
                 className="bg-gray-800/50 hover:bg-gray-700/70 p-4 rounded-xl cursor-pointer border border-gray-700/50 hover:border-orange-500/50 transition-all">
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div className="flex items-center gap-4">
@@ -176,7 +189,22 @@ export default function TrendingPage() {
           <div className="grid gap-3">
             {(data as FeedItem[])?.map((item, i) => (
               <div key={item.id || i}
-                onClick={() => item.token_in_address && window.open(`https://app.cielo.finance/trading/${item.token_in_address}?ref_code=iseeiape`, '_blank')}
+                onClick={() => {
+                  if (item.token_in_address) {
+                    // Track analytics
+                    fetch('/api/analytics/track', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({
+                        type: 'token_click',
+                        target: item.token_in_address,
+                        source: `feed:${activeTab}:${item.token_in_symbol || 'unknown'}`
+                      })
+                    }).catch(() => {}); // Silently fail
+                    
+                    window.open(`https://app.cielo.finance/trading/${item.token_in_address}?ref_code=iseeiape`, '_blank');
+                  }
+                }}
                 className="bg-gray-800/50 hover:bg-gray-700/70 p-4 rounded-xl cursor-pointer border border-gray-700/50 hover:border-orange-500/50 transition-all">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
@@ -190,7 +218,19 @@ export default function TrendingPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-orange-400 hover:underline"
-                          onClick={(e) => e.stopPropagation()}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            // Track analytics
+                            fetch('/api/analytics/track', {
+                              method: 'POST',
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify({
+                                type: 'wallet_click',
+                                target: item.wallet,
+                                source: `feed:${activeTab}:wallet`
+                              })
+                            }).catch(() => {}); // Silently fail
+                          }}
                         >
                           {item.wallet_label || item.wallet.slice(0, 6) + '...' + item.wallet.slice(-4)}
                         </a>
