@@ -12,6 +12,8 @@ export default function Home() {
         <p style={{ textAlign: 'center', color: '#888', fontSize: '20px' }}>Smart Money Intelligence for Solana & Base</p>
         
         <div style={{ marginTop: '60px', textAlign: 'center' }}>
+          <a href="/dashboard" style={{ margin: '10px', padding: '15px 30px', background: '#0052FF', color: '#fff', textDecoration: 'none', borderRadius: '8px', display: 'inline-block', fontWeight: 'bold' }}>📊 Live Dashboard</a>
+          <a href="/analytics" style={{ margin: '10px', padding: '15px 30px', background: '#FF6B00', color: '#fff', textDecoration: 'none', borderRadius: '8px', display: 'inline-block', fontWeight: 'bold' }}>📈 Analytics</a>
           <a href="/case-studies" style={{ margin: '10px', padding: '15px 30px', background: '#00ff88', color: '#000', textDecoration: 'none', borderRadius: '8px', display: 'inline-block' }}>Case Studies</a>
           <a href="/guides" style={{ margin: '10px', padding: '15px 30px', background: '#00ff88', color: '#000', textDecoration: 'none', borderRadius: '8px', display: 'inline-block' }}>Guides</a>
           <a href="/insights" style={{ margin: '10px', padding: '15px 30px', background: '#00ff88', color: '#000', textDecoration: 'none', borderRadius: '8px', display: 'inline-block' }}>Insights</a>
