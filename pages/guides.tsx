@@ -15,15 +15,15 @@ export default function Guides() {
         {/* Featured Guide Banner */}
         <div style={{ padding: '30px', background: 'linear-gradient(135deg, #ff880022, #00ff8822)', border: '1px solid #ff880044', borderRadius: '16px', marginBottom: '40px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-            <div style={{ fontSize: '64px' }}>🤖</div>
+            <div style={{ fontSize: '64px' }}>⚡</div>
             <div style={{ flex: 1 }}>
-              <span style={{ padding: '6px 16px', background: '#ff8800', color: '#000', borderRadius: '20px', fontSize: '14px', fontWeight: 'bold' }}>🔥 TODAY'S FEATURED • FEB 9, 2026</span>
-              <h2 style={{ marginTop: '15px', fontSize: '28px' }}>How to Track AI Agent Tokens on Solana & Base</h2>
-              <p style={{ color: '#ccc', marginBottom: '15px' }}>AI agents are eating crypto. This guide shows you how to separate legitimate AI projects from GPT-wrapped rugs. Includes wallet scanning for AI-focused whales and timing strategies for meta rotations.</p>
+              <span style={{ padding: '6px 16px', background: '#ff8800', color: '#000', borderRadius: '20px', fontSize: '14px', fontWeight: 'bold' }}>🔥 TODAY'S FEATURED • FEB 10, 2026</span>
+              <h2 style={{ marginTop: '15px', fontSize: '28px' }}>The 3-Minute Volume Spike Framework</h2>
+              <p style={{ color: '#ccc', marginBottom: '15px' }}>Don't stare at charts all day. This framework teaches you to identify high-probability entries in under 3 minutes using just volume, unique buyer count, and market cap velocity.</p>
               <div style={{ display: 'flex', gap: '20px', color: '#888', fontSize: '14px' }}>
-                <span>📖 11 steps</span>
-                <span>⏱️ 28 minutes</span>
-                <span>🟡 Intermediate</span>
+                <span>📖 5 steps</span>
+                <span>⏱️ 12 minutes</span>
+                <span>🟢 Beginner</span>
               </div>
             </div>
           </div>
@@ -31,17 +31,17 @@ export default function Guides() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '30px' }}>
           <article style={{ padding: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88' }}>
-            <div style={{ fontSize: '48px', marginBottom: '15px' }}>🤖</div>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Intermediate • Featured Today</span>
-            <h2 style={{ marginTop: '15px' }}>How to Track AI Agent Tokens</h2>
-            <p style={{ color: '#aaa' }}>Separate legitimate AI projects from GPT-wrapped rugs on Solana & Base.</p>
+            <div style={{ fontSize: '48px', marginBottom: '15px' }}>⚡</div>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Beginner • Featured Today</span>
+            <h2 style={{ marginTop: '15px' }}>The 3-Minute Volume Spike Framework</h2>
+            <p style={{ color: '#aaa' }}>Identify high-probability entries fast using volume and buyer count.</p>
           </article>
 
           <article style={{ padding: '30px', background: '#111', borderRadius: '16px' }}>
-            <div style={{ fontSize: '48px', marginBottom: '15px' }}>⚡</div>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Beginner</span>
-            <h2 style={{ marginTop: '15px' }}>The 3-Minute Volume Spike Framework</h2>
-            <p style={{ color: '#aaa' }}>Identify high-probability entries fast using volume and buyer count.</p>
+            <div style={{ fontSize: '48px', marginBottom: '15px' }}>🤖</div>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Intermediate</span>
+            <h2 style={{ marginTop: '15px' }}>How to Track AI Agent Tokens</h2>
+            <p style={{ color: '#aaa' }}>Separate legitimate AI projects from GPT-wrapped rugs on Solana & Base.</p>
           </article>
 
           <article style={{ padding: '30px', background: '#111', borderRadius: '16px' }}>
