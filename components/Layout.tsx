@@ -2,14 +2,21 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import MatrixBackground from './MatrixBackground'
 
 interface LayoutProps {
   children: React.ReactNode
   title?: string
   description?: string
+  showMatrix?: boolean
 }
 
-export default function Layout({ children, title = 'iseeiape', description = 'Smart Money Intelligence for Solana & Base' }: LayoutProps) {
+export default function Layout({ 
+  children, 
+  title = 'iseeiape', 
+  description = 'Smart Money Intelligence for Solana & Base',
+  showMatrix = true 
+}: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const router = useRouter()
 
@@ -31,89 +38,289 @@ export default function Layout({ children, title = 'iseeiape', description = 'Sm
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
 
-      {/* Desktop Navigation */}
-      <nav className="nav">
-        <div className="container nav-container">
-          <Link href="/" className="nav-brand">
-            <span>🦎</span>
-            <span>iseeiape</span>
-          </Link>
+      <style>{`
+        :root {
+          --neon-green: #00ff88;
+          --neon-blue: #00d4ff;
+          --neon-red: #ff4757;
+          --neon-orange: #ff6b35;
+          --bg-dark: #0a0a0f;
+          --bg-card: rgba(18, 18, 26, 0.9);
+        }
+        
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: 'Inter', sans-serif;
+          background: var(--bg-dark);
+          color: #fff;
+          min-height: 100vh;
+        }
+        
+        .site-wrapper {
+          position: relative;
+          min-height: 100vh;
+          z-index: 1;
+        }
+        
+        /* Navigation */
+        .nav {
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          background: rgba(10, 10, 15, 0.9);
+          backdrop-filter: blur(20px);
+          border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+        }
+        
+        .nav-container {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 72px;
+        }
+        
+        .nav-brand {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 20px;
+          font-weight: 700;
+          color: var(--neon-green);
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+        
+        .nav-links {
+          display: none;
+          align-items: center;
+          gap: 8px;
+        }
+        
+        @media (min-width: 768px) {
+          .nav-links {
+            display: flex;
+          }
+        }
+        
+        .nav-link {
+          font-family: 'JetBrains Mono', monospace;
+          padding: 8px 16px;
+          color: rgba(255, 255, 255, 0.7);
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: 500;
+          border-radius: 8px;
+          transition: all 0.2s ease;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        
+        .nav-link:hover {
+          color: var(--neon-green);
+          background: rgba(0, 255, 136, 0.1);
+        }
+        
+        .nav-link-active {
+          color: var(--neon-green);
+          background: rgba(0, 255, 136, 0.15);
+          border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+        
+        .nav-actions {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 10px 20px;
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 13px;
+          font-weight: 600;
+          border-radius: 8px;
+          border: none;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        
+        .btn-primary {
+          background: var(--neon-green);
+          color: #000;
+        }
+        
+        .btn-primary:hover {
+          background: #00e67a;
+          box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+          transform: translateY(-1px);
+        }
+        
+        .btn-ghost {
+          background: transparent;
+          color: rgba(255, 255, 255, 0.7);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-ghost:hover {
+          color: var(--neon-green);
+          border-color: var(--neon-green);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+          display: none;
+          padding: 16px 20px;
+          border-top: 1px solid rgba(0, 255, 136, 0.1);
+        }
+        
+        .mobile-menu.open {
+          display: block;
+        }
+        
+        .mobile-menu .nav-link {
+          display: block;
+          margin-bottom: 8px;
+        }
+        
+        /* Main Content */
+        .main-content {
+          position: relative;
+          z-index: 1;
+          padding-bottom: 80px;
+        }
+        
+        /* Mobile Bottom Nav */
+        .mobile-nav {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(10, 10, 15, 0.95);
+          backdrop-filter: blur(20px);
+          border-top: 1px solid rgba(0, 255, 136, 0.2);
+          display: flex;
+          justify-content: space-around;
+          padding: 8px 0;
+          z-index: 100;
+        }
+        
+        @media (min-width: 768px) {
+          .mobile-nav {
+            display: none;
+          }
+          
+          .main-content {
+            padding-bottom: 0;
+          }
+        }
+        
+        .mobile-nav-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+          padding: 8px 16px;
+          color: rgba(255, 255, 255, 0.5);
+          text-decoration: none;
+          font-size: 11px;
+          font-family: 'JetBrains Mono', monospace;
+          transition: all 0.2s ease;
+        }
+        
+        .mobile-nav-item:hover,
+        .mobile-nav-item-active {
+          color: var(--neon-green);
+        }
+      `}</style>
 
-          <div className="nav-links hidden md:flex">
+      {showMatrix && <MatrixBackground />}
+      
+      <div className="site-wrapper">
+        <nav className="nav">
+          <div className="nav-container">
+            <Link href="/" className="nav-brand">
+              <span>🦎</span>
+              <span>iseeiape</span>
+            </Link>
+
+            <div className="nav-links">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`nav-link ${isActive(link.href) ? 'nav-link-active' : ''}`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="nav-actions">
+              <Link href="/war-room" className="btn btn-primary hidden md:flex">
+                ⚡ War Room
+              </Link>
+              
+              <button
+                className="btn btn-ghost md:hidden"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                ☰
+              </button>
+            </div>
+          </div>
+
+          <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`nav-link ${isActive(link.href) ? 'nav-link-active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
               >
-                {link.label}
+                {link.icon} {link.label}
               </Link>
             ))}
-          </div>
-
-          <div className="flex items-center gap-4">
-            <Link href="/search" className="btn btn-ghost hidden md:flex">
-              🔍 Search
+            <Link href="/war-room" className="nav-link">
+              ⚡ War Room
             </Link>
-            
-            <button
-              className="btn btn-ghost md:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          </div>
+        </nav>
+
+        <main className="main-content">
+          {children}
+        </main>
+
+        <nav className="mobile-nav">
+          {navLinks.slice(0, 5).map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`mobile-nav-item ${isActive(link.href) ? 'mobile-nav-item-active' : ''}`}
             >
-              ☰
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu Dropdown */}
-        {mobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="container">
-              <div className="py-4">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`nav-link block mb-2 ${isActive(link.href) ? 'nav-link-active' : ''}`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.icon} {link.label}
-                  </Link>
-                ))}
-                <Link
-                  href="/search"
-                  className="nav-link block"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  🔍 Search
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
-      </nav>
-
-      {/* Main Content */}
-      <main style={{ paddingBottom: '80px' }}>
-        {children}
-      </main>
-
-      {/* Mobile Bottom Navigation */}
-      <nav className="mobile-nav">
-        {navLinks.slice(0, 5).map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={`mobile-nav-item ${isActive(link.href) ? 'mobile-nav-item-active' : ''}`}
-          >
-            <span style={{ fontSize: '20px' }}>{link.icon}</span>
-            <span>{link.label}</span>
-          </Link>
-        ))}
-      </nav>
+              <span style={{ fontSize: '20px' }}>{link.icon}</span>
+              <span>{link.label}</span>
+            </Link>
+          ))}
+        </nav>
+      </div>
     </>
   )
 }
