@@ -1,18 +1,13 @@
-import Head from 'next/head'
+import Layout from '../components/Layout'
 
 export default function CaseStudies() {
   return (
-    <>
-      <Head>
-        <title>Case Studies - iseeiape</title>
-      </Head>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px', color: '#fff', background: '#0a0a0a', minHeight: '100vh' }}>
-        <a href="/" style={{ color: '#00ff88', textDecoration: 'none' }}>← Back to Home</a>
-        
-        <h1 style={{ fontSize: '42px', marginTop: '30px' }}>📊 Case Studies</h1>
+    <Layout title="Case Studies | iseeiape">
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px', color: '#fff', minHeight: '100vh' }}>
+        <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📊 Case Studies</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Real trades, real wallets, real alpha. Updated daily.</p>
 
-        <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px' }}>
+        <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88' }}>
           <div style={{ color: '#00ff88', fontSize: '14px', marginBottom: '10px' }}>📈 +10,075% • Feb 5, 2025</div>
           <h2>How Whale #17 Caught the BigTrout Wave</h2>
           <p style={{ color: '#aaa' }}>$89,400 profit in 16 hours. Entry: $0.0000038 → Exit: $0.000384</p>
@@ -48,6 +43,6 @@ export default function CaseStudies() {
           </div>
         </article>
       </div>
-    </>
+    </Layout>
   )
 }

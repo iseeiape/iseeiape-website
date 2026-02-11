@@ -1,15 +1,11 @@
-import Head from 'next/head'
+import Layout from '../components/Layout'
 
 export default function Insights() {
   return (
-    <>
-      <Head>
-        <title>Insights - iseeiape</title>
-      </Head>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px', color: '#fff', background: '#0a0a0a', minHeight: '100vh' }}>
-        <a href="/" style={{ color: '#00ff88', textDecoration: 'none' }}>← Back to Home</a>
+    <Layout title="Insights | iseeiape">
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px', color: '#fff', minHeight: '100vh' }}>
         
-        <h1 style={{ fontSize: '42px', marginTop: '30px' }}>📝 Insights</h1>
+        <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
         <a href="/insights/ai-consciousness-panic-sold" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
@@ -45,6 +41,6 @@ export default function Insights() {
           <p style={{ color: '#aaa' }}>The 4 information layers of crypto markets. Trade layer 1 while retail is stuck on layer 4.</p>
         </article>
       </div>
-    </>
+    </Layout>
   )
 }

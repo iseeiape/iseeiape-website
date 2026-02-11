@@ -1,15 +1,11 @@
-import Head from 'next/head'
+import Layout from '../components/Layout'
 
 export default function Guides() {
   return (
-    <>
-      <Head>
-        <title>Guides - iseeiape</title>
-      </Head>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px', color: '#fff', background: '#0a0a0a', minHeight: '100vh' }}>
-        <a href="/" style={{ color: '#00ff88', textDecoration: 'none' }}>← Back to Home</a>
+    <Layout title="Guides | iseeiape">
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px', color: '#fff', minHeight: '100vh' }}>
         
-        <h1 style={{ fontSize: '42px', marginTop: '30px' }}>📚 Guides</h1>
+        <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📚 Guides</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Master smart money tracking. From beginner basics to advanced strategies.</p>
 
         {/* Featured Guide Banner */}
@@ -52,6 +48,6 @@ export default function Guides() {
           </article>
         </div>
       </div>
-    </>
+    </Layout>
   )
 }
