@@ -139,14 +139,15 @@ export default function WarRoom() {
           font-family: 'JetBrains Mono', monospace;
           background: var(--bg-dark);
           color: #fff;
-          overflow: hidden;
+          overflow-x: hidden;
         }
         
         .war-room {
           position: relative;
           min-height: 100vh;
           display: grid;
-          grid-template-rows: auto 1fr auto;
+          grid-template-rows: auto auto 1fr auto;
+          padding-bottom: 60px;
         }
         
         .matrix-bg {
@@ -164,15 +165,15 @@ export default function WarRoom() {
           z-index: 1;
           padding: 20px;
           display: grid;
-          grid-template-columns: 300px 1fr 300px;
+          grid-template-columns: 1fr;
           gap: 20px;
-          height: calc(100vh - 160px);
+          min-height: calc(100vh - 200px);
         }
         
-        @media (max-width: 1200px) {
+        @media (min-width: 1200px) {
           .content {
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto;
+            grid-template-columns: 300px 1fr 300px;
+            height: calc(100vh - 160px);
           }
         }
         
@@ -518,8 +519,14 @@ export default function WarRoom() {
         
         .mini-stats {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: 1fr;
           gap: 16px;
+        }
+        
+        @media (min-width: 640px) {
+          .mini-stats {
+            grid-template-columns: repeat(3, 1fr);
+          }
         }
         
         .mini-stat {
