@@ -5,7 +5,7 @@ export default function Smartmoneymastery() {
     <>
       <Head>
         <title>X ARTICLE: "How I Stopped Gambling and Started Printing" - iseeiape</title>
-        <meta name="description" content="X ARTICLE: "How I Stopped Gambling and Started Printing"" />
+        <meta name="description" content="X ARTICLE: How I Stopped Gambling and Started Printing" />
       </Head>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px', color: '#fff', background: '#0a0a0a', minHeight: '100vh' }}>
         <h1 style={{ fontSize: '36px', color: '#00ff88', marginBottom: '30px' }}>X ARTICLE: "How I Stopped Gambling and Started Printing"</h1>

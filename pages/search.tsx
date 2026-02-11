@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 
 export default function Search() {
   const [query, setQuery] = useState('')
-  const [results, setResults] = useState([])
+  const [results, setResults] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Search() {
     }
   }, [])
 
-  const performSearch = (searchTerm) => {
+  const performSearch = (searchTerm: string) => {
     setLoading(true)
     
     // Search content index (would be fetched from API in production)
@@ -43,7 +43,7 @@ export default function Search() {
     setLoading(false)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (query.trim()) {
       performSearch(query)
@@ -60,7 +60,7 @@ export default function Search() {
         color: '#fff',
         minHeight: '100vh'
       }}>
-        <h1 style={{ fontSize: '36px', marginBottom: '30px' }}>🔍 Search�c/s>
+        <h1 style={{ fontSize: '36px', marginBottom: '30px' }}>🔍 Search</h1>
 
         <form onSubmit={handleSubmit} style={{ marginBottom: '40px' }}>
           <div style={{ display: 'flex', gap: '10px' }}>

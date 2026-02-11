@@ -1,7 +1,12 @@
 import Head from 'next/head'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, ReactNode } from 'react'
 
-export default function Layout({ children, title = "iseeiape" }) {
+interface LayoutProps {
+  children: ReactNode;
+  title?: string;
+}
+
+export default function Layout({ children, title = "iseeiape" }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [isMobile, setIsMobile] = useState(false)
@@ -21,7 +26,7 @@ export default function Layout({ children, title = "iseeiape" }) {
     { href: '/dashboard', label: '📈 Dashboard' },
   ]
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
     if (searchQuery.trim()) {
       // Search across all content
@@ -120,8 +125,8 @@ export default function Layout({ children, title = "iseeiape" }) {
                     borderRadius: '6px',
                     transition: 'background 0.2s'
                   }}
-                  onMouseEnter={(e) => e.target.style.background = '#1a1a1a'}
-                  onMouseLeave={(e) => e.target.style.background = 'transparent'}
+                  onMouseEnter={(e: any) => e.target.style.background = '#1a1a1a'}
+                  onMouseLeave={(e: any) => e.target.style.background = 'transparent'}
                 >
                   {link.label}
                 </a>
