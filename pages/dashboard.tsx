@@ -10,184 +10,78 @@ export default function Dashboard() {
   ]
 
   const wallets = [
-    { id: '#17', label: 'Solana OG', profit: 894000, roi: 10075 },
-    { id: '#42', label: 'AI Agent Trader', profit: 231500, roi: 4520 },
-    { id: '#55', label: 'Meme Coin Hunter', profit: 123400, roi: 5670 },
-    { id: '#29', label: 'Cross-Chain Specialist', profit: 67200, roi: 3692 },
-    { id: '#13', label: 'DeFi Yield Farmer', profit: 56700, roi: 2890 },
+    { id: '#17', label: 'Solana OG', profit: 894000, roi: 10075, chain: 'SOL' },
+    { id: '#42', label: 'AI Agent Trader', profit: 231500, roi: 4520, chain: 'SOL' },
+    { id: '#55', label: 'Meme Coin Hunter', profit: 123400, roi: 5670, chain: 'SOL' },
+    { id: '#29', label: 'Cross-Chain Specialist', profit: 67200, roi: 3692, chain: 'BASE' },
+    { id: '#13', label: 'DeFi Yield Farmer', profit: 56700, roi: 2890, chain: 'ETH' },
   ]
 
   return (
     <Layout title="Dashboard | iseeiape">
-      <>
-        <style>{`
-          .dashboard-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #fff;
-            min-height: 100vh;
-          }
-          .dashboard-header {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 30px;
-          }
-          .dashboard-title {
-            font-size: clamp(24px, 5vw, 36px);
-            color: #00ff88;
-            margin-bottom: 8px;
-          }
-          .refresh-btn {
-            padding: 12px 24px;
-            background: #00ff88;
-            color: #000;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            align-self: flex-start;
-          }
-          .dashboard-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin-bottom: 30px;
-          }
-          @media (min-width: 768px) {
-            .dashboard-header {
-              flex-direction: row;
-              justify-content: space-between;
-              align-items: center;
-            }
-            .dashboard-grid {
-              grid-template-columns: 1fr 1fr;
-            }
-          }
-          .dashboard-card {
-            background: #111;
-            padding: 20px;
-            border-radius: 12px;
-            overflow: hidden;
-          }
-          .card-title {
-            font-size: 20px;
-            color: #00ff88;
-            margin-bottom: 15px;
-          }
-          .table-container {
-            overflow-x: auto;
-            margin: -10px;
-            padding: 10px;
-          }
-          .data-table {
-            width: 100%;
-            min-width: 400px;
-            border-collapse: collapse;
-            font-size: 14px;
-          }
-          .data-table th {
-            text-align: left;
-            padding: 10px;
-            color: #888;
-            font-weight: normal;
-            border-bottom: 1px solid #333;
-          }
-          .data-table td {
-            padding: 10px;
-            border-bottom: 1px solid #222;
-          }
-          .token-symbol {
-            font-weight: bold;
-          }
-          .token-name {
-            font-size: 12px;
-            color: #888;
-          }
-          .positive {
-            color: #00ff88;
-          }
-          .negative {
-            color: #ff4444;
-          }
-          .wallet-label {
-            font-size: 12px;
-            color: #888;
-          }
-          .overview-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-          }
-          @media (min-width: 640px) {
-            .overview-grid {
-              grid-template-columns: repeat(4, 1fr);
-            }
-          }
-          .stat-card {
-            text-align: center;
-            padding: 20px;
-            background: #1a1a1a;
-            border-radius: 8px;
-          }
-          .stat-label {
-            font-size: 12px;
-            color: #888;
-            margin-bottom: 8px;
-          }
-          .stat-value {
-            font-size: 24px;
-            color: #00ff88;
-          }
-        `}</style>
-
-        <div className="dashboard-container">
-          {/* Header */}
-          <div className="dashboard-header">
+      <div className="container">
+        {/* Header */}
+        <div className="section" style={{ paddingBottom: 0 }}>
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div>
-              <h1 className="dashboard-title">📊 Real-time Dashboard</h1>
-              <p style={{ color: '#888', fontSize: '14px' }}>
-                Live smart money intelligence for Solana & Base
-                <span style={{ display: 'block', marginTop: '4px' }}>
-                  Last updated: {lastUpdated}
-                </span>
+              <h1 className="heading-2 mb-2">📊 Real-time Dashboard</h1>
+              <p style={{ color: 'var(--text-muted)' }}>
+                Live smart money intelligence • Updated {lastUpdated}
               </p>
             </div>
             
-            <button className="refresh-btn">
+            <button className="btn btn-primary">
               🔄 Refresh
             </button>
           </div>
+        </div>
 
-          {/* Main Grid */}
-          <div className="dashboard-grid">
+        {/* Main Grid */}
+        <div className="section" style={{ paddingTop: 'var(--space-6)' }}>
+          <div className="grid grid-2">
             {/* Trending Tokens */}
-            <div className="dashboard-card">
-              <h2 className="card-title">🔥 Trending Tokens</h2>
+            <div className="card">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="heading-4 text-gradient">🔥 Trending Tokens</h2>
+                <span className="tag tag-success">Live</span>
+              </div>
               
               <div className="table-container">
-                <table className="data-table">
+                <table className="table">
                   <thead>
                     <tr>
                       <th>Token</th>
                       <th>Price</th>
                       <th>24h</th>
-                      <th>Vol</th>
+                      <th>Chain</th>
                     </tr>
                   </thead>
                   <tbody>
                     {trendingTokens.map((token, i) => (
                       <tr key={i}>
                         <td>
-                          <div className="token-symbol">{token.symbol}</div>
-                          <div className="token-name">{token.name}</div>
+                          <div style={{ fontWeight: 600 }}>{token.symbol}</div>
+                          <div style={{ fontSize: 'var(--text-xs)', color: 'var(--text-muted)' }}>{token.name}</div>
                         </td>
-                        <td>${token.price.toFixed(6)}</td>
-                        <td className={token.change >= 0 ? 'positive' : 'negative'}>
-                          {token.change >= 0 ? '+' : ''}{token.change}%
+                        <td style={{ fontFamily: 'var(--font-mono)' }}>${token.price.toFixed(6)}</td>
+                        <td>
+                          <span className={token.change >= 0 ? 'positive' : 'negative'}>
+                            {token.change >= 0 ? '+' : ''}{token.change}%
+                          </span>
                         </td>
-                        <td>${(token.volume / 1000000).toFixed(1)}M</td>
+                        <td>
+                          <span 
+                            className="tag"
+                            style={{ 
+                              background: token.chain === 'SOL' ? 'rgba(20, 241, 149, 0.15)' : 
+                                        token.chain === 'BASE' ? 'rgba(0, 82, 255, 0.15)' : 'rgba(0, 212, 255, 0.15)',
+                              color: token.chain === 'SOL' ? '#14F195' : 
+                                     token.chain === 'BASE' ? '#0052FF' : '#00d4ff'
+                            }}
+                          >
+                            {token.chain}
+                          </span>
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -196,11 +90,14 @@ export default function Dashboard() {
             </div>
 
             {/* Top Wallets */}
-            <div className="dashboard-card">
-              <h2 className="card-title">🐋 Top Performing Wallets</h2>
+            <div className="card">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="heading-4 text-gradient">🐋 Top Wallets</h2>
+                <span className="tag tag-info">Updated</span>
+              </div>
               
               <div className="table-container">
-                <table className="data-table">
+                <table className="table">
                   <thead>
                     <tr>
                       <th>Wallet</th>
@@ -212,14 +109,16 @@ export default function Dashboard() {
                     {wallets.map((wallet, i) => (
                       <tr key={i}>
                         <td>
-                          <div style={{ fontWeight: 'bold' }}>Whale {wallet.id}</div>
-                          <div className="wallet-label">{wallet.label}</div>
+                          <div style={{ fontWeight: 600 }}>Whale {wallet.id}</div>
+                          <div style={{ fontSize: 'var(--text-xs)', color: 'var(--text-muted)' }}>{wallet.label}</div>
                         </td>
-                        <td className="positive">
+                        <td className="positive" style={{ fontFamily: 'var(--font-mono)' }}>
                           ${(wallet.profit / 1000).toFixed(1)}K
                         </td>
-                        <td className="positive">
-                          +{wallet.roi}%
+                        <td>
+                          <span className="tag tag-success">
+                            +{wallet.roi}%
+                          </span>
                         </td>
                       </tr>
                     ))}
@@ -228,12 +127,14 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Market Overview */}
-          <div className="dashboard-card">
-            <h2 className="card-title">📈 Market Overview</h2>
+        {/* Market Overview */}
+        <div className="section" style={{ paddingTop: 0 }}>
+          <div className="card">
+            <h2 className="heading-4 text-gradient mb-6">📈 Market Overview</h2>
             
-            <div className="overview-grid">
+            <div className="grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               <div className="stat-card">
                 <div className="stat-label">Tokens Tracked</div>
                 <div className="stat-value">0</div>
@@ -246,17 +147,17 @@ export default function Dashboard() {
               
               <div className="stat-card">
                 <div className="stat-label">Total Profit</div>
-                <div className="stat-value" style={{ fontSize: '20px' }}>$1.37M</div>
+                <div className="stat-value" style={{ fontSize: 'var(--text-2xl)' }}>$1.37M</div>
               </div>
               
               <div className="stat-card">
                 <div className="stat-label">Avg ROI</div>
-                <div className="stat-value" style={{ fontSize: '20px' }}>+5369%</div>
+                <div className="stat-value" style={{ fontSize: 'var(--text-2xl)' }}>+5369%</div>
               </div>
             </div>
           </div>
         </div>
-      </>
+      </div>
     </Layout>
   )
 }
