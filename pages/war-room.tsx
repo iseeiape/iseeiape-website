@@ -281,14 +281,15 @@ export default function WarRoom() {
         }
         
         .stat-value {
-          font-size: 24px;
+          font-size: clamp(18px, 4vw, 24px);
           font-weight: 700;
           color: var(--neon-green);
           text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+          word-break: break-word;
         }
         
         .stat-label {
-          font-size: 10px;
+          font-size: clamp(8px, 2vw, 10px);
           color: rgba(255, 255, 255, 0.5);
           text-transform: uppercase;
           letter-spacing: 1px;
@@ -353,8 +354,14 @@ export default function WarRoom() {
           display: flex;
           flex-direction: column;
           gap: 10px;
-          max-height: calc(100vh - 300px);
+          max-height: 400px;
           overflow-y: auto;
+        }
+        
+        @media (min-width: 1200px) {
+          .feed {
+            max-height: calc(100vh - 300px);
+          }
         }
         
         .feed-item {
