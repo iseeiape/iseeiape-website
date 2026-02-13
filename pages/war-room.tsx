@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import Head from 'next/head'
 import GitHubTrends from '../components/GitHubTrends'
+import LiveWhaleFeed from '../components/LiveWhaleFeed'
 
 // WAR ROOM - LIVE Crypto Command Center
 export default function WarRoom() {
@@ -672,30 +673,8 @@ export default function WarRoom() {
             </div>
           </div>
 
-          {/* Right Panel - Live Feed */}
-          <div className="panel">
-            <div className="panel-header">
-              <span className="panel-title">Whale Activity</span>
-              <div className="live-indicator">
-                <span className="live-dot" />
-                REAL-TIME
-              </div>
-            </div>
-            
-            <div className="feed">
-              {whales.map((whale, i) => (
-                <div key={i} className="feed-item">
-                  <span className="feed-whale">{whale.name}</span>
-                  <span className={`feed-action ${whale.action.toLowerCase()}`}>
-                    {whale.action}
-                  </span>
-                  <span className="feed-token">{whale.token}</span>
-                  <span className="feed-amount">{whale.amount}</span>
-                  <span className="feed-time">{whale.time}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Right Panel - Live Whale Feed */}
+          <LiveWhaleFeed />
         </div>
 
         {/* GitHub Trends Section */}
