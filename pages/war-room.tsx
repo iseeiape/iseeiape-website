@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import Head from 'next/head'
+import GitHubTrends from '../components/GitHubTrends'
 
 // WAR ROOM - LIVE Crypto Command Center
 export default function WarRoom() {
@@ -695,6 +696,18 @@ export default function WarRoom() {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* GitHub Trends Section */}
+        <div style={{ 
+          position: 'relative', 
+          zIndex: 1, 
+          padding: '0 20px 20px',
+          maxWidth: '1200px',
+          margin: '0 auto',
+          width: '100%'
+        }}>
+          <GitHubTrends />
         </div>
 
         {/* Bottom Ticker */}
