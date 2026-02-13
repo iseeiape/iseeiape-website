@@ -1,29 +1,64 @@
 import { useEffect, useState, useRef } from 'react'
 import Head from 'next/head'
 
-// WAR ROOM - The Ultimate Crypto Command Center
+// WAR ROOM - LIVE Crypto Command Center
 export default function WarRoom() {
   const [mounted, setMounted] = useState(false)
-  const [tick, setTick] = useState(0)
   const [typedText, setTypedText] = useState('')
   const fullText = 'WELCOME TO THE WAR ROOM'
   const canvasRef = useRef<HTMLCanvasElement>(null)
   
-  // Live data simulation
+  // LIVE DATA STATES
   const [prices, setPrices] = useState([
-    { symbol: 'BONK', price: 0.00001234, change: 45.2 },
-    { symbol: 'WIF', price: 0.2345, change: 23.8 },
-    { symbol: 'PEPE', price: 0.00000876, change: -12.3 },
-    { symbol: 'FARTCOIN', price: 0.0456, change: 189.4 },
-    { symbol: 'MOODENG', price: 0.1234, change: 67.2 },
-    { symbol: 'AI16Z', price: 0.5678, change: -5.4 },
+    { symbol: 'BTC', price: 66392, change: -0.91 },
+    { symbol: 'SOL', price: 78.57, change: -2.30 },
+    { symbol: 'ETH', price: 3456, change: -1.2 },
+    { symbol: 'BONK', price: 0.00000598, change: 2.0 },
+    { symbol: 'WIF', price: 1.23, change: 5.4 },
+    { symbol: 'PEPE', price: 0.00000876, change: -3.2 },
   ])
+  
+  const [loading, setLoading] = useState(true)
+  const [lastUpdate, setLastUpdate] = useState('')
+
+  // Fetch live prices from CoinGecko
+  const fetchPrices = async () => {
+    try {
+      const res = await fetch(
+        'https://api.coingecko.com/api/v3/simple/price?ids=solana,bitcoin,ethereum,bonk,dogwifhat,pepe&vs_currencies=usd&include_24hr_change=true'
+      )
+      const data = await res.json()
+      
+      const newPrices = [
+        { symbol: 'BTC', price: data.bitcoin?.usd || 66392, change: data.bitcoin?.usd_24h_change || 0 },
+        { symbol: 'SOL', price: data.solana?.usd || 78.57, change: data.solana?.usd_24h_change || 0 },
+        { symbol: 'ETH', price: data.ethereum?.usd || 3456, change: data.ethereum?.usd_24h_change || 0 },
+        { symbol: 'BONK', price: data.bonk?.usd || 0.00000598, change: data.bonk?.usd_24h_change || 0 },
+        { symbol: 'WIF', price: data.dogwifhat?.usd || 1.23, change: data.dogwifhat?.usd_24h_change || 0 },
+        { symbol: 'PEPE', price: data.pepe?.usd || 0.00000876, change: data.pepe?.usd_24h_change || 0 },
+      ]
+      
+      setPrices(newPrices)
+      setLastUpdate(new Date().toLocaleTimeString())
+      setLoading(false)
+    } catch (err) {
+      console.log('Using fallback prices')
+      setLoading(false)
+    }
+  }
+
+  // Initial fetch + interval
+  useEffect(() => {
+    fetchPrices()
+    const interval = setInterval(fetchPrices, 60000) // Update every minute
+    return () => clearInterval(interval)
+  }, [])
 
   const whales = [
-    { name: 'WHALE_17', action: 'BUY', token: '$BIGTROUT', amount: '$89.4K', time: '2s ago' },
-    { name: 'WHALE_42', action: 'SELL', token: '$BONK', amount: '$234K', time: '5s ago' },
-    { name: 'SMART_MONEY', action: 'BUY', token: '$WIF', amount: '$45.2K', time: '8s ago' },
-    { name: 'SOLANA_OG', action: 'BUY', token: '$FARTCOIN', amount: '$12.1K', time: '12s ago' },
+    { name: 'WHALE_17', action: 'BUY', token: '$BIGTROUT', amount: '$89.4K', time: '2m ago' },
+    { name: 'BHBASEQ1197', action: 'BUY', token: '$APGARENA', amount: '$387.98', time: '1m ago' },
+    { name: '57rX', action: 'BUY', token: '$thankful', amount: '$771.6K', time: '5m ago' },
+    { name: 'BHBASEQ1815', action: 'BUY', token: '$DRB', amount: '$4.9K', time: '8m ago' },
   ]
 
   const stats = [
@@ -59,7 +94,7 @@ export default function WarRoom() {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
-    const chars = '0123456789ABCDEF$#@%&'
+    const chars = '0123456789ABCDEF$#@%'
     const fontSize = 14
     const columns = canvas.width / fontSize
     const drops: number[] = Array(Math.floor(columns)).fill(1)
@@ -68,7 +103,7 @@ export default function WarRoom() {
       ctx.fillStyle = 'rgba(10, 10, 15, 0.05)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
       
-      ctx.fillStyle = '#00ff8833'
+      ctx.fillStyle = '#00ff8815'
       ctx.font = `${fontSize}px monospace`
 
       for (let i = 0; i < drops.length; i++) {
@@ -95,19 +130,6 @@ export default function WarRoom() {
       window.removeEventListener('resize', handleResize)
     }
   }, [mounted])
-
-  // Live price updates
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPrices(prev => prev.map(p => ({
-        ...p,
-        price: p.price * (1 + (Math.random() - 0.5) * 0.02),
-        change: p.change + (Math.random() - 0.5) * 2
-      })))
-      setTick(t => t + 1)
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [])
 
   if (!mounted) return null
 
@@ -488,6 +510,7 @@ export default function WarRoom() {
           display: flex;
           align-items: center;
           justify-content: center;
+          min-height: 200px;
         }
         
         .visualizer-grid {
@@ -526,13 +549,13 @@ export default function WarRoom() {
         
         .mini-stats {
           display: grid;
-          grid-template-columns: 1fr;
+          grid-template-columns: repeat(3, 1fr);
           gap: 16px;
         }
         
-        @media (min-width: 640px) {
+        @media (max-width: 640px) {
           .mini-stats {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr;
           }
         }
         
@@ -556,6 +579,18 @@ export default function WarRoom() {
           text-transform: uppercase;
           margin-top: 4px;
         }
+        
+        .loading {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 12px;
+        }
+        
+        .update-time {
+          font-size: 10px;
+          color: rgba(255, 255, 255, 0.4);
+          text-align: right;
+          margin-top: 10px;
+        }
       `}</style>
 
       <div className="war-room">
@@ -564,6 +599,7 @@ export default function WarRoom() {
         <header className="header">
           <h1>{typedText}<span className="cursor" /></h1>
           <p className="subtitle">Smart Money Intelligence Terminal</p>
+          {loading && <p className="loading">Loading live data...</p>}
         </header>
 
         <div className="content">
@@ -590,15 +626,18 @@ export default function WarRoom() {
 
             <div style={{ marginTop: '20px' }}>
               <div className="panel-header">
-                <span className="panel-title">Top Movers</span>
+                <span className="panel-title">Live Prices</span>
+                {lastUpdate && <span style={{ fontSize: '10px', color: '#888' }}>{lastUpdate}</span>}
               </div>
               <div className="price-list">
                 {prices.map((price, i) => (
                   <div key={i} className={`price-item ${price.change < 0 ? 'negative' : ''}`}>
                     <span className="price-symbol">${price.symbol}</span>
-                    <span className="price-value">${price.price.toFixed(6)}</span>
+                    <span className="price-value">
+                      ${price.price < 1 ? price.price.toFixed(6) : price.price.toLocaleString()}
+                    </span>
                     <span className={`price-change ${price.change >= 0 ? 'positive' : 'negative'}`}>
-                      {price.change >= 0 ? '+' : ''}{price.change.toFixed(1)}%
+                      {price.change >= 0 ? '+' : ''}{price.change.toFixed(2)}%
                     </span>
                   </div>
                 ))}
@@ -664,7 +703,9 @@ export default function WarRoom() {
             {[...prices, ...prices].map((price, i) => (
               <div key={i} className="ticker-item">
                 <span className="ticker-symbol">${price.symbol}</span>
-                <span className="ticker-price">${price.price.toFixed(6)}</span>
+                <span className="ticker-price">
+                  ${price.price < 1 ? price.price.toFixed(6) : price.price.toLocaleString()}
+                </span>
                 <span className={`ticker-change ${price.change >= 0 ? 'positive' : 'negative'}`}>
                   {price.change >= 0 ? '▲' : '▼'} {Math.abs(price.change).toFixed(1)}%
                 </span>
