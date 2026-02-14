@@ -9,13 +9,23 @@ interface LayoutProps {
   title?: string
   description?: string
   showMatrix?: boolean
+  ogImage?: string
+  canonical?: string
+  article?: boolean
+  publishDate?: string
+  author?: string
 }
 
 export default function Layout({ 
   children, 
-  title = 'iseeiape', 
-  description = 'Smart Money Intelligence for Solana & Base',
-  showMatrix = true 
+  title = 'iseeiape - Smart Money Intelligence for Solana & Base', 
+  description = 'Track whale wallets, discover alpha, and follow smart money on Solana and Base chains. Real-time intelligence for crypto traders.',
+  showMatrix = true,
+  ogImage = 'https://www.iseeiape.com/og-image.jpg',
+  canonical,
+  article = false,
+  publishDate,
+  author = 'Neo (Matrix Army)'
 }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const router = useRouter()
@@ -30,12 +40,100 @@ export default function Layout({
 
   const isActive = (href: string) => router.pathname === href
 
+  const siteUrl = 'https://www.iseeiape.com'
+  const fullUrl = canonical ? `${siteUrl}${canonical}` : siteUrl
+  const pageTitle = title.includes('iseeiape') ? title : `${title} | iseeiape`
+
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={fullUrl} />
+        
+        {/* Robots */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content={article ? 'article' : 'website'} />
+        <meta property="og:url" content={fullUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:site_name" content="iseeiape" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Article specific */}
+        {article && publishDate && (
+          <>
+            <meta property="article:published_time" content={publishDate} />
+            <meta property="article:author" content={author} />
+            <meta property="article:section" content="Crypto Trading" />
+            <meta property="article:tag" content="Solana, Base, Smart Money, Whale Tracking" />
+          </>
+        )}
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={fullUrl} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        
+        {/* Structured Data - Organization */}
+        {!article && (
+          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "iseeiape",
+            "url": siteUrl,
+            "logo": `${siteUrl}/logo.png`,
+            "description": description,
+            "sameAs": [
+              "https://twitter.com/iseeiape",
+              "https://twitter.com/dog_on_chain"
+            ],
+            "founder": {
+              "@type": "Person",
+              "name": "Dan (Lizard King)",
+              "url": "https://twitter.com/iseeicode"
+            }
+          })}} />
+        )}
+        
+        {/* Structured Data - Article */}
+        {article && (
+          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": title,
+            "description": description,
+            "image": ogImage,
+            "datePublished": publishDate,
+            "dateModified": publishDate,
+            "author": {
+              "@type": "Person",
+              "name": author
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "iseeiape",
+              "logo": {
+                "@type": "ImageObject",
+                "url": `${siteUrl}/logo.png`
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": fullUrl
+            }
+          })}} />
+        )}
+        
+        {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />

@@ -29,11 +29,14 @@ export default function Insights() {
           <p style={{ color: '#aaa' }}>$890K in 30 days. 78% win rate on Pump.fun launches. We reverse-engineer their strategy.</p>
         </article>
 
-        <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px' }}>
-          <span style={{ padding: '4px 12px', background: '#ff880033', color: '#ff8800', borderRadius: '20px', fontSize: '12px' }}>Strategy</span>
-          <h2 style={{ marginTop: '15px' }}>The Cross-Chain Edge</h2>
-          <p style={{ color: '#aaa' }}>Why Base launches pump 40% faster than Solana. Position before the rotation.</p>
-        </article>
+        <a href="/insights/cross-chain-edge" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #ff8800', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#ff880033', color: '#ff8800', borderRadius: '20px', fontSize: '12px' }}>🆕 Fresh - Feb 14</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>The Cross-Chain Edge: Why Base Whales Move Faster</h2>
+            <p style={{ color: '#aaa' }}>Analysis of 10,000+ transactions reveals Base traders capture pumps 40% earlier than Solana. The structural advantage explained.</p>
+            <p style={{ color: '#ff8800', fontSize: '12px', marginTop: '10px' }}>9 min read • Strategy • Cross-Chain Alpha →</p>
+          </article>
+        </a>
 
         <article style={{ padding: '30px', background: '#111', borderRadius: '16px' }}>
           <span style={{ padding: '4px 12px', background: '#ff00ff33', color: '#ff00ff', borderRadius: '20px', fontSize: '12px' }}>Psychology</span>
