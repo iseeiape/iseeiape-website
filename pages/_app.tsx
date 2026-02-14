@@ -2,14 +2,14 @@ import type { AppProps } from 'next/app'
 import Script from 'next/script'
 import '../styles/globals.css'
 
-// Google Analytics ID - Replace with your actual GA4 Measurement ID
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX' // TODO: Replace with actual GA4 ID
+// Google Analytics ID
+const GA_MEASUREMENT_ID = 'G-GSGMFPHPWW'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       {/* Google Analytics */}
-      {GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX' && (
+      {GA_MEASUREMENT_ID && GA_MEASUREMENT_ID.startsWith('G-') && (
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
