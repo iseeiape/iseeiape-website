@@ -38,11 +38,14 @@ export default function Insights() {
           </article>
         </a>
 
-        <article style={{ padding: '30px', background: '#111', borderRadius: '16px' }}>
-          <span style={{ padding: '4px 12px', background: '#ff00ff33', color: '#ff00ff', borderRadius: '20px', fontSize: '12px' }}>Psychology</span>
-          <h2 style={{ marginTop: '15px' }}>Why You're Always Late to the Pump</h2>
-          <p style={{ color: '#aaa' }}>The 4 information layers of crypto markets. Trade layer 1 while retail is stuck on layer 4.</p>
-        </article>
+        <a href="/insights/late-to-pump" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #ff00ff', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#ff00ff33', color: '#ff00ff', borderRadius: '20px', fontSize: '12px' }}>🆕 Fresh - Feb 15</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>Why You're Always Late to the Pump</h2>
+            <p style={{ color: '#aaa' }}>The 4 information layers of crypto markets. Learn why retail always buys the top and how smart money positions at layer 1.</p>
+            <p style={{ color: '#ff00ff', fontSize: '12px', marginTop: '10px' }}>7 min read • Psychology • Information Layers →</p>
+          </article>
+        </a>
       </div>
     </Layout>
   )
