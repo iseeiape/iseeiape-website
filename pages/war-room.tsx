@@ -2,6 +2,10 @@ import { useEffect, useState, useRef } from 'react'
 import Head from 'next/head'
 import GitHubTrends from '../components/GitHubTrends'
 import LiveWhaleFeed from '../components/LiveWhaleFeed'
+import Opportunities from '../components/Opportunities'
+import XTrends from '../components/XTrends'
+import LatestNews from '../components/LatestNews'
+import TeamStatus from '../components/TeamStatus'
 
 // WAR ROOM - LIVE Crypto Command Center
 export default function WarRoom() {
@@ -675,6 +679,36 @@ export default function WarRoom() {
 
           {/* Right Panel - Live Whale Feed */}
           <LiveWhaleFeed />
+        </div>
+
+        {/* New Dashboard Components Section */}
+        <div style={{ 
+          position: 'relative', 
+          zIndex: 1, 
+          padding: '20px',
+          maxWidth: '1400px',
+          margin: '0 auto',
+          width: '100%'
+        }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gap: '20px',
+            marginBottom: '20px'
+          }}>
+            <Opportunities />
+            <XTrends />
+          </div>
+          
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gap: '20px',
+            marginBottom: '20px'
+          }}>
+            <LatestNews />
+            <TeamStatus />
+          </div>
         </div>
 
         {/* GitHub Trends Section */}
