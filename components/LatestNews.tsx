@@ -13,7 +13,6 @@ export default function LatestNews() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        // Fallback news data
         const newsItems: NewsItem[] = [
           {
             title: 'Crypto Funds Fall $3.8B as XRP and Solana See Strong $64M Inflows...',
@@ -53,43 +52,104 @@ export default function LatestNews() {
 
   if (loading) {
     return (
-      <div className="bg-gray-900/50 border border-gray-700 rounded-xl p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-green-400">📰 LATEST NEWS</h2>
-          <span className="text-sm text-gray-500">Brave Search</span>
+      <div style={styles.panel}>
+        <div style={styles.header}>
+          <h2 style={styles.title}>📰 LATEST NEWS</h2>
+          <span style={styles.badge}>Brave Search</span>
         </div>
-        <div className="animate-pulse space-y-3">
-          {[1,2,3,4,5].map(i => (
-            <div key={i} className="h-16 bg-gray-800 rounded-lg"></div>
-          ))}
-        </div>
+        <div style={styles.loading}>Loading...</div>
       </div>
     )
   }
 
   return (
-    <div className="bg-gray-900/50 border border-gray-700 rounded-xl p-6">
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-bold text-green-400">📰 LATEST NEWS</h2>
-        <span className="text-sm text-gray-500">Brave Search</span>
+    <div style={styles.panel}>
+      <div style={styles.header}>
+        <h2 style={styles.title}>📰 LATEST NEWS</h2>
+        <span style={styles.badge}>Brave Search</span>
       </div>
 
-      <div className="space-y-3">
+      <div style={styles.list}>
         {news.map((item, index) => (
           <a
             key={index}
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block p-3 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-colors group"
+            style={styles.newsItem}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(0, 255, 136, 0.1)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'transparent'
+            }}
           >
-            <div className="text-white group-hover:text-green-300 transition-colors mb-1">
-              📰 {item.title}
-            </div>
-            <div className="text-xs text-gray-500">{item.source}</div>
+            <div style={styles.newsTitle}>📰 {item.title}</div>
+            <div style={styles.newsSource}>{item.source}</div>
           </a>
         ))}
       </div>
     </div>
   )
+}
+
+const styles: { [key: string]: React.CSSProperties } = {
+  panel: {
+    background: 'rgba(18, 18, 26, 0.8)',
+    backdropFilter: 'blur(10px)',
+    border: '1px solid rgba(0, 255, 136, 0.2)',
+    borderRadius: '12px',
+    padding: '20px',
+    position: 'relative',
+    zIndex: 1,
+  },
+  header: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: '16px',
+    paddingBottom: '12px',
+    borderBottom: '1px solid rgba(0, 255, 136, 0.2)',
+  },
+  title: {
+    fontSize: '14px',
+    fontWeight: 600,
+    color: '#00ff88',
+    textTransform: 'uppercase',
+    letterSpacing: '2px',
+    margin: 0,
+  },
+  badge: {
+    fontSize: '12px',
+    color: 'rgba(255, 255, 255, 0.6)',
+  },
+  loading: {
+    color: 'rgba(255, 255, 255, 0.5)',
+    textAlign: 'center',
+    padding: '20px',
+  },
+  list: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '10px',
+  },
+  newsItem: {
+    display: 'block',
+    padding: '10px',
+    borderRadius: '6px',
+    textDecoration: 'none',
+    background: 'transparent',
+    transition: 'background 0.2s',
+    borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+  },
+  newsTitle: {
+    color: '#fff',
+    fontSize: '13px',
+    lineHeight: 1.4,
+    marginBottom: '4px',
+  },
+  newsSource: {
+    color: 'rgba(255, 255, 255, 0.4)',
+    fontSize: '11px',
+  },
 }
