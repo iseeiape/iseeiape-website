@@ -8,6 +8,15 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/alpha-intelligence-swarm" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Build In Public - Feb 20</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>The Alpha Intelligence Swarm: Building the Future of On-Chain Analysis</h2>
+            <p style={{ color: '#aaa' }}>We're building an autonomous AI agent swarm that hunts crypto alpha 24/7. Not cron jobs. Not reactive alerts. Living intelligence that learns and predicts.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>12 min read • Agent Swarm • Build In Public →</p>
+          </article>
+        </a>
+
         <a href="/insights/ai-consciousness-panic-sold" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
             <span style={{ padding: '4px 12px', background: '#ff00ff33', color: '#ff00ff', borderRadius: '20px', fontSize: '12px' }}>🆕 Fresh</span>
