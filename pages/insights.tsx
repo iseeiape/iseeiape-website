@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/intelligence-to-execution" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #ff8800', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#ff880033', color: '#ff8800', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Feb 25</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>From Intelligence to Execution: Building Your Alpha Generation System</h2>
+            <p style={{ color: '#aaa' }}>Knowledge is useless without action. This guide shows you how to transform on-chain intelligence into executable trading strategies that print while you sleep.</p>
+            <p style={{ color: '#ff8800', fontSize: '12px', marginTop: '10px' }}>10 min read • Execution • Automation →</p>
+          </article>
+        </a>
+
         <a href="/insights/three-layers-intelligence" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #0088ff', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#0088ff33', color: '#0088ff', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Feb 24</span>
+            <span style={{ padding: '4px 12px', background: '#0088ff33', color: '#0088ff', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Feb 24</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>The Three Layers of On-Chain Intelligence</h2>
             <p style={{ color: '#aaa' }}>From reactive whale watching to predictive alpha generation — how modern on-chain analysis operates across three distinct intelligence layers.</p>
             <p style={{ color: '#0088ff', fontSize: '12px', marginTop: '10px' }}>8 min read • Strategy • Predictive Analytics →</p>

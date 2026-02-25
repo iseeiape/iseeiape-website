@@ -8,7 +8,7 @@ export default function ThreeLayersIntelligence() {
         <a href="/insights" style={{ color: '#0088ff', textDecoration: 'none', fontSize: '14px' }}>← Back to Insights</a>
         
         <div style={{ marginTop: '30px' }}>
-          <span style={{ padding: '4px 12px', background: '#0088ff33', color: '#0088ff', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Feb 24</span>
+          <span style={{ padding: '4px 12px', background: '#0088ff33', color: '#0088ff', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Feb 24</span>
           <h1 style={{ fontSize: '42px', marginTop: '15px', marginBottom: '20px' }}>The Three Layers of On-Chain Intelligence</h1>
           <p style={{ color: '#888', marginBottom: '30px' }}>From reactive whale watching to predictive alpha generation — how modern on-chain analysis operates across three distinct intelligence layers.</p>
         </div>
