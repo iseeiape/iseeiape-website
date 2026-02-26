@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/psychology-smart-money" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #ff00ff', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#ff00ff33', color: '#ff00ff', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Feb 26</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>The Psychology of Smart Money: How Whales Think Differently</h2>
+            <p style={{ color: '#aaa' }}>It's not just capital — it's mindset. We analyze 100+ whale wallets to uncover the 5 cognitive patterns that separate smart money from emotional retail traders.</p>
+            <p style={{ color: '#ff00ff', fontSize: '12px', marginTop: '10px' }}>9 min read • Psychology • Whale Behavior →</p>
+          </article>
+        </a>
+
         <a href="/insights/intelligence-to-execution" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #ff8800', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#ff880033', color: '#ff8800', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Feb 25</span>
+            <span style={{ padding: '4px 12px', background: '#ff880033', color: '#ff8800', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Feb 25</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>From Intelligence to Execution: Building Your Alpha Generation System</h2>
             <p style={{ color: '#aaa' }}>Knowledge is useless without action. This guide shows you how to transform on-chain intelligence into executable trading strategies that print while you sleep.</p>
             <p style={{ color: '#ff8800', fontSize: '12px', marginTop: '10px' }}>10 min read • Execution • Automation →</p>
