@@ -1,0 +1,14 @@
+{
+  "cron_schedule": "*/30 * * * *",
+  "next_run": "2026-02-25T22:36:38.269Z",
+  "endpoints": {
+    "data": "/data/enhanced-live-data.json",
+    "content": "/outputs/enhanced-content/",
+    "api": "node scripts/enhanced-api.js"
+  },
+  "integration": {
+    "website": "Update dashboard with enhanced-live-data.json",
+    "twitter": "Use content from enhanced-content/",
+    "telegram": "Configure bot to send whale alerts"
+  }
+}

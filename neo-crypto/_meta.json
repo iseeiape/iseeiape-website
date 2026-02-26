@@ -1,0 +1,43 @@
+{
+  "name": "neo-crypto",
+  "version": "1.0.0",
+  "description": "Automated crypto alpha generation for the Lizard King empire",
+  "author": "Neo (Matrix Army Machine 2)",
+  "license": "MIT",
+  "keywords": [
+    "crypto",
+    "content",
+    "automation",
+    "trading",
+    "alpha",
+    "solana",
+    "whale",
+    "twitter",
+    "x"
+  ],
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0",
+    "node-cron": "^3.0.3",
+    "twitter-api-v2": "^1.15.0"
+  },
+  "scripts": {
+    "start": "node scripts/alpha-generator.js",
+    "track": "node scripts/wallet-tracker.js",
+    "scan": "node scripts/trend-scanner.js",
+    "post": "node scripts/post-to-x.js",
+    "report": "node scripts/daily-report.js",
+    "setup": "node scripts/onboarding.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iseeiape/neo-crypto"
+  },
+  "bugs": {
+    "url": "https://github.com/iseeiape/neo-crypto/issues"
+  },
+  "homepage": "https://iseeiape.com/neo",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
