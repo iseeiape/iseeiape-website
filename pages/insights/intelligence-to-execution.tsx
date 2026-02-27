@@ -107,7 +107,7 @@ export default function IntelligenceToExecution() {
 
           <h2 style={{ marginTop: '40px', marginBottom: '20px', color: '#fff' }}>Case Study: The 3-Minute Volume Spike Bot</h2>
           <p>
-            We built a bot that scans for 3-minute volume spikes (>500% increase) on new tokens. Here's the performance over 30 days:
+            We built a bot that scans for 3-minute volume spikes (&gt;500% increase) on new tokens. Here's the performance over 30 days:
           </p>
           <div style={{ 
             background: '#000', 

@@ -113,7 +113,7 @@ export default function PsychologySmartMoney() {
 
           <p style={{ color: '#888', fontSize: '14px', marginTop: '50px', borderTop: '1px solid #333', paddingTop: '20px' }}>
             <strong>Data Sources:</strong> Analysis of 100+ whale wallets with $50M+ combined realized profits over 90 days. 
-            Wallets selected based on consistent profitability (>70% win rate) and portfolio size ($500K+). 
+            Wallets selected based on consistent profitability (&gt;70% win rate) and portfolio size ($500K+). 
             Psychological patterns inferred from entry/exit timing, position sizing, and portfolio allocation across different risk profiles.
           </p>
         </div>
