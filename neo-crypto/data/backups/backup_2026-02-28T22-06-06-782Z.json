@@ -1,0 +1,34 @@
+{
+  "tokens": [
+    { "symbol": "SOL", "price": 145.67, "change24h": 14.49, "volume24h": 1200000000 },
+    { "symbol": "BONK", "price": 0.00025, "change24h": 8.2, "volume24h": 87000000 },
+    { "symbol": "JUP", "price": 1.45, "change24h": 5.7, "volume24h": 189000000 },
+    { "symbol": "RAY", "price": 2.34, "change24h": 12.3, "volume24h": 45000000 },
+    { "symbol": "PYTH", "price": 0.85, "change24h": 7.8, "volume24h": 92000000 }
+  ],
+  "narratives": [
+    { "name": "AI Agents", "score": 95 },
+    { "name": "RWA", "score": 95 },
+    { "name": "Meme Coins", "score": 95 },
+    { "name": "DeFi", "score": 85 },
+    { "name": "Gaming", "score": 80 }
+  ],
+  "whales": {
+    "wallets": 5,
+    "transactions": 14,
+    "recentActivity": [
+      { "wallet": "8x9F...z3qR", "action": "bought", "token": "BONK", "amount": 50000, "value": 12500 },
+      { "wallet": "3aB2...k9pL", "action": "sold", "token": "SOL", "amount": 250, "value": 36417.5 },
+      { "wallet": "7mN4...r2tS", "action": "bought", "token": "JUP", "amount": 10000, "value": 14500 }
+    ]
+  },
+  "market": {
+    "totalVolume": 2500000000,
+    "sentiment": "bullish",
+    "volatility": 0.08,
+    "supportLevel": "142.50",
+    "resistanceLevel": "148.00"
+  },
+  "timestamp": "2026-02-28T00:15:30.000Z",
+  "source": "DexScreener API + Whale Alert System"
+}

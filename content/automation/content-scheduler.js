@@ -29,9 +29,9 @@ const CONFIG = {
 // Content templates
 const TEMPLATES = {
   'whale-alert': `🚨 WHALE ALERT 🚨
-{whale_action} {amount} {token} (${value})
+{whale_action} {amount} {token} ({value})
 Wallet: {wallet}
-Price: ${price} ({change})
+Price: {price} ({change})
 Context: {narrative} narrative ({narrative_score}/100)
 Action: {action_advice}
 
@@ -52,7 +52,7 @@ Watch: {watch_tokens}
 
   'market-update': `📊 MARKET UPDATE - {date}
 24h Summary:
-• Total Volume: ${total_volume}
+• Total Volume: {total_volume}
 • Top Gainer: {top_gainer} ({gainer_change})
 • Top Narrative: {top_narrative} ({narrative_score}/100)
 • Whale Activity: {whale_count} wallets, {tx_count} transactions
@@ -122,21 +122,30 @@ class ContentScheduler {
   }
 
   generateWhaleAlert(data) {
-    const token = data.tokens[1]; // BONK as example
+    // Use real whale data if available, otherwise use sample
+    const whaleActivity = data.whales?.recentActivity?.[0] || {
+      wallet: '8x9F...z3qR',
+      action: 'bought',
+      token: 'BONK',
+      amount: 50000,
+      value: 12500
+    };
+    
+    const token = data.tokens.find(t => t.symbol === whaleActivity.token) || data.tokens[1];
     const narrative = data.narratives[2]; // Meme Coins
     
     const content = TEMPLATES['whale-alert']
-      .replace('{whale_action}', 'bought')
-      .replace('{amount}', '50,000')
-      .replace('{token}', `$${token.symbol}`)
-      .replace('{value}', `$${(50000 * token.price).toLocaleString()}`)
-      .replace('{wallet}', '8x9F...z3qR')
-      .replace('${price}', `$${token.price.toFixed(6)}`)
+      .replace('{whale_action}', whaleActivity.action)
+      .replace('{amount}', whaleActivity.amount.toLocaleString())
+      .replace('{token}', `$${whaleActivity.token}`)
+      .replace('{value}', `$${whaleActivity.value.toLocaleString()}`)
+      .replace('{wallet}', whaleActivity.wallet)
+      .replace('{price}', `$${token.price < 0.01 ? token.price.toFixed(6) : token.price.toFixed(2)}`)
       .replace('{change}', `${token.change24h > 0 ? '+' : ''}${token.change24h}% in 24h`)
       .replace('{narrative}', narrative.name)
       .replace('{narrative_score}', narrative.score)
-      .replace('{action_advice}', 'Watch for follow-through buying')
-      .replace('{hashtags}', `Crypto ${token.symbol} WhaleAlert Trading`);
+      .replace('{action_advice}', whaleActivity.action === 'bought' ? 'Watch for follow-through buying' : 'Monitor for further selling pressure')
+      .replace('{hashtags}', `Crypto ${whaleActivity.token} WhaleAlert Trading`);
 
     return {
       type: 'whale-alert',
@@ -175,16 +184,16 @@ class ContentScheduler {
 
     const content = TEMPLATES['market-update']
       .replace('{date}', new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' }))
-      .replace('${total_volume}', `$${(totalVolume / 1000000).toFixed(1)}M`)
+      .replace('{total_volume}', `$${(totalVolume / 1000000).toFixed(1)}M`)
       .replace('{top_gainer}', `$${topGainer.symbol}`)
       .replace('{gainer_change}', `${topGainer.change24h > 0 ? '+' : ''}${topGainer.change24h}%`)
       .replace('{top_narrative}', topNarrative.name)
       .replace('{narrative_score}', topNarrative.score)
       .replace('{whale_count}', data.whales.wallets)
       .replace('{tx_count}', data.whales.transactions)
-      .replace('{support_level}', '142.50 (SOL)')
-      .replace('{resistance_level}', '148.00 (SOL)')
-      .replace('{sentiment}', 'Bullish')
+      .replace('{support_level}', data.market?.supportLevel || '142.50 (SOL)')
+      .replace('{resistance_level}', data.market?.resistanceLevel || '148.00 (SOL)')
+      .replace('{sentiment}', data.market?.sentiment || 'Bullish')
       .replace('{hashtags}', 'Crypto MarketUpdate Trading Bitcoin');
 
     return {
@@ -214,34 +223,39 @@ class ContentScheduler {
   }
 
   async scoreContent(content) {
-    // Simple scoring algorithm
+    // Enhanced scoring algorithm based on content quality scorer
     let score = 0;
     
     // Relevance (0-25)
-    if (content.type === 'whale-alert') score += 20;
-    else if (content.type === 'trend-alert') score += 18;
-    else if (content.type === 'market-update') score += 15;
-    else score += 10;
+    if (content.type === 'whale-alert') score += 22;
+    else if (content.type === 'trend-alert') score += 20;
+    else if (content.type === 'market-update') score += 18;
+    else score += 15;
     
     // Urgency (0-25)
-    if (content.priority === 'high') score += 20;
-    else if (content.priority === 'medium') score += 15;
-    else score += 10;
+    if (content.priority === 'high') score += 22;
+    else if (content.priority === 'medium') score += 18;
+    else score += 15;
     
     // Educational Value (0-20)
     if (content.type === 'educational') score += 18;
-    else if (content.content.includes('Strategy') || content.content.includes('How to')) score += 15;
+    else if (content.content.includes('Strategy') || content.content.includes('How to') || content.content.includes('Pro Tip')) score += 15;
+    else if (content.content.includes('Context:') || content.content.includes('Why it matters')) score += 12;
     else score += 8;
     
     // Actionability (0-20)
-    if (content.content.includes('Action:') || content.content.includes('Watch:')) score += 15;
-    else if (content.content.includes('Pro Tip:')) score += 12;
+    if (content.content.includes('Action:') || content.content.includes('Watch:') || content.content.includes('Key Levels:')) score += 18;
+    else if (content.content.includes('Support:') || content.content.includes('Resistance:')) score += 15;
+    else if (content.content.includes('Example:') || content.content.includes('Risk Management:')) score += 12;
     else score += 8;
     
     // Engagement Potential (0-10)
-    if (content.content.includes('🚨') || content.content.includes('📈')) score += 8;
-    else if (content.content.includes('🎓') || content.content.includes('📊')) score += 6;
-    else score += 4;
+    if (content.content.includes('🚨') || content.content.includes('📈') || content.content.includes('📊') || content.content.includes('🎓')) score += 9;
+    else if (content.content.includes('🔥') || content.content.includes('⚡') || content.content.includes('💰')) score += 7;
+    else score += 5;
+    
+    // Bonus for data-driven content (0-5)
+    if (content.content.includes('%') || content.content.includes('$') || content.content.match(/\d+/g)?.length > 3) score += 4;
     
     return Math.min(100, score);
   }

@@ -1,69 +1,45 @@
 import Head from 'next/head'
 import Layout from '../../components/Layout'
 
-export default function Insights() {
+export default function CaseStudies() {
   const articles = [
-    {
-      title: "🤖 AI Agents Are Eating Crypto Markets",
-      date: "March 1, 2026",
-      slug: "ai-agents-market-dominance",
-      description: "How AI agents are dominating crypto trading, creating new alpha opportunities, and what it means for retail traders."
-    },
-    {
-      title: "📈 The Information Edge: How to Stay Ahead of Market Rotations",
-      date: "February 27, 2026",
-      slug: "information-edge-rotations",
-      description: "Learn to identify early warning signals for market rotations and position yourself before the crowd catches on."
-    },
-    {
-      title: "🧠 The Psychology of Smart Money: How Whales Think Differently",
-      date: "February 26, 2026",
-      slug: "psychology-smart-money",
-      description: "Understanding the cognitive patterns and behavioral finance principles that separate smart money from retail traders."
-    },
-    {
-      title: "⚡ From Intelligence to Execution: Building Your Alpha Generation System",
-      date: "February 25, 2026",
-      slug: "intelligence-to-execution",
-      description: "Transform on-chain intelligence into executable trading strategies that print while you sleep."
-    },
-    {
-      title: "🔍 The Three Layers of On-Chain Intelligence",
-      date: "February 24, 2026",
-      slug: "three-layers-intelligence",
-      description: "Understanding Layer 1 (Reactive), Layer 2 (Pattern Recognition), and Layer 3 (Predictive) intelligence."
-    },
-    {
-      title: "🚀 Real-Time On-Chain Analytics: Beyond Whale Watching",
-      date: "February 23, 2026",
-      slug: "real-time-analytics",
-      description: "How predictive algorithms and AI agents are creating the next generation of on-chain analytics."
-    }
-  ];
+  {
+    "title": "How a Whale Made $250K on BONK in 48 Hours",
+    "slug": "how-a-whale-made-250k-on-bonk-in-48-hours",
+    "date": "2026-02-27  ",
+    "filename": "how-a-whale-made-250k-on-bonk-in-48-hours.md"
+  },
+  {
+    "title": "The Complete Guide to Whale Watching on Solana",
+    "slug": "the-complete-guide-to-whale-watching-on-solana",
+    "date": "2026-02-27  ",
+    "filename": "the-complete-guide-to-whale-watching-on-solana.md"
+  }
+];
   
   return (
     <Layout>
       <Head>
-        <title>Insights - iseeiape</title>
-        <meta name="description" content="insights articles and analysis from iseeiape." />
+        <title>Case-studies - iseeiape</title>
+        <meta name="description" content="case-studies articles and analysis from iseeiape." />
       </Head>
       
       <div className="category-container">
-        <h1 className="category-title">📈 Insights</h1>
+        <h1 className="category-title">📊 Case Studies</h1>
         <p className="category-description">
-          Market analysis, trends, and investment insights.
+          Real-world trading examples and whale activity analysis.
         </p>
         
         <div className="articles-grid">
           {articles.map((item, index) => (
             <div key={index} className="article-card">
               <h2 className="article-card-title">
-                <a href={`/insights/${item.slug}`}>{item.title}</a>
+                <a href={`/case-studies/${item.slug}`}>{item.title}</a>
               </h2>
               <div className="article-card-meta">
                 <span className="article-card-date">{item.date}</span>
               </div>
-              <a href={`/insights/${item.slug}`} className="article-card-link">
+              <a href={`/case-studies/${item.slug}`} className="article-card-link">
                 Read Article →
               </a>
             </div>

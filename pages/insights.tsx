@@ -8,6 +8,15 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/ai-agents-market-dominance" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 1</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 AI Agents Are Eating Crypto Markets</h2>
+            <p style={{ color: '#aaa' }}>AI agent trading volume surged 312% in February. We break down the three dominant archetypes — from sub-5-second launch snipers to cross-chain arbitrageurs — and what it means for retail traders.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Technology • AI Agents →</p>
+          </article>
+        </a>
+
         <a href="/insights/information-edge-rotations" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
             <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Feb 27</span>

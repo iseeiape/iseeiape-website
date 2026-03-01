@@ -1,69 +1,39 @@
 import Head from 'next/head'
 import Layout from '../../components/Layout'
 
-export default function Insights() {
+export default function Guides() {
   const articles = [
-    {
-      title: "🤖 AI Agents Are Eating Crypto Markets",
-      date: "March 1, 2026",
-      slug: "ai-agents-market-dominance",
-      description: "How AI agents are dominating crypto trading, creating new alpha opportunities, and what it means for retail traders."
-    },
-    {
-      title: "📈 The Information Edge: How to Stay Ahead of Market Rotations",
-      date: "February 27, 2026",
-      slug: "information-edge-rotations",
-      description: "Learn to identify early warning signals for market rotations and position yourself before the crowd catches on."
-    },
-    {
-      title: "🧠 The Psychology of Smart Money: How Whales Think Differently",
-      date: "February 26, 2026",
-      slug: "psychology-smart-money",
-      description: "Understanding the cognitive patterns and behavioral finance principles that separate smart money from retail traders."
-    },
-    {
-      title: "⚡ From Intelligence to Execution: Building Your Alpha Generation System",
-      date: "February 25, 2026",
-      slug: "intelligence-to-execution",
-      description: "Transform on-chain intelligence into executable trading strategies that print while you sleep."
-    },
-    {
-      title: "🔍 The Three Layers of On-Chain Intelligence",
-      date: "February 24, 2026",
-      slug: "three-layers-intelligence",
-      description: "Understanding Layer 1 (Reactive), Layer 2 (Pattern Recognition), and Layer 3 (Predictive) intelligence."
-    },
-    {
-      title: "🚀 Real-Time On-Chain Analytics: Beyond Whale Watching",
-      date: "February 23, 2026",
-      slug: "real-time-analytics",
-      description: "How predictive algorithms and AI agents are creating the next generation of on-chain analytics."
-    }
-  ];
+  {
+    "title": "February 2026 Market Outlook: AI Agents & Meme Coin Convergence",
+    "slug": "february-2026-market-outlook-ai-agents-meme-coin-convergence",
+    "date": "2026-02-27  ",
+    "filename": "february-2026-market-outlook-ai-agents-meme-coin-convergence.md"
+  }
+];
   
   return (
     <Layout>
       <Head>
-        <title>Insights - iseeiape</title>
-        <meta name="description" content="insights articles and analysis from iseeiape." />
+        <title>Guides - iseeiape</title>
+        <meta name="description" content="guides articles and analysis from iseeiape." />
       </Head>
       
       <div className="category-container">
-        <h1 className="category-title">📈 Insights</h1>
+        <h1 className="category-title">🎓 Guides</h1>
         <p className="category-description">
-          Market analysis, trends, and investment insights.
+          Step-by-step tutorials and educational content.
         </p>
         
         <div className="articles-grid">
           {articles.map((item, index) => (
             <div key={index} className="article-card">
               <h2 className="article-card-title">
-                <a href={`/insights/${item.slug}`}>{item.title}</a>
+                <a href={`/guides/${item.slug}`}>{item.title}</a>
               </h2>
               <div className="article-card-meta">
                 <span className="article-card-date">{item.date}</span>
               </div>
-              <a href={`/insights/${item.slug}`} className="article-card-link">
+              <a href={`/guides/${item.slug}`} className="article-card-link">
                 Read Article →
               </a>
             </div>
