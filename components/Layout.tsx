@@ -14,24 +14,28 @@ interface LayoutProps {
   article?: boolean
   publishDate?: string
   author?: string
+  breadcrumbs?: Array<{ name: string; path: string }>
 }
 
 export default function Layout({ 
   children, 
-  title = 'iseeiape - Smart Money Intelligence for Solana & Base', 
-  description = 'Track whale wallets, discover alpha, and follow smart money on Solana and Base chains. Real-time intelligence for crypto traders.',
+  title = 'iseeiape - Smart Money Intelligence Terminal | On-Chain Analytics', 
+  description = 'Track whale wallets, decode smart money moves, and stay ahead of crypto market rotations with real-time on-chain analytics.',
   showMatrix = true,
-  ogImage = 'https://www.iseeiape.com/og-image.jpg',
+  ogImage = 'https://www.iseeiape.com/og-image.png',
   canonical,
   article = false,
   publishDate,
-  author = 'Neo (Matrix Army)'
+  author = 'iseeiape',
+  breadcrumbs
 }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const router = useRouter()
 
+  const currentUrl = `https://www.iseeiape.com${router.asPath}`
+  const canonicalUrl = canonical || currentUrl
+  
   const navLinks = [
-    { href: '/', label: 'Home', icon: '🏠' },
     { href: '/case-studies', label: 'Cases', icon: '📊' },
     { href: '/guides', label: 'Guides', icon: '📚' },
     { href: '/insights', label: 'Insights', icon: '💡' },
@@ -131,6 +135,28 @@ export default function Layout({
               "@type": "WebPage",
               "@id": fullUrl
             }
+          })}} />
+        )}
+        
+        {/* Structured Data - BreadcrumbList */}
+        {breadcrumbs && breadcrumbs.length > 0 && (
+          <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.iseeiape.com"
+              },
+              ...breadcrumbs.map((crumb, index) => ({
+                "@type": "ListItem",
+                "position": index + 2,
+                "name": crumb.name,
+                "item": `https://www.iseeiape.com${crumb.path}`
+              }))
+            ]
           })}} />
         )}
         

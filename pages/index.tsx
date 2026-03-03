@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import Link from 'next/link'
+import Head from 'next/head'
 import { useState, useEffect } from 'react'
 
 export default function Home() {
@@ -8,6 +9,69 @@ export default function Home() {
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  // Schema markup for homepage
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://www.iseeiape.com/#webapp",
+        "name": "iseeiape",
+        "url": "https://www.iseeiape.com",
+        "description": "Smart Money Intelligence Terminal for on-chain analytics, whale wallet tracking, and crypto market intelligence on Solana and beyond.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Real-time whale wallet tracking",
+          "On-chain data analytics",
+          "Smart money intelligence",
+          "Solana market analysis",
+          "Crypto market insights"
+        ],
+        "screenshot": "https://www.iseeiape.com/og-image.png",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.iseeiape.com/#organization",
+        "name": "iseeiape",
+        "url": "https://www.iseeiape.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.iseeiape.com/logo.png"
+        },
+        "sameAs": [
+          "https://twitter.com/iseeiape"
+        ],
+        "description": "On-chain analytics and smart money intelligence platform for crypto traders and Web3 investors."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.iseeiape.com/#website",
+        "url": "https://www.iseeiape.com",
+        "name": "iseeiape",
+        "description": "Smart Money Intelligence Terminal",
+        "publisher": {
+          "@id": "https://www.iseeiape.com/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.iseeiape.com/insights?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        },
+        "inLanguage": "en"
+      }
+    ]
+  };
 
   const topPlays = [
     { name: 'BigTrout', roi: '+10,075%', desc: 'Whale #17 turned $8.9K into $89.4K', time: '16 hours' },
@@ -32,7 +96,11 @@ export default function Home() {
   if (!mounted) return null
 
   return (
-    <Layout title="iseeiape - Smart Money Intelligence">
+    <>
+      <Head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(homeSchema)}} />
+      </Head>
+      <Layout title="iseeiape - Smart Money Intelligence">
       <>
         <style>{`
           .container {

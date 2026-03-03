@@ -1,12 +1,30 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
 
-Sitemap: https://www.iseeiape.com/sitemap.xml
+# LLM & AI Crawlers — explicitly allow for GEO
+User-agent: GPTBot
+Allow: /
 
-# Optimize crawl rate
-Crawl-delay: 1
+User-agent: ChatGPT-User
+Allow: /
 
-# Allow all bots to access content
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 User-agent: Googlebot
 Allow: /
 
@@ -18,3 +36,7 @@ Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
+
+Crawl-delay: 1
+
+Sitemap: https://www.iseeiape.com/sitemap.xml
