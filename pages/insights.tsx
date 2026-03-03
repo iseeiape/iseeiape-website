@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/predictive-vs-reactive-analytics" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 2</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🔮 Predictive Analytics vs Reactive Tracking: The Next Frontier</h2>
+            <p style={{ color: '#aaa' }}>Reactive tracking is dead. The future belongs to predictive analytics — systems that don't just tell you what happened, but what's about to happen. Learn how to position before the pump, not during.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Strategy • Future of Analytics →</p>
+          </article>
+        </a>
+
         <a href="/insights/ai-agents-market-dominance" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 1</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 1</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 AI Agents Are Eating Crypto Markets</h2>
             <p style={{ color: '#aaa' }}>AI agent trading volume surged 312% in February. We break down the three dominant archetypes — from sub-5-second launch snipers to cross-chain arbitrageurs — and what it means for retail traders.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Technology • AI Agents →</p>
@@ -19,7 +28,7 @@ export default function Insights() {
 
         <a href="/insights/information-edge-rotations" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Feb 27</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Feb 27</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>The Information Edge: How to Stay Ahead of Market Rotations</h2>
             <p style={{ color: '#aaa' }}>Market rotations happen faster than ever. Learn the 3 early warning signals that smart money uses to pivot before the crowd catches on.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Market Analysis • Rotations →</p>
@@ -28,7 +37,7 @@ export default function Insights() {
 
         <a href="/insights/psychology-smart-money" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #ff00ff', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#ff00ff33', color: '#ff00ff', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Feb 26</span>
+            <span style={{ padding: '4px 12px', background: '#ff00ff33', color: '#ff00ff', borderRadius: '20px', fontSize: '12px' }}>3 days ago - Feb 26</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>The Psychology of Smart Money: How Whales Think Differently</h2>
             <p style={{ color: '#aaa' }}>It's not just capital — it's mindset. We analyze 100+ whale wallets to uncover the 5 cognitive patterns that separate smart money from emotional retail traders.</p>
             <p style={{ color: '#ff00ff', fontSize: '12px', marginTop: '10px' }}>9 min read • Psychology • Whale Behavior →</p>
@@ -37,7 +46,7 @@ export default function Insights() {
 
         <a href="/insights/intelligence-to-execution" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #ff8800', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#ff880033', color: '#ff8800', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Feb 25</span>
+            <span style={{ padding: '4px 12px', background: '#ff880033', color: '#ff8800', borderRadius: '20px', fontSize: '12px' }}>4 days ago - Feb 25</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>From Intelligence to Execution: Building Your Alpha Generation System</h2>
             <p style={{ color: '#aaa' }}>Knowledge is useless without action. This guide shows you how to transform on-chain intelligence into executable trading strategies that print while you sleep.</p>
             <p style={{ color: '#ff8800', fontSize: '12px', marginTop: '10px' }}>10 min read • Execution • Automation →</p>

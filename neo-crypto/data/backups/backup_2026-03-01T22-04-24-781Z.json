@@ -2,45 +2,45 @@
   "tokens": [
     {
       "symbol": "SOL",
-      "price": 82.91,
-      "change24h": -2.27,
-      "volume24h": 8853298.5,
-      "liquidity": 7749009.61,
+      "price": 82.95,
+      "change24h": -2.0451459803262857,
+      "volume24h": 8850541.03,
+      "liquidity": 7757419.85,
       "dex": "aerodrome",
       "pairAddress": "0xb30540172F1B37d1eE1d109e49F883E935E69219"
     },
     {
       "symbol": "BONK",
-      "price": 0.000005771,
-      "change24h": -3.19,
-      "volume24h": 881790.7,
-      "liquidity": 326435.49,
+      "price": 0.00000578,
+      "change24h": -2.637549104707769,
+      "volume24h": 882336.97,
+      "liquidity": 326155.98,
       "dex": "meteora",
       "pairAddress": "6oFWm7KPLfxnwMb3z5xwBoXNSPP3JJyirAPqPSiVcnsp"
     },
     {
       "symbol": "JUP",
-      "price": 0.1638,
-      "change24h": 1.95,
-      "volume24h": 1531679.42,
-      "liquidity": 299020.42,
+      "price": 0.163603,
+      "change24h": 2.087192795707897,
+      "volume24h": 1531945.37,
+      "liquidity": 299024.26,
       "dex": "orca",
       "pairAddress": "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz"
     },
     {
       "symbol": "RAY",
-      "price": 0.5847,
-      "change24h": -4.37,
-      "volume24h": 2468130.12,
-      "liquidity": 1175831.69,
+      "price": 0.584526,
+      "change24h": -3.955439321693562,
+      "volume24h": 2468763.92,
+      "liquidity": 1174839.57,
       "dex": "raydium",
       "pairAddress": "2AXXcN6oN9bBT5owwmTH53C7QHUXvhLeu718Kqt8rvY2"
     },
     {
       "symbol": "PYTH",
-      "price": 0.0475,
-      "change24h": -2.52,
-      "volume24h": 84466.89,
+      "price": 0.04760367,
+      "change24h": -2.172065951229051,
+      "volume24h": 84573.24,
       "liquidity": 205428.37,
       "dex": "raydium",
       "pairAddress": "9n3dSLrERZQp95dHXywft7xV8D8xnGFLaUHtEhQVaXaC"
@@ -48,16 +48,16 @@
     {
       "symbol": "NEAR",
       "price": 1.13,
-      "change24h": -2.59,
-      "volume24h": 10892,
+      "change24h": -2.137528030366511,
+      "volume24h": 10913.64,
       "liquidity": 73760.85,
       "dex": "pancakeswap",
       "pairAddress": "0x9191B027C26d44b86177E64f992cf4DCd1F4E0eF"
     },
     {
       "symbol": "FET",
-      "price": 0.1494,
-      "change24h": -4.2,
+      "price": 0.149807,
+      "change24h": -4.038423307195708,
       "volume24h": 564.22,
       "liquidity": 192177.29,
       "dex": "minswap",
@@ -65,8 +65,8 @@
     },
     {
       "symbol": "AGIX",
-      "price": 0.06918,
-      "change24h": -1.53,
+      "price": 0.06689,
+      "change24h": -6.303656075199872,
       "volume24h": 353.52,
       "liquidity": 125992.14,
       "dex": "minswap",
@@ -136,7 +136,7 @@
     },
     {
       "name": "AI Agents",
-      "score": 54,
+      "score": 52,
       "tokenCount": 1,
       "topPerformer": "AGIX"
     },
@@ -160,39 +160,48 @@
     }
   ],
   "whales": {
-    "wallets": 9,
-    "transactions": 16,
+    "wallets": 10,
+    "transactions": 23,
     "recentActivity": [
       {
-        "wallet": "molk...wkb9",
+        "wallet": "i7xx...c8j2",
         "action": "bought",
-        "token": "SOL",
-        "amount": 1298,
-        "value": 196785.56
+        "token": "JUP",
+        "amount": 4853,
+        "value": 7631.08
       },
       {
-        "wallet": "r0w1...qczr",
-        "action": "transferred",
-        "token": "RAY",
-        "amount": 5747,
-        "value": 13455.95
+        "wallet": "i4c3...h45v",
+        "action": "sold",
+        "token": "SOL",
+        "amount": 3190,
+        "value": 480699.17
       },
       {
-        "wallet": "jx7r...wjso",
-        "action": "transferred",
+        "wallet": "lsl5...gso5",
+        "action": "sold",
         "token": "SOL",
-        "amount": 10867,
-        "value": 1609695.71
+        "amount": 3496,
+        "value": 541015.78
       }
     ]
   },
   "market": {
-    "sentiment": "neutral",
-    "volatility": 2.72,
-    "supportLevel": "5.84",
+    "sentiment": "bearish",
+    "volatility": 2.92,
+    "supportLevel": "5.85",
     "resistanceLevel": "6.46",
-    "totalVolume": 14210287.009999998
+    "totalVolume": 14209103.55
   },
-  "timestamp": "2026-03-01T22:04:57.370Z",
-  "source": "Real-Time Multi-API Fetch"
+  "timestamp": "2026-03-01T22:04:15.093Z",
+  "source": "Real-Time Multi-API Fetch",
+  "_metadata": {
+    "generatedAt": "2026-03-01T22:04:15.096Z",
+    "dataSources": [
+      "DexScreener",
+      "CoinGecko",
+      "Simulated Whale Data"
+    ],
+    "version": "2.0"
+  }
 }

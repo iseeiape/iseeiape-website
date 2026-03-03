@@ -160,29 +160,29 @@
     }
   ],
   "whales": {
-    "wallets": 9,
-    "transactions": 16,
+    "wallets": 6,
+    "transactions": 17,
     "recentActivity": [
       {
-        "wallet": "molk...wkb9",
+        "wallet": "eyli...yw9l",
         "action": "bought",
-        "token": "SOL",
-        "amount": 1298,
-        "value": 196785.56
+        "token": "BONK",
+        "amount": 10466,
+        "value": 2.98
       },
       {
-        "wallet": "r0w1...qczr",
-        "action": "transferred",
-        "token": "RAY",
-        "amount": 5747,
-        "value": 13455.95
+        "wallet": "xy8v...0vvo",
+        "action": "bought",
+        "token": "JUP",
+        "amount": 2223,
+        "value": 3328.94
       },
       {
-        "wallet": "jx7r...wjso",
-        "action": "transferred",
-        "token": "SOL",
-        "amount": 10867,
-        "value": 1609695.71
+        "wallet": "5y4y...377f",
+        "action": "sold",
+        "token": "BONK",
+        "amount": 1474,
+        "value": 0.34
       }
     ]
   },
@@ -193,6 +193,15 @@
     "resistanceLevel": "6.46",
     "totalVolume": 14210287.009999998
   },
-  "timestamp": "2026-03-01T22:04:57.370Z",
-  "source": "Real-Time Multi-API Fetch"
+  "timestamp": "2026-03-01T22:05:08.663Z",
+  "source": "Real-Time Multi-API Fetch",
+  "_metadata": {
+    "generatedAt": "2026-03-01T22:05:08.665Z",
+    "dataSources": [
+      "DexScreener",
+      "CoinGecko",
+      "Simulated Whale Data"
+    ],
+    "version": "2.0"
+  }
 }

@@ -36,6 +36,7 @@ export default function Layout({
     { href: '/guides', label: 'Guides', icon: '📚' },
     { href: '/insights', label: 'Insights', icon: '💡' },
     { href: '/dashboard', label: 'Dashboard', icon: '📈' },
+    { href: '/automation-monitor', label: 'Automation', icon: '🤖' },
   ]
 
   const isActive = (href: string) => router.pathname === href

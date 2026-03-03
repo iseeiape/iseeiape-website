@@ -4,6 +4,12 @@ import Layout from '../../components/Layout'
 export default function Insights() {
   const articles = [
     {
+      title: "🤝 The Decentralized Intelligence Network: How AI Agents Are Forming Swarms",
+      date: "March 3, 2026",
+      slug: "decentralized-intelligence-network",
+      description: "How AI agents are forming decentralized intelligence networks that share alpha, coordinate trades, and create emergent market behavior."
+    },
+    {
       title: "🤖 AI Agents Are Eating Crypto Markets",
       date: "March 1, 2026",
       slug: "ai-agents-market-dominance",
