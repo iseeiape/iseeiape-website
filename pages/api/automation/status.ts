@@ -21,8 +21,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (scheduleFiles.length > 0) {
       // Sort by timestamp (newest first)
       scheduleFiles.sort((a, b) => {
-        const aTime = parseInt(a.match(/enhanced_schedule_(\d+)\.json/)[1])
-        const bTime = parseInt(b.match(/enhanced_schedule_(\d+)\.json/)[1])
+        const aMatch = a.match(/enhanced_schedule_(\d+)\.json/)
+        const bMatch = b.match(/enhanced_schedule_(\d+)\.json/)
+        const aTime = aMatch ? parseInt(aMatch[1]) : 0
+        const bTime = bMatch ? parseInt(bMatch[1]) : 0
         return bTime - aTime
       })
       
