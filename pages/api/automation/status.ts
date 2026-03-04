@@ -135,7 +135,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Error fetching automation status:', error)
     res.status(500).json({ 
       error: 'Failed to fetch automation status',
-      message: error.message 
+      message: error instanceof Error ? error.message : 'Unknown error'
     })
   }
 }
