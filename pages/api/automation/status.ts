@@ -49,7 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     
     // Get posted schedules from archive
     const archiveDir = path.join(automationDir, 'archive')
-    let archiveFiles = []
+    let archiveFiles: string[] = []
     try {
       archiveFiles = await fs.readdir(archiveDir)
     } catch (error) {
