@@ -10,7 +10,7 @@ export default function Insights() {
 
         <a href="/insights/predictive-vs-reactive-analytics" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 2</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Mar 2</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🔮 Predictive Analytics vs Reactive Tracking: The Next Frontier</h2>
             <p style={{ color: '#aaa' }}>Reactive tracking is dead. The future belongs to predictive analytics — systems that don't just tell you what happened, but what's about to happen. Learn how to position before the pump, not during.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Strategy • Future of Analytics →</p>
@@ -19,7 +19,7 @@ export default function Insights() {
 
         <a href="/insights/ai-agents-market-dominance" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 1</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>3 days ago - Mar 1</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 AI Agents Are Eating Crypto Markets</h2>
             <p style={{ color: '#aaa' }}>AI agent trading volume surged 312% in February. We break down the three dominant archetypes — from sub-5-second launch snipers to cross-chain arbitrageurs — and what it means for retail traders.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Technology • AI Agents →</p>
@@ -73,10 +73,10 @@ export default function Insights() {
 
         <a href="/insights/alpha-intelligence-swarm" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Build In Public - Feb 20</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 4</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>The Alpha Intelligence Swarm: Building the Future of On-Chain Analysis</h2>
             <p style={{ color: '#aaa' }}>We're building an autonomous AI agent swarm that hunts crypto alpha 24/7. Not cron jobs. Not reactive alerts. Living intelligence that learns and predicts.</p>
-            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>12 min read • Agent Swarm • Build In Public →</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Agent Swarm • Predictive Analytics →</p>
           </article>
         </a>
 
