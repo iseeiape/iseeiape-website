@@ -151,7 +151,7 @@ export default function AutomationMonitor() {
         <div className="section">
           <h2 className="heading-4 mb-4">🩺 System Health</h2>
           <div className="grid grid-4">
-            {Object.entries(automationData.systemHealth).map(([component, status]) => (
+            {Object.entries(automationData.systemHealth).map(([component, status]: [string, any]) => (
               <div key={component} className="card">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="heading-5" style={{ textTransform: 'capitalize' }}>
