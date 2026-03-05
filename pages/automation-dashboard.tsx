@@ -2,7 +2,7 @@ import Layout from '../components/Layout'
 import { useState, useEffect } from 'react'
 
 export default function AutomationDashboard() {
-  const [dashboardData, setDashboardData] = useState(null)
+  const [dashboardData, setDashboardData] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [lastUpdated, setLastUpdated] = useState('')
   const [activeTab, setActiveTab] = useState('overview')
