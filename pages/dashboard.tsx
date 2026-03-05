@@ -84,7 +84,7 @@ export default function Dashboard() {
                       </tr>
                     </thead>
                     <tbody>
-                      {topTokens.slice(0, 5).map((token, i) => (
+                      {topTokens.slice(0, 5).map((token: any, i: number) => (
                         <tr key={i}>
                           <td>
                             <div style={{ fontWeight: 600 }}>{token.symbol}</div>
