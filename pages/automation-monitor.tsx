@@ -82,7 +82,7 @@ export default function AutomationMonitor() {
     }
   }
 
-  const getStatusColor = (status) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational': return 'var(--success)'
       case 'posted': return 'var(--success)'
@@ -93,7 +93,7 @@ export default function AutomationMonitor() {
     }
   }
 
-  const getStatusIcon = (status) => {
+  const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational': return '✅'
       case 'posted': return '✅'
