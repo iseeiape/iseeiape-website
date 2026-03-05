@@ -2,7 +2,7 @@ import Layout from '../components/Layout'
 import { useState, useEffect } from 'react'
 
 export default function AutomationMonitor() {
-  const [automationData, setAutomationData] = useState(null)
+  const [automationData, setAutomationData] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [lastUpdated, setLastUpdated] = useState('')
 

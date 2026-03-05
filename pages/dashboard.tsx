@@ -2,7 +2,7 @@ import Layout from '../components/Layout'
 import { useState, useEffect } from 'react'
 
 export default function Dashboard() {
-  const [wolfData, setWolfData] = useState(null)
+  const [wolfData, setWolfData] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [lastUpdated, setLastUpdated] = useState('Loading...')
 
