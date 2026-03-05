@@ -61,7 +61,7 @@ ${articles.map(article => `  <url>
 </urlset>`;
 }
 
-export async function getServerSideProps({ res }) {
+export async function getServerSideProps({ res }: { res: any }) {
   const sitemap = generateSiteMap();
   
   res.setHeader('Content-Type', 'text/xml');
