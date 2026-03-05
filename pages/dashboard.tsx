@@ -130,7 +130,7 @@ export default function Dashboard() {
                 <div className="text-center py-8" style={{ color: 'var(--text-muted)' }}>Loading...</div>
               ) : (
                 <div className="space-y-4">
-                  {narratives.slice(0, 3).map((narrative, i) => (
+                  {narratives.slice(0, 3).map((narrative: any, i: number) => (
                     <div key={i} className="bg-gray-800 rounded-lg p-4">
                       <div className="flex justify-between items-center mb-2">
                         <div className="font-bold text-white">{narrative.name}</div>
