@@ -104,7 +104,7 @@ export default function AutomationDashboard() {
     }
   }
 
-  const getStatusColor = (status) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'healthy': return '#14F195'
       case 'operational': return '#14F195'
@@ -117,7 +117,7 @@ export default function AutomationDashboard() {
     }
   }
 
-  const getStatusIcon = (status) => {
+  const getStatusIcon = (status: string) => {
     switch (status) {
       case 'healthy': return '✅'
       case 'operational': return '✅'
@@ -130,7 +130,7 @@ export default function AutomationDashboard() {
     }
   }
 
-  const getHealthColor = (health) => {
+  const getHealthColor = (health: string) => {
     switch (health) {
       case 'healthy': return 'rgba(20, 241, 149, 0.15)'
       case 'degraded': return 'rgba(255, 159, 10, 0.15)'
@@ -139,7 +139,7 @@ export default function AutomationDashboard() {
     }
   }
 
-  const getHealthTextColor = (health) => {
+  const getHealthTextColor = (health: string) => {
     switch (health) {
       case 'healthy': return '#14F195'
       case 'degraded': return '#FF9F0A'
