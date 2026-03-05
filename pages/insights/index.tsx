@@ -4,6 +4,12 @@ import Layout from '../../components/Layout'
 export default function Insights() {
   const articles = [
     {
+      title: "🤖 The Alpha Intelligence Swarm: Building the Future of On-Chain Analysis",
+      date: "March 4, 2026",
+      slug: "alpha-intelligence-swarm",
+      description: "We're building an autonomous AI agent swarm that hunts crypto alpha 24/7. Not cron jobs. Not reactive alerts. Living intelligence that learns and predicts."
+    },
+    {
       title: "🤝 The Decentralized Intelligence Network: How AI Agents Are Forming Swarms",
       date: "March 3, 2026",
       slug: "decentralized-intelligence-network",
