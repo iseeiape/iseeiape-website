@@ -158,7 +158,10 @@ export default function Dashboard() {
           <div className="card">
             <h2 className="heading-4 text-gradient mb-6">📊 Wolf Statistics</h2>
             
-            <div className="grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
+            <div className="grid" style={{ 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gap: '1rem'
+            }}>
               <div className="stat-card">
                 <div className="stat-label">Alerts Found</div>
                 <div className="stat-value">{wolfData?.stats?.totalTokens || 0}</div>
