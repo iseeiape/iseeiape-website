@@ -15,6 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="theme-color" content="#000000" />
         
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="T8iO7AdN5z_luWy-Xn3QQRa9mz3u2JPZtLrTSYm5_YM" />
+        
         {/* Default Open Graph */}
         <meta property="og:site_name" content="iseeiape" />
         <meta property="og:locale" content="en_US" />
