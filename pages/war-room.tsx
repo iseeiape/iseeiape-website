@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import Head from 'next/head'
+import Layout from '../components/Layout'
 import GitHubTrends from '../components/GitHubTrends'
 import LiveWhaleFeed from '../components/LiveWhaleFeed'
 import Opportunities from '../components/Opportunities'
@@ -140,12 +141,13 @@ export default function WarRoom() {
   if (!mounted) return null
 
   return (
-    <>
-      <Head>
-        <title>WAR ROOM | iseeiape</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-      </Head>
+    <Layout title="WAR ROOM | iseeiape" showMatrix={false}>
+      <>
+        <Head>
+          <title>WAR ROOM | iseeiape</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        </Head>
 
       <style>{`
         :root {
@@ -741,6 +743,7 @@ export default function WarRoom() {
         </div>
       </div>
     </>
+  </Layout>
   )
 }
 // Deploy trigger: Mon Feb 16 10:38:20 PM EET 2026

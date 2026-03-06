@@ -36,11 +36,12 @@ export default function Layout({
   const canonicalUrl = canonical || currentUrl
   
   const navLinks = [
+    { href: '/', label: 'Home', icon: '🏠' },
     { href: '/case-studies', label: 'Cases', icon: '📊' },
     { href: '/guides', label: 'Guides', icon: '📚' },
     { href: '/insights', label: 'Insights', icon: '💡' },
     { href: '/dashboard', label: 'Dashboard', icon: '📈' },
-    { href: '/automation-monitor', label: 'Automation', icon: '🤖' },
+    { href: '/war-room', label: 'War Room', icon: '🎯' },
   ]
 
   const isActive = (href: string) => router.pathname === href
