@@ -71,9 +71,18 @@ export default function Insights() {
           </article>
         </a>
 
+        <a href="/insights/future-autonomous-trading" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 6</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>The Future of Autonomous Trading: When AI Agents Become Market Makers</h2>
+            <p style={{ color: '#aaa' }}>AI agents are evolving from simple trading bots to sophisticated market makers that create liquidity, set prices, and shape market microstructure.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • AI Agents • Market Structure →</p>
+          </article>
+        </a>
+
         <a href="/insights/alpha-intelligence-swarm" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 4</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Mar 4</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>The Alpha Intelligence Swarm: Building the Future of On-Chain Analysis</h2>
             <p style={{ color: '#aaa' }}>We're building an autonomous AI agent swarm that hunts crypto alpha 24/7. Not cron jobs. Not reactive alerts. Living intelligence that learns and predicts.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Agent Swarm • Predictive Analytics →</p>

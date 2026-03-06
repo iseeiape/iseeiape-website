@@ -4,22 +4,15 @@ import path from 'path';
 
 export default async function handler(req, res) {
   try {
-    // Find latest Wolf alerts file in /tmp
-    const tmpDir = '/tmp';
-    const files = fs.readdirSync(tmpDir);
-    const wolfFiles = files.filter(f => f.startsWith('wolf_alerts_') && f.endsWith('.json'));
+    // Read from committed data file (updated by cron job)
+    const dataFile = path.join(process.cwd(), 'data/wolf-alerts-latest.json');
     
-    if (wolfFiles.length === 0) {
-      // Fallback to sample data if no alerts yet
+    if (!fs.existsSync(dataFile)) {
+      console.log('Wolf alerts file not found, using sample data');
       return res.status(200).json(getSampleData());
     }
 
-    // Get most recent file by sorting
-    const latestFile = wolfFiles
-      .map(f => ({ name: f, path: path.join(tmpDir, f), time: fs.statSync(path.join(tmpDir, f)).mtime }))
-      .sort((a, b) => b.time - a.time)[0];
-
-    const rawData = fs.readFileSync(latestFile.path, 'utf8');
+    const rawData = fs.readFileSync(dataFile, 'utf8');
     const wolfAlerts = JSON.parse(rawData);
 
     // Transform Wolf alerts to dashboard format
@@ -61,6 +54,9 @@ export default async function handler(req, res) {
       }
     ].filter(n => n.tokens.length > 0);
 
+    // Get file stats for last scan time
+    const stats = fs.statSync(dataFile);
+
     // Transform the data for the frontend
     const transformedData = {
       lastUpdated: new Date().toISOString(),
@@ -82,7 +78,7 @@ export default async function handler(req, res) {
         totalWhales: 11,
       },
       source: 'Wolf Alerts v4.2',
-      lastScan: latestFile.time.toISOString()
+      lastScan: stats.mtime.toISOString()
     };
 
     // Set cache headers (30 seconds for Wolf data)
