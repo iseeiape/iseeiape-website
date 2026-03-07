@@ -8,7 +8,7 @@ export default function BotWarsAlgorithmicTrading() {
         <a href="/insights" style={{ color: '#0088ff', textDecoration: 'none', fontSize: '14px' }}>← Back to Insights</a>
         
         <div style={{ marginTop: '30px' }}>
-          <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Feb 28</span>
+          <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 7</span>
           <h1 style={{ fontSize: '42px', marginTop: '15px', marginBottom: '20px' }}>The Bot Wars: How Algorithmic Trading Is Reshaping On-Chain Dynamics</h1>
           <p style={{ color: '#888', marginBottom: '30px' }}>Algorithms are eating crypto. From MEV bots to AI-powered trading agents, learn how automated systems are changing market structure, creating new alpha opportunities, and what it means for human traders.</p>
         </div>

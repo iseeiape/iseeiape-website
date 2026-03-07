@@ -8,6 +8,15 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/bot-wars-algorithmic-trading" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 7</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 The Bot Wars: How Algorithmic Trading Is Reshaping On-Chain Dynamics</h2>
+            <p style={{ color: '#aaa' }}>Algorithms are eating crypto. From MEV bots to AI-powered trading agents, learn how automated systems are changing market structure, creating new alpha opportunities, and what it means for human traders.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Algorithmic Trading • Market Structure →</p>
+          </article>
+        </a>
+
         <a href="/insights/predictive-vs-reactive-analytics" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
             <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Mar 2</span>
@@ -19,7 +28,7 @@ export default function Insights() {
 
         <a href="/insights/ai-agents-market-dominance" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>3 days ago - Mar 1</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>6 days ago - Mar 1</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 AI Agents Are Eating Crypto Markets</h2>
             <p style={{ color: '#aaa' }}>AI agent trading volume surged 312% in February. We break down the three dominant archetypes — from sub-5-second launch snipers to cross-chain arbitrageurs — and what it means for retail traders.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Technology • AI Agents →</p>
@@ -28,7 +37,7 @@ export default function Insights() {
 
         <a href="/insights/information-edge-rotations" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Feb 27</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>9 days ago - Feb 27</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>The Information Edge: How to Stay Ahead of Market Rotations</h2>
             <p style={{ color: '#aaa' }}>Market rotations happen faster than ever. Learn the 3 early warning signals that smart money uses to pivot before the crowd catches on.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Market Analysis • Rotations →</p>
@@ -37,7 +46,7 @@ export default function Insights() {
 
         <a href="/insights/psychology-smart-money" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #ff00ff', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#ff00ff33', color: '#ff00ff', borderRadius: '20px', fontSize: '12px' }}>3 days ago - Feb 26</span>
+            <span style={{ padding: '4px 12px', background: '#ff00ff33', color: '#ff00ff', borderRadius: '20px', fontSize: '12px' }}>10 days ago - Feb 26</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>The Psychology of Smart Money: How Whales Think Differently</h2>
             <p style={{ color: '#aaa' }}>It's not just capital — it's mindset. We analyze 100+ whale wallets to uncover the 5 cognitive patterns that separate smart money from emotional retail traders.</p>
             <p style={{ color: '#ff00ff', fontSize: '12px', marginTop: '10px' }}>9 min read • Psychology • Whale Behavior →</p>
@@ -46,7 +55,7 @@ export default function Insights() {
 
         <a href="/insights/intelligence-to-execution" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #ff8800', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#ff880033', color: '#ff8800', borderRadius: '20px', fontSize: '12px' }}>4 days ago - Feb 25</span>
+            <span style={{ padding: '4px 12px', background: '#ff880033', color: '#ff8800', borderRadius: '20px', fontSize: '12px' }}>11 days ago - Feb 25</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>From Intelligence to Execution: Building Your Alpha Generation System</h2>
             <p style={{ color: '#aaa' }}>Knowledge is useless without action. This guide shows you how to transform on-chain intelligence into executable trading strategies that print while you sleep.</p>
             <p style={{ color: '#ff8800', fontSize: '12px', marginTop: '10px' }}>10 min read • Execution • Automation →</p>
@@ -55,7 +64,7 @@ export default function Insights() {
 
         <a href="/insights/three-layers-intelligence" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #0088ff', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#0088ff33', color: '#0088ff', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Feb 24</span>
+            <span style={{ padding: '4px 12px', background: '#0088ff33', color: '#0088ff', borderRadius: '20px', fontSize: '12px' }}>12 days ago - Feb 24</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>The Three Layers of On-Chain Intelligence</h2>
             <p style={{ color: '#aaa' }}>From reactive whale watching to predictive alpha generation — how modern on-chain analysis operates across three distinct intelligence layers.</p>
             <p style={{ color: '#0088ff', fontSize: '12px', marginTop: '10px' }}>8 min read • Strategy • Predictive Analytics →</p>
@@ -64,7 +73,7 @@ export default function Insights() {
 
         <a href="/insights/real-time-analytics" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Feb 23</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>13 days ago - Feb 23</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>Real-Time On-Chain Analytics: Beyond Whale Watching</h2>
             <p style={{ color: '#aaa' }}>How predictive algorithms are changing on-chain analysis from reactive tracking to anticipatory intelligence. Learn the three layers of modern analytics.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Strategy • Predictive Algorithms →</p>
@@ -73,7 +82,7 @@ export default function Insights() {
 
         <a href="/insights/future-autonomous-trading" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 6</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 6</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>The Future of Autonomous Trading: When AI Agents Become Market Makers</h2>
             <p style={{ color: '#aaa' }}>AI agents are evolving from simple trading bots to sophisticated market makers that create liquidity, set prices, and shape market microstructure.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • AI Agents • Market Structure →</p>
@@ -82,7 +91,7 @@ export default function Insights() {
 
         <a href="/insights/alpha-intelligence-swarm" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Mar 4</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>3 days ago - Mar 4</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>The Alpha Intelligence Swarm: Building the Future of On-Chain Analysis</h2>
             <p style={{ color: '#aaa' }}>We're building an autonomous AI agent swarm that hunts crypto alpha 24/7. Not cron jobs. Not reactive alerts. Living intelligence that learns and predicts.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Agent Swarm • Predictive Analytics →</p>
