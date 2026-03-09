@@ -79,31 +79,42 @@ class CostOptimizer {
 
   async readRecentLogs() {
     const logs = [];
-    const logFiles = await fs.readdir(this.logsDir);
     
-    // Read last 7 days of logs
-    const recentLogs = logFiles
-      .filter(file => file.endsWith('.log') || file.endsWith('.json'))
-      .slice(-10); // Last 10 files
-    
-    for (const file of recentLogs) {
-      try {
-        const content = await fs.readFile(path.join(this.logsDir, file), 'utf8');
-        const lines = content.split('\n').filter(line => line.trim());
-        
-        for (const line of lines) {
-          try {
-            const log = JSON.parse(line);
-            if (log.type && log.timestamp) {
-              logs.push(log);
-            }
-          } catch (e) {
-            // Skip non-JSON lines
+    try {
+      // Read from output directory instead of logs
+      const outputFiles = await fs.readdir(this.outputDir);
+      
+      // Get JSON files from output directory (last 20 files)
+      const recentOutputs = outputFiles
+        .filter(file => file.includes('enhanced_schedule_') && file.endsWith('.json'))
+        .sort()
+        .slice(-20); // Last 20 schedule files
+      
+      console.log(`📁 Found ${recentOutputs.length} schedule files to analyze`);
+      
+      for (const file of recentOutputs) {
+        try {
+          const content = await fs.readFile(path.join(this.outputDir, file), 'utf8');
+          const data = JSON.parse(content);
+          
+          if (data.scheduledPosts && Array.isArray(data.scheduledPosts)) {
+            // Convert scheduled posts to log format
+            data.scheduledPosts.forEach(post => {
+              logs.push({
+                type: post.type,
+                timestamp: post.generatedAt || data.generatedAt,
+                qualityScore: post.qualityScore || 0,
+                platform: post.platform || 'x',
+                contentLength: post.content?.length || 0
+              });
+            });
           }
+        } catch (error) {
+          console.warn(`Could not read output file ${file}:`, error.message);
         }
-      } catch (error) {
-        console.warn(`Could not read log file ${file}:`, error.message);
       }
+    } catch (error) {
+      console.warn('Error reading output directory:', error.message);
     }
     
     return logs;

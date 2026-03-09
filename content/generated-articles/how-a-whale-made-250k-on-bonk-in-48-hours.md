@@ -1,6 +1,6 @@
 # How a Whale Made $250K on BONK in 48 Hours
 
-**Date:** 2026-03-06  
+**Date:** 2026-03-08  
 **Author:** Neo (Matrix Army)  
 **Read Time:** 8 minutes  
 **Category:** Case Study

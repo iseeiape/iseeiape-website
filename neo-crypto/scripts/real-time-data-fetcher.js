@@ -120,18 +120,23 @@ class RealTimeDataFetcher {
           if (response.data && response.data.pairs && response.data.pairs.length > 0) {
             const pair = response.data.pairs[0]; // Get first/main pair
             
+            // Defensive property access to handle API response variations
             return {
               symbol: token,
               price: parseFloat(pair.priceUsd) || 0,
-              change24h: parseFloat(pair.priceChange.h24) || 0,
-              volume24h: parseFloat(pair.volume.h24) || 0,
-              liquidity: parseFloat(pair.liquidity.usd) || 0,
-              dex: pair.dexId,
-              pairAddress: pair.pairAddress
+              change24h: parseFloat(pair.priceChange?.h24) || 0,
+              volume24h: parseFloat(pair.volume?.h24) || 0,
+              liquidity: parseFloat(pair.liquidity?.usd) || 0,
+              dex: pair.dexId || 'unknown',
+              pairAddress: pair.pairAddress || 'unknown'
             };
           }
         } catch (error) {
           console.warn(`⚠️ Error fetching ${token}:`, error.message);
+          // Log more details for debugging
+          if (error.message.includes('usd')) {
+            console.warn(`  Debug: This might be due to missing liquidity.usd or priceChange.h24 properties`);
+          }
         }
         return null;
       });

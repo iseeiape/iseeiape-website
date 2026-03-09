@@ -352,11 +352,24 @@ if (require.main === module) {
       await scheduler.runFullPipeline();
     } else {
       // Run full pipeline
-      await scheduler.runFullPipeline();
+      const results = await scheduler.runFullPipeline();
+      
+      // Check if pipeline was successful
+      // Content generation is critical, market data can use cached data
+      const successful = results && 
+        results.content && results.content.success;
+      
+      if (!successful) {
+        console.error('\n❌ Pipeline execution failed!');
+        process.exit(1);
+      }
     }
   }
   
-  main().catch(console.error);
+  main().catch(error => {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  });
 }
 
 module.exports = CronScheduler;

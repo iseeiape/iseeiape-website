@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-03-08T22:05:38.419Z",
+  "totalPosts": 90,
+  "estimatedCosts": {
+    "total": 0.007630000000000007,
+    "byType": {
+      "whale-alert": 0.0008400000000000004,
+      "trend-alert": 0.00041999999999999996,
+      "market-update": 0.0012599999999999996,
+      "technical-analysis": 0.002799999999999999,
+      "educational": 0.0007699999999999997,
+      "sentiment-report": 0.0015399999999999995
+    },
+    "byModel": {
+      "deepseek-chat": 0.007630000000000007
+    },
+    "dailyAverage": 0.001090000000000001
+  },
+  "modelUsage": {
+    "deepseek-chat": {
+      "count": 90,
+      "types": {}
+    }
+  },
+  "recommendations": [
+    {
+      "type": "high-cost-content",
+      "severity": "medium",
+      "message": "Generating many sentiment-report posts (11) which are expensive",
+      "suggestion": "Reduce frequency of sentiment-report or use cheaper model",
+      "estimatedSavings": 0.055
+    },
+    {
+      "type": "high-cost-content",
+      "severity": "medium",
+      "message": "Generating many technical-analysis posts (20) which are expensive",
+      "suggestion": "Reduce frequency of technical-analysis or use cheaper model",
+      "estimatedSavings": 0.1
+    },
+    {
+      "type": "batch-processing",
+      "severity": "medium",
+      "message": "Content generation peaks at hours: 9, 10, 11, 12, 13",
+      "suggestion": "Consider batching content generation to reduce API calls",
+      "estimatedSavings": 0.015
+    }
+  ],
+  "potentialSavings": {
+    "daily": 0,
+    "monthly": 0,
+    "percentage": 0
+  }
+}

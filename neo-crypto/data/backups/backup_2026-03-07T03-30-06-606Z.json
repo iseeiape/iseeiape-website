@@ -1,0 +1,192 @@
+{
+  "tokens": [
+    {
+      "symbol": "NEAR",
+      "price": 1.24,
+      "change24h": -3.1171277610263792,
+      "volume24h": 159324628.71151534,
+      "liquidity": 0,
+      "dex": "coinGecko",
+      "pairAddress": ""
+    },
+    {
+      "symbol": "POPCAT",
+      "price": 0.051898,
+      "change24h": -3.062828753090106,
+      "volume24h": 12628905.065967092,
+      "liquidity": 0,
+      "dex": "coinGecko",
+      "pairAddress": ""
+    },
+    {
+      "symbol": "MYRO",
+      "price": 0.00325736,
+      "change24h": -2.794478741809707,
+      "volume24h": 479734.39805252803,
+      "liquidity": 0,
+      "dex": "coinGecko",
+      "pairAddress": ""
+    },
+    {
+      "symbol": "BONK",
+      "price": 0.00001679,
+      "change24h": -4.68,
+      "volume24h": 55.46,
+      "liquidity": 13444.62,
+      "dex": "raydium",
+      "pairAddress": "4SNcBLsvis7UAYvRS4vaaMzX73Ensa7YxKGemHCXtC2q"
+    },
+    {
+      "symbol": "WIF",
+      "price": 0.000008516,
+      "change24h": 0,
+      "volume24h": 2.55,
+      "liquidity": 13118.27,
+      "dex": "raydium",
+      "pairAddress": "Fz2pYazumRbB3QkbisktVbmUyrVs9JEAiNDDX6EsRKbQ"
+    },
+    {
+      "symbol": "WEN",
+      "price": 0.08564,
+      "change24h": -0.05,
+      "volume24h": 2.52,
+      "liquidity": 765.55,
+      "dex": "orca",
+      "pairAddress": "AXSMXaStHG4UEkoabUAfRWmZUm2mobzWw67AY8ex1uVJ"
+    },
+    {
+      "symbol": "FET",
+      "price": 0.1484,
+      "change24h": -1.81,
+      "volume24h": 1.27,
+      "liquidity": 123.58,
+      "dex": "uniswap",
+      "pairAddress": "0xd08CBCB751345f600AA1bD7A50e82Ad5D7E697D9"
+    },
+    {
+      "symbol": "ORCA",
+      "price": 0.00006224,
+      "change24h": -3.64,
+      "volume24h": 1.03,
+      "liquidity": 216.41,
+      "dex": "orca",
+      "pairAddress": "CXZDGnd4GdN1VPNaRfo5wEhL75Q2a8tuT1z8BKGg2PhB"
+    },
+    {
+      "symbol": "SAMO",
+      "price": 0.000001982,
+      "change24h": -0.77,
+      "volume24h": 0.39,
+      "liquidity": 33.66,
+      "dex": "raydium",
+      "pairAddress": "74Vt48pWRcqtYyuLN6oN3dZ54m3yJZriiDWQLSby2pX1"
+    }
+  ],
+  "narratives": [
+    {
+      "name": "Meme Coins",
+      "score": 82,
+      "tokenCount": 6,
+      "topPerformer": "WIF",
+      "totalVolume": 13108700.384019623
+    },
+    {
+      "name": "Infrastructure",
+      "score": 74,
+      "tokenCount": 1,
+      "topPerformer": "NEAR",
+      "totalVolume": 159324628.71151534
+    },
+    {
+      "name": "AI Agents",
+      "score": 50,
+      "tokenCount": 0,
+      "topPerformer": "None",
+      "totalVolume": 0
+    },
+    {
+      "name": "RWA",
+      "score": 50,
+      "tokenCount": 0,
+      "topPerformer": "None",
+      "totalVolume": 0
+    },
+    {
+      "name": "DeFi",
+      "score": 50,
+      "tokenCount": 1,
+      "topPerformer": "ORCA",
+      "totalVolume": 1.03
+    },
+    {
+      "name": "Gaming",
+      "score": 50,
+      "tokenCount": 0,
+      "topPerformer": "None",
+      "totalVolume": 0
+    }
+  ],
+  "whales": {
+    "wallets": 19,
+    "transactions": 21,
+    "recentActivity": [
+      {
+        "wallet": "bkzn...796o",
+        "action": "sold",
+        "token": "MYRO",
+        "amount": 42783,
+        "value": 139.36,
+        "timestamp": "2026-03-07T03:30:06.025Z"
+      },
+      {
+        "wallet": "xacl...tpzs",
+        "action": "bought",
+        "token": "WIF",
+        "amount": 13070,
+        "value": 0.11,
+        "timestamp": "2026-03-07T03:30:06.025Z"
+      },
+      {
+        "wallet": "5d1d...waxt",
+        "action": "bought",
+        "token": "WIF",
+        "amount": 49526,
+        "value": 0.42,
+        "timestamp": "2026-03-07T03:30:06.025Z"
+      },
+      {
+        "wallet": "0ied...9265",
+        "action": "sold",
+        "token": "BONK",
+        "amount": 35426,
+        "value": 0.59,
+        "timestamp": "2026-03-07T03:30:06.025Z"
+      },
+      {
+        "wallet": "17lc...jgax",
+        "action": "transferred",
+        "token": "WIF",
+        "amount": 16493,
+        "value": 0.14,
+        "timestamp": "2026-03-07T03:30:06.025Z"
+      }
+    ]
+  },
+  "market": {
+    "totalVolume": 172433331.39553496,
+    "sentiment": "bearish",
+    "volatility": 2.21,
+    "supportLevel": "$0.16",
+    "resistanceLevel": "$0.18",
+    "positiveRatio": 0,
+    "avgChange": -2.21
+  },
+  "timestamp": "2026-03-07T03:30:06.025Z",
+  "source": "Enhanced API Fetch",
+  "apiStatus": {
+    "dexscreener": "success",
+    "coinGecko": "success"
+  }
+}ecko": "success"
+  }
+}

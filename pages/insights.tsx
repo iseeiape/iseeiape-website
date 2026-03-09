@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/physics-crypto-markets" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 9</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🔬 The Physics of Crypto Markets: Applying Thermodynamics to Tokenomics</h2>
+            <p style={{ color: '#aaa' }}>What if crypto markets obey the same fundamental laws as physical systems? We explore how thermodynamics principles — entropy, energy conservation, and phase transitions — can predict market behavior with startling accuracy.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Market Physics • Thermodynamics →</p>
+          </article>
+        </a>
+
         <a href="/insights/quant-revolution-mathematical-models" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 8</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 8</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🧮 The Quant Revolution: How Mathematical Models Are Dominating Crypto Markets</h2>
             <p style={{ color: '#aaa' }}>From stochastic calculus to reinforcement learning, quantitative models are capturing 68% of crypto trading volume. We analyze the 3 dominant mathematical frameworks winning the alpha wars and what it means for retail traders.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Quantitative Finance • Mathematical Models →</p>

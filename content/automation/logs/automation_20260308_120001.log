@@ -1,0 +1,25 @@
+[0;34m[2026-03-08 12:00:01][0m 🦎 Starting iseeiape Automation System
+[0;34m[2026-03-08 12:00:01][0m 📁 Base directory: /home/matrix/.openclaw/workspace/iseeiape-website
+[0;34m[2026-03-08 12:00:01][0m 📝 Log file: /home/matrix/.openclaw/workspace/iseeiape-website/content/automation/logs/automation_20260308_120001.log
+[0;34m[2026-03-08 12:00:01][0m 🚀 Starting automation pipeline...
+============================================================
+🦎 MATRIX ARMY AUTOMATION PIPELINE
+============================================================
+Start time: 3/8/2026, 12:00:01 PM
+Mode: PRODUCTION
+============================================================
+
+🚀 Generate Market Data
+   Command: node neo-crypto/scripts/real-time-data-fetcher.js...
+   ✅ Completed in 662ms
+
+⚠️  Market data generation failed. Continuing with existing data...
+
+🚀 Generate Enhanced Content
+   Command: node content/automation/enhanced-content-scheduler.js...
+   ✅ Completed in 247ms
+
+❌ Content generation failed. Stopping pipeline.
+[0;32m✓[0m ✅ Automation pipeline completed successfully
+[0;34m[2026-03-08 12:00:02][0m 📊 Pipeline execution complete
+[0;34m[2026-03-08 12:00:02][0m 📁 Log saved to: /home/matrix/.openclaw/workspace/iseeiape-website/content/automation/logs/automation_20260308_120001.log
