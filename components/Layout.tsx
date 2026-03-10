@@ -41,6 +41,7 @@ export default function Layout({
     { href: '/guides', label: 'Guides', icon: '📚' },
     { href: '/insights', label: 'Insights', icon: '💡' },
     { href: '/dashboard', label: 'Dashboard', icon: '📈' },
+    { href: '/dashboard-enhanced', label: 'Enhanced', icon: '🦎' },
     { href: '/war-room', label: 'War Room', icon: '🎯' },
   ]
 
