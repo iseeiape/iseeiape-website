@@ -174,7 +174,7 @@ class EnhancedCronScheduler {
    * Step 1: Generate fresh market data using enhanced fetcher
    */
   async generateMarketData() {
-    const command = 'node neo-crypto/scripts/real-time-data-fetcher-v2.js';
+    const command = 'node neo-crypto/scripts/real-time-data-fetcher-enhanced-wrapper.js';
     return await this.executeCommand(command, 'Generate Market Data');
   }
 
