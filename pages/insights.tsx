@@ -8,9 +8,27 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/ai-agent-economies" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 11</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>💰 AI Agent Economies: How Autonomous Systems Are Creating New Market Structures</h2>
+            <p style={{ color: '#aaa' }}>AI agents aren't just trading — they're building entire economies. From agent-to-agent token swaps to autonomous liquidity provision, we explore how AI systems are creating parallel financial ecosystems that operate 24/7.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • AI Agents • Market Structure • Tokenomics →</p>
+          </article>
+        </a>
+
+        <a href="/insights/decentralized-intelligence-networks" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 10</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🕸️ Decentralized Intelligence Networks: How AI Agents Are Forming Autonomous Swarms</h2>
+            <p style={{ color: '#aaa' }}>AI agents are no longer operating in isolation. They're forming decentralized intelligence networks — autonomous swarms that share information, coordinate strategies, and create emergent market behavior. The fourth wave of AI evolution is here.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Network Theory • Swarm Intelligence →</p>
+          </article>
+        </a>
+
         <a href="/insights/physics-crypto-markets" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 9</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 9</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🔬 The Physics of Crypto Markets: Applying Thermodynamics to Tokenomics</h2>
             <p style={{ color: '#aaa' }}>What if crypto markets obey the same fundamental laws as physical systems? We explore how thermodynamics principles — entropy, energy conservation, and phase transitions — can predict market behavior with startling accuracy.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Market Physics • Thermodynamics →</p>
