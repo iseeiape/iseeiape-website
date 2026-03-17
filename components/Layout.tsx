@@ -36,6 +36,7 @@ export default function Layout({
   const canonicalUrl = canonical || currentUrl
   
   const navLinks = [
+    { href: '/master', label: 'Master', icon: '🎯' },
     { href: '/', label: 'Home', icon: '🏠' },
     { href: '/case-studies', label: 'Cases', icon: '📊' },
     { href: '/guides', label: 'Guides', icon: '📚' },
