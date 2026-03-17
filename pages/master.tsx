@@ -27,6 +27,26 @@ interface WolfData {
   generatedAt?: string
 }
 
+interface TrendingRepo {
+  id: number
+  name: string
+  full_name: string
+  description: string | null
+  stargazers_count: number
+  language: string | null
+  html_url: string
+  updated_at: string
+  topics: string[]
+}
+
+interface CryptoNewsItem {
+  title: string
+  url: string
+  source: string
+  publishedAt: string
+  description: string
+}
+
 // ─── Formatters ──────────────────────────────────────────────────────────────
 
 function fmt$(n: number): string {
@@ -70,7 +90,19 @@ function chainLabel(chain: string): string {
   return (chain || 'UNK').toUpperCase().slice(0, 4)
 }
 
-// Fake whale feed data (same style as war-room.tsx)
+function timeAgo(dateStr: string): string {
+  if (!dateStr) return ''
+  const diff = Date.now() - new Date(dateStr).getTime()
+  const mins = Math.floor(diff / 60000)
+  if (mins < 1) return 'just now'
+  if (mins < 60) return `${mins}m ago`
+  const hours = Math.floor(mins / 60)
+  if (hours < 24) return `${hours}h ago`
+  const days = Math.floor(hours / 24)
+  return `${days}d ago`
+}
+
+// Fake whale feed data
 const WHALES = [
   { name: 'WHALE_17', action: 'BUY', token: '$BIGTROUT', amount: '$89.4K', time: '2m ago' },
   { name: 'BHBASEQ1197', action: 'BUY', token: '$APGARENA', amount: '$387.98', time: '1m ago' },
@@ -96,7 +128,6 @@ function WolfSection({ data, loading, onRefresh, countdown }: {
 
   return (
     <div>
-      {/* Section header */}
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center', marginBottom: '20px' }}>
         <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flex: 1, flexWrap: 'wrap' }}>
           {data?.lastUpdated && (
@@ -153,7 +184,6 @@ function WolfSection({ data, loading, onRefresh, countdown }: {
                 padding: '16px',
                 display: 'flex', flexDirection: 'column', gap: '10px',
               }}>
-                {/* Top row */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                   <div>
                     <div style={{ fontSize: '20px', fontWeight: 700 }}>${alert.symbol}</div>
@@ -171,7 +201,6 @@ function WolfSection({ data, loading, onRefresh, countdown }: {
                   </div>
                 </div>
 
-                {/* Price grid */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '6px' }}>
                   {[
                     { label: 'PRICE', val: fmt$(alert.price), color: '#fff' },
@@ -186,7 +215,6 @@ function WolfSection({ data, loading, onRefresh, countdown }: {
                   ))}
                 </div>
 
-                {/* Volume / Liq / MCap */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px' }}>
                   {[
                     { label: 'VOL 24H', val: fmt$(alert.volume_24h) },
@@ -200,7 +228,6 @@ function WolfSection({ data, loading, onRefresh, countdown }: {
                   ))}
                 </div>
 
-                {/* Signals */}
                 {alert.signals?.length > 0 && (
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
                     {alert.signals.slice(0, 4).map((sig, j) => (
@@ -212,7 +239,6 @@ function WolfSection({ data, loading, onRefresh, countdown }: {
                   </div>
                 )}
 
-                {/* Footer */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <span style={{
                     padding: '2px 8px', borderRadius: '8px', fontSize: '10px', fontWeight: 600,
@@ -236,6 +262,155 @@ function WolfSection({ data, loading, onRefresh, countdown }: {
           })}
         </div>
       )}
+    </div>
+  )
+}
+
+// ─── Section: Trending Repos ─────────────────────────────────────────────────
+
+function TrendingReposSection({ repos, loading }: { repos: TrendingRepo[]; loading: boolean }) {
+  if (loading) {
+    return (
+      <div style={{ textAlign: 'center', padding: '60px', color: '#888' }}>
+        <div style={{ fontSize: '32px', marginBottom: '12px' }}>⏳</div>
+        <p>Fetching trending repos...</p>
+      </div>
+    )
+  }
+
+  if (!repos.length) {
+    return (
+      <div style={{ textAlign: 'center', padding: '60px', background: '#111', borderRadius: '12px', border: '1px solid #222' }}>
+        <div style={{ fontSize: '32px', marginBottom: '12px' }}>🔥</div>
+        <p style={{ color: '#888' }}>No repos found. GitHub API may be rate-limited.</p>
+      </div>
+    )
+  }
+
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '16px' }}>
+      {repos.map((repo) => (
+        <div key={repo.id} style={{
+          background: '#111', borderRadius: '14px', border: '1px solid #222',
+          padding: '16px', display: 'flex', flexDirection: 'column', gap: '10px',
+        }}>
+          <div>
+            <a
+              href={repo.html_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: '15px', fontWeight: 700, color: '#00d4ff', textDecoration: 'none' }}
+            >
+              {repo.name}
+            </a>
+            <div style={{ fontSize: '11px', color: '#555', marginTop: '2px' }}>{repo.full_name}</div>
+          </div>
+
+          {repo.description && (
+            <p style={{
+              fontSize: '12px', color: '#aaa', lineHeight: '1.5', margin: 0,
+              overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
+            }}>
+              {repo.description}
+            </p>
+          )}
+
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '13px', color: '#ffcc00', fontWeight: 600 }}>
+              ⭐ {repo.stargazers_count.toLocaleString()}
+            </span>
+            {repo.language && (
+              <span style={{
+                padding: '2px 8px', background: '#1a1a1a', border: '1px solid #333',
+                borderRadius: '10px', fontSize: '11px', color: '#ccc',
+              }}>
+                {repo.language}
+              </span>
+            )}
+            <span style={{ fontSize: '11px', color: '#555', marginLeft: 'auto' }}>
+              Updated {timeAgo(repo.updated_at)}
+            </span>
+          </div>
+
+          {repo.topics.length > 0 && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+              {repo.topics.slice(0, 4).map(t => (
+                <span key={t} style={{
+                  padding: '2px 7px', background: '#9945ff11', color: '#9945ff',
+                  borderRadius: '10px', fontSize: '10px', border: '1px solid #9945ff22',
+                }}>{t}</span>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// ─── Section: Crypto News ─────────────────────────────────────────────────────
+
+const SOURCE_STYLES: Record<string, { bg: string; color: string; border: string }> = {
+  CoinDesk: { bg: '#0052ff22', color: '#6699ff', border: '1px solid #0052ff44' },
+  Decrypt: { bg: '#7b2fff22', color: '#b066ff', border: '1px solid #7b2fff44' },
+  CoinTelegraph: { bg: '#ff6b0022', color: '#ff8c42', border: '1px solid #ff6b0044' },
+}
+
+function CryptoNewsSection({ news, loading }: { news: CryptoNewsItem[]; loading: boolean }) {
+  if (loading) {
+    return (
+      <div style={{ textAlign: 'center', padding: '60px', color: '#888' }}>
+        <div style={{ fontSize: '32px', marginBottom: '12px' }}>⏳</div>
+        <p>Fetching latest news...</p>
+      </div>
+    )
+  }
+
+  if (!news.length) {
+    return (
+      <div style={{ textAlign: 'center', padding: '60px', background: '#111', borderRadius: '12px', border: '1px solid #222' }}>
+        <div style={{ fontSize: '32px', marginBottom: '12px' }}>📰</div>
+        <p style={{ color: '#888' }}>No news available right now.</p>
+      </div>
+    )
+  }
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+      {news.map((item, i) => {
+        const ss = SOURCE_STYLES[item.source] || { bg: '#33333344', color: '#aaa', border: '1px solid #444' }
+        return (
+          <div key={i} style={{
+            padding: '14px 16px', background: '#111', borderRadius: '10px',
+            border: '1px solid #1a1a1a', display: 'flex', flexDirection: 'column', gap: '6px',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', flexWrap: 'wrap' }}>
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontSize: '14px', fontWeight: 600, color: '#e0e0e0', textDecoration: 'none', flex: 1, lineHeight: '1.4' }}
+              >
+                {item.title}
+              </a>
+              <span style={{ fontSize: '11px', color: '#555', whiteSpace: 'nowrap', paddingTop: '2px' }}>
+                {timeAgo(item.publishedAt)}
+              </span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{
+                padding: '2px 8px', borderRadius: '8px', fontSize: '10px', fontWeight: 600,
+                background: ss.bg, color: ss.color, border: ss.border,
+              }}>{item.source}</span>
+              {item.description && (
+                <span style={{ fontSize: '12px', color: '#666', flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {item.description}
+                </span>
+              )}
+            </div>
+          </div>
+        )
+      })}
     </div>
   )
 }
@@ -349,6 +524,8 @@ function TopPerformersSection({ data }: { data: WolfData | null }) {
 
 const TABS = [
   { id: 'wolf', label: '🐺 Wolf Alerts' },
+  { id: 'repos', label: '🔥 Trending Repos' },
+  { id: 'news', label: '📰 Crypto News' },
   { id: 'market', label: '📊 Market Overview' },
   { id: 'whales', label: '🐋 Whale Feed' },
   { id: 'top', label: '📈 Top Performers' },
@@ -363,6 +540,12 @@ export default function Master() {
   const [fetchedAt, setFetchedAt] = useState('')
   const [countdown, setCountdown] = useState(120)
   const countdownRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+  const [repos, setRepos] = useState<TrendingRepo[]>([])
+  const [reposLoading, setReposLoading] = useState(true)
+
+  const [news, setNews] = useState<CryptoNewsItem[]>([])
+  const [newsLoading, setNewsLoading] = useState(true)
 
   const fetchAlerts = async () => {
     try {
@@ -379,10 +562,44 @@ export default function Master() {
     }
   }
 
+  const fetchRepos = async () => {
+    try {
+      setReposLoading(true)
+      const res = await fetch('/api/trending-repos')
+      const data = await res.json()
+      setRepos(data.repos || [])
+    } catch (err) {
+      console.error('Failed to fetch trending repos:', err)
+    } finally {
+      setReposLoading(false)
+    }
+  }
+
+  const fetchNews = async () => {
+    try {
+      setNewsLoading(true)
+      const res = await fetch('/api/crypto-news')
+      const data = await res.json()
+      setNews(data.news || [])
+    } catch (err) {
+      console.error('Failed to fetch crypto news:', err)
+    } finally {
+      setNewsLoading(false)
+    }
+  }
+
   useEffect(() => {
     fetchAlerts()
+    fetchRepos()
+    fetchNews()
+
     const fetchInterval = setInterval(fetchAlerts, 2 * 60 * 1000)
-    return () => clearInterval(fetchInterval)
+    const newsInterval = setInterval(fetchNews, 10 * 60 * 1000)
+
+    return () => {
+      clearInterval(fetchInterval)
+      clearInterval(newsInterval)
+    }
   }, [])
 
   useEffect(() => {
@@ -414,7 +631,7 @@ export default function Master() {
             )}
           </div>
           <p style={{ color: '#666', marginTop: '8px', fontSize: '14px' }}>
-            Consolidated intelligence terminal — wolf signals, whale activity, market overview
+            Consolidated intelligence terminal — wolf signals, trending repos, crypto news, whale activity
           </p>
         </div>
 
@@ -452,6 +669,29 @@ export default function Master() {
             </div>
           )}
 
+          {activeTab === 'repos' && (
+            <div>
+              <div style={{ marginBottom: '20px' }}>
+                <h2 style={{ fontSize: '20px', margin: 0, color: '#fff' }}>🔥 Trending Crypto Repos</h2>
+                <p style={{ color: '#555', fontSize: '13px', marginTop: '6px' }}>What builders are shipping right now</p>
+              </div>
+              <TrendingReposSection repos={repos} loading={reposLoading} />
+            </div>
+          )}
+
+          {activeTab === 'news' && (
+            <div>
+              <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <h2 style={{ fontSize: '20px', margin: 0, color: '#fff' }}>📰 Latest Crypto News</h2>
+                <span style={{ fontSize: '12px', color: '#555' }}>Real-time from CoinDesk, Decrypt, CoinTelegraph</span>
+                <span style={{ padding: '3px 8px', background: '#00ff8822', border: '1px solid #00ff8844', borderRadius: '8px', fontSize: '11px', color: '#00ff88' }}>
+                  auto-refresh 10m
+                </span>
+              </div>
+              <CryptoNewsSection news={news} loading={newsLoading} />
+            </div>
+          )}
+
           {activeTab === 'market' && (
             <div>
               <div style={{ marginBottom: '20px' }}>
@@ -460,7 +700,6 @@ export default function Master() {
               </div>
               <MarketSection data={wolfData} />
 
-              {/* Also show top alert summary */}
               {wolfData && wolfData.alerts.length > 0 && (
                 <div style={{ marginTop: '32px' }}>
                   <h3 style={{ fontSize: '16px', color: '#888', marginBottom: '14px', fontWeight: 600 }}>All Current Alerts by Score</h3>

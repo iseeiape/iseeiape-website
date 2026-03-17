@@ -41,10 +41,6 @@ export default function Layout({
     { href: '/case-studies', label: 'Cases', icon: '📊' },
     { href: '/guides', label: 'Guides', icon: '📚' },
     { href: '/insights', label: 'Insights', icon: '💡' },
-    { href: '/wolf-alerts', label: 'Wolf Alerts', icon: '🐺' },
-    { href: '/dashboard', label: 'Dashboard', icon: '📈' },
-    { href: '/dashboard-enhanced', label: 'Enhanced', icon: '🦎' },
-    { href: '/war-room', label: 'War Room', icon: '🎯' },
   ]
 
   const isActive = (href: string) => router.pathname === href
@@ -403,10 +399,6 @@ export default function Layout({
             </div>
 
             <div className="nav-actions">
-              <Link href="/war-room" className="btn btn-primary hidden md:flex">
-                ⚡ War Room
-              </Link>
-              
               <button
                 className="btn btn-ghost md:hidden"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -427,9 +419,6 @@ export default function Layout({
                 {link.icon} {link.label}
               </Link>
             ))}
-            <Link href="/war-room" className="nav-link">
-              ⚡ War Room
-            </Link>
           </div>
         </nav>
 
