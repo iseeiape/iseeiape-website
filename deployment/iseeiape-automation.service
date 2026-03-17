@@ -1,0 +1,45 @@
+[Unit]
+Description=iseeiape Automation System
+Documentation=https://iseeiape.com
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=matrix
+Group=matrix
+WorkingDirectory=/home/matrix/.openclaw/workspace/iseeiape-website
+Environment=NODE_ENV=production
+Environment=PATH=/usr/bin:/usr/local/bin:/home/matrix/.npm-global/bin
+
+# Main automation process
+ExecStart=/usr/bin/node /home/matrix/.openclaw/workspace/iseeiape-website/scripts/cron-manager.js start
+
+# Auto-restart on failure
+Restart=on-failure
+RestartSec=10
+
+# Process management
+KillMode=process
+KillSignal=SIGTERM
+TimeoutStopSec=30
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=4096
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/matrix/.openclaw/workspace/iseeiape-website/neo-crypto
+ReadWritePaths=/home/matrix/.openclaw/workspace/iseeiape-website/backups
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=iseeiape-automation
+
+[Install]
+WantedBy=multi-user.target

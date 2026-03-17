@@ -1,5 +1,4 @@
 import Layout from '../../components/Layout'
-import Head from 'next/head'
 
 export default function WIFCaseStudy() {
   return (
@@ -8,11 +7,6 @@ export default function WIFCaseStudy() {
       description="Real case study: How on-chain analysis spotted the Dogwifhat breakout 48 hours before it pumped 1000%. Full breakdown of signals and entry strategy."
       breadcrumbs={[{ name: 'Case Studies', path: '/case-studies' }, { name: '$WIF Breakout', path: '/case-studies/how-we-caught-wif-1000-percent-move' }]}
     >
-      <Head>
-        <title>How We Caught the $WIF 1000% Move | iseeiape Case Studies</title>
-        <meta name="description" content="Real case study: How on-chain analysis spotted the Dogwifhat breakout 48 hours before it pumped 1000%. Full breakdown of signals and entry strategy." />
-      </Head>
-      
       <article className="article">
         <header className="article-header">
           <span className="tag">Case Study</span>
@@ -229,8 +223,7 @@ ROI: +490%`}
           
           <p>Our <a href="/dashboard">Dashboard</a> scans for these patterns 24/7. When the next $WIF appears, you'll know.</p>
 
-          <div className="article-cta"
-3e
+          <div className="article-cta">
             <h3>Want Real-Time Alerts?</h3>
             <p>Our Wolf system caught $WIF at $0.15. It's hunting for the next one right now. <a href="/dashboard">Check the Dashboard</a>.</p>
           </div>
