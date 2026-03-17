@@ -1,0 +1,69 @@
+{
+  "name": "Lizard King Crypto Alpha",
+  "version": "1.0",
+  
+  "apis": {
+    "cielo": {
+      "api_key": "93771acc-c2fc-455d-b8e7-263ccd61da4a",
+      "base_url": "https://feed-api.cielo.finance/api/v1"
+    },
+    "birdeye": {
+      "api_key": "",
+      "base_url": "https://public-api.birdeye.so"
+    },
+    "twitter": {
+      "api_key": "",
+      "api_secret": "",
+      "access_token": "",
+      "access_secret": ""
+    },
+    "telegram": {
+      "bot_token": "8517262684:AAFzMBTnPExxhd5b_eWLq1_hTqYNUmb6lVo",
+      "chat_id": "120001865"
+    }
+  },
+  
+  "content": {
+    "post_frequency": 5,
+    "post_times": ["08:30", "12:00", "14:30", "20:00", "22:00"],
+    "timezone": "Europe/Bucharest",
+    "default_hashtags": ["#Solana", "#Crypto", "#Trading", "#Alpha", "#WhaleWatching"],
+    "engagement_goal": 7.5,
+    "min_post_length": 120,
+    "max_post_length": 280
+  },
+  
+  "tracking": {
+    "wallet_count": 50,
+    "check_interval": 300,
+    "min_transaction_usd": 1000,
+    "chains": ["solana"],
+    "alert_types": ["large_transfer", "token_buy", "token_sell"]
+  },
+  
+  "templates": {
+    "whale_alert": "templates/hooks/whale-alert.md",
+    "trend_emerging": "templates/hooks/trend-emerging.md",
+    "thread_template": "templates/posts/thread-template.md"
+  },
+  
+  "analytics": {
+    "track_engagement": true,
+    "track_followers": true,
+    "track_revenue": true,
+    "daily_report_time": "20:00"
+  },
+  
+  "safety": {
+    "disclaimer": "Not financial advice. Do your own research.",
+    "max_posts_per_day": 10,
+    "cooldown_between_posts": 900,
+    "verify_signals": true
+  },
+  
+  "paths": {
+    "data": "data/",
+    "outputs": "outputs/",
+    "logs": "logs/"
+  }
+}

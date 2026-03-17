@@ -40,6 +40,7 @@ export default function Layout({
     { href: '/case-studies', label: 'Cases', icon: '📊' },
     { href: '/guides', label: 'Guides', icon: '📚' },
     { href: '/insights', label: 'Insights', icon: '💡' },
+    { href: '/wolf-alerts', label: 'Wolf Alerts', icon: '🐺' },
     { href: '/dashboard', label: 'Dashboard', icon: '📈' },
     { href: '/dashboard-enhanced', label: 'Enhanced', icon: '🦎' },
     { href: '/war-room', label: 'War Room', icon: '🎯' },
