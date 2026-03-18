@@ -1,5 +1,6 @@
 // pages/dashboard.js - Real-time market dashboard page
 import MarketDashboard from '../components/MarketDashboard';
+import SystemStatus from '../components/SystemStatus';
 import Head from 'next/head';
 
 export default function DashboardPage() {
@@ -64,9 +65,16 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* Main Dashboard */}
+          {/* System Status */}
           <div className="mb-8">
-            <MarketDashboard />
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="lg:col-span-2">
+                <MarketDashboard />
+              </div>
+              <div>
+                <SystemStatus />
+              </div>
+            </div>
           </div>
 
           {/* Features */}
