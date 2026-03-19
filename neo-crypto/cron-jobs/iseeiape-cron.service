@@ -1,0 +1,14 @@
+[Unit]
+Description=iseeiape Neo Crypto Engine Cron Manager
+After=network.target
+
+[Service]
+Type=simple
+User=matrix
+WorkingDirectory=/home/matrix/.openclaw/workspace/iseeiape-website
+ExecStart=/usr/bin/node /home/matrix/.openclaw/workspace/iseeiape-website/scripts/cron-manager.js start
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

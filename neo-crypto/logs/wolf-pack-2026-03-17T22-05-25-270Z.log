@@ -1,0 +1,21 @@
+[2026-03-17T22:05:25.270Z] [INFO] Starting wolf-pack job
+[2026-03-17T22:05:25.272Z] [INFO] Schedule: */15 * * * *
+[2026-03-17T22:05:25.272Z] [INFO] Description: Run Wolf Pack alerts and integration
+[2026-03-17T22:05:25.272Z] [INFO] Executing: node /home/matrix/.openclaw/workspace/iseeiape-website/scripts/wolf-pack-runner.js 
+[2026-03-17T22:05:34.538Z] [INFO] Execution completed in 9266ms
+[2026-03-17T22:05:34.539Z] [INFO] Output: 🚀 Wolf Pack Runner - Neo Crypto Engine Integration
+
+🐺 Running Wolf Pack v8...
+✅ Wolf Pack execution completed
+🔍 Parsing Wolf Pack output...
+✅ Parsed 4 alerts from output
+📊 Found 4 alerts
+📈 Analyzing alert patterns...
+📊 Analysis complete:
+  • Total alerts: 4
+  • Categories: newpairs: 4
+  • Scores: High: 2, Medium: 0, Low: 2
+  • Top tokens: TRUMPPEPE(2), PAWAN(1), TRUST(1)
+  • Trends identified: 1
+💾 Summary saved: /home/matrix/.openclaw/workspace/iseeiape-website/neo-crypto/data/wolf-pack-s...
+[2026-03-17T22:05:34.539Z] [INFO] Job wolf-pack completed successfully

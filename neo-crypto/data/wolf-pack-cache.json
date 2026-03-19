@@ -1,0 +1,139 @@
+{
+  "alerts": [
+    {
+      "id": "wolf_1773784923398_1",
+      "timestamp": "2026-03-17T21:02:03.398Z",
+      "category": "alpha",
+      "emoji": "🐺",
+      "token": "dogwifhat",
+      "symbol": "WIF",
+      "score": 95,
+      "maxScore": 100,
+      "confidence": 95,
+      "raw": "🐺 ALERT: dogwifhat (WIF) - Score: 95/100",
+      "details": [
+        "Solana meme coin showing strong momentum",
+        "Volume up 250% in last hour",
+        "Whale accumulation detected"
+      ]
+    },
+    {
+      "id": "wolf_1773784923398_2",
+      "timestamp": "2026-03-17T20:02:03.398Z",
+      "category": "newpairs",
+      "emoji": "🆕",
+      "token": "Popcat",
+      "symbol": "POPCAT",
+      "score": 65,
+      "maxScore": 100,
+      "confidence": 65,
+      "raw": "🆕 ALERT: Popcat (POPCAT) - Score: 65/100",
+      "details": [
+        "New trading pair on Raydium",
+        "Initial liquidity: $250k",
+        "Early momentum building"
+      ]
+    },
+    {
+      "id": "wolf_1773784923398_3",
+      "timestamp": "2026-03-17T19:02:03.398Z",
+      "category": "momentum",
+      "emoji": "📈",
+      "token": "Jupiter",
+      "symbol": "JUP",
+      "score": 82,
+      "maxScore": 100,
+      "confidence": 82,
+      "raw": "📈 ALERT: Jupiter (JUP) - Score: 82/100",
+      "details": [
+        "Breaking out of consolidation",
+        "Volume spike: 3x average",
+        "Key resistance broken at $1.25"
+      ]
+    }
+  ],
+  "lastFetch": "2026-03-17T22:02:03.400Z",
+  "performance": {},
+  "analysis": {
+    "summary": {
+      "totalAlerts": 3,
+      "byCategory": {
+        "alpha": 1,
+        "newpairs": 1,
+        "momentum": 1
+      },
+      "byConfidence": {
+        "high": 2,
+        "medium": 1,
+        "low": 0
+      },
+      "timeDistribution": {
+        "21": 1,
+        "22": 1,
+        "23": 1
+      }
+    },
+    "topTokens": {
+      "WIF": {
+        "count": 1,
+        "totalScore": 95,
+        "categories": [
+          "alpha"
+        ],
+        "latestAlert": "2026-03-17T21:02:03.398Z",
+        "avgScore": 95
+      },
+      "POPCAT": {
+        "count": 1,
+        "totalScore": 65,
+        "categories": [
+          "newpairs"
+        ],
+        "latestAlert": "2026-03-17T20:02:03.398Z",
+        "avgScore": 65
+      },
+      "JUP": {
+        "count": 1,
+        "totalScore": 82,
+        "categories": [
+          "momentum"
+        ],
+        "latestAlert": "2026-03-17T19:02:03.398Z",
+        "avgScore": 82
+      }
+    },
+    "trends": [],
+    "topTokensSorted": [
+      {
+        "symbol": "WIF",
+        "count": 1,
+        "totalScore": 95,
+        "categories": [
+          "alpha"
+        ],
+        "latestAlert": "2026-03-17T21:02:03.398Z",
+        "avgScore": 95
+      },
+      {
+        "symbol": "POPCAT",
+        "count": 1,
+        "totalScore": 65,
+        "categories": [
+          "newpairs"
+        ],
+        "latestAlert": "2026-03-17T20:02:03.398Z",
+        "avgScore": 65
+      },
+      {
+        "symbol": "JUP",
+        "count": 1,
+        "totalScore": 82,
+        "categories": [
+          "momentum"
+        ],
+        "latestAlert": "2026-03-17T19:02:03.398Z",
+        "avgScore": 82
+      }
+    ]
+  }
+}

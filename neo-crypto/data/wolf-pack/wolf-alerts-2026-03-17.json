@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "generatedAt": "2026-03-17T22:02:03.399Z",
+    "source": "wolf-pack-integration",
+    "version": "1.0.0"
+  },
+  "recentAlerts": [
+    {
+      "id": "wolf_1773784923398_1",
+      "timestamp": "2026-03-17T21:02:03.398Z",
+      "category": "alpha",
+      "emoji": "🐺",
+      "symbol": "WIF",
+      "token": "dogwifhat",
+      "score": 95,
+      "confidence": 95,
+      "summary": "Solana meme coin showing strong momentum"
+    },
+    {
+      "id": "wolf_1773784923398_2",
+      "timestamp": "2026-03-17T20:02:03.398Z",
+      "category": "newpairs",
+      "emoji": "🆕",
+      "symbol": "POPCAT",
+      "token": "Popcat",
+      "score": 65,
+      "confidence": 65,
+      "summary": "New trading pair on Raydium"
+    },
+    {
+      "id": "wolf_1773784923398_3",
+      "timestamp": "2026-03-17T19:02:03.398Z",
+      "category": "momentum",
+      "emoji": "📈",
+      "symbol": "JUP",
+      "token": "Jupiter",
+      "score": 82,
+      "confidence": 82,
+      "summary": "Breaking out of consolidation"
+    }
+  ],
+  "analysis": {
+    "summary": {
+      "totalAlerts": 3,
+      "byCategory": {
+        "alpha": 1,
+        "newpairs": 1,
+        "momentum": 1
+      },
+      "byConfidence": {
+        "high": 2,
+        "medium": 1,
+        "low": 0
+      },
+      "timeDistribution": {
+        "21": 1,
+        "22": 1,
+        "23": 1
+      }
+    },
+    "topTokens": [
+      {
+        "symbol": "WIF",
+        "count": 1,
+        "totalScore": 95,
+        "categories": [
+          "alpha"
+        ],
+        "latestAlert": "2026-03-17T21:02:03.398Z",
+        "avgScore": 95
+      },
+      {
+        "symbol": "POPCAT",
+        "count": 1,
+        "totalScore": 65,
+        "categories": [
+          "newpairs"
+        ],
+        "latestAlert": "2026-03-17T20:02:03.398Z",
+        "avgScore": 65
+      },
+      {
+        "symbol": "JUP",
+        "count": 1,
+        "totalScore": 82,
+        "categories": [
+          "momentum"
+        ],
+        "latestAlert": "2026-03-17T19:02:03.398Z",
+        "avgScore": 82
+      }
+    ],
+    "trends": [],
+    "hourlyDistribution": [
+      {
+        "hour": 21,
+        "count": 1
+      },
+      {
+        "hour": 22,
+        "count": 1
+      },
+      {
+        "hour": 23,
+        "count": 1
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "type": "timing_insight",
+      "priority": "low",
+      "message": "Peak alert activity around 21:00 UTC",
+      "action": "Schedule monitoring during active hours"
+    }
+  ]
+}

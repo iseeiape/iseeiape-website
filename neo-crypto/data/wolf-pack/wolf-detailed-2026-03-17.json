@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "generatedAt": "2026-03-17T22:05:34.533Z",
+    "source": "wolf-pack-runner",
+    "version": "1.0.0",
+    "alertCount": 4
+  },
+  "recentAlerts": [
+    {
+      "id": "wolf_1773785134531_0",
+      "timestamp": "2026-03-17T22:05:34.531Z",
+      "category": "newpairs",
+      "emoji": "🆕",
+      "symbol": "TRUMPPEPE",
+      "token": "TRUMPPEPE",
+      "score": 83,
+      "confidence": 83,
+      "type": "🆕 NEW_PAIR"
+    },
+    {
+      "id": "wolf_1773785134531_1",
+      "timestamp": "2026-03-17T22:05:34.531Z",
+      "category": "newpairs",
+      "emoji": "🆕",
+      "symbol": "TRUMPPEPE",
+      "token": "TRUMPPEPE",
+      "score": 83,
+      "confidence": 83,
+      "type": "🆕 NEW_PAIR"
+    },
+    {
+      "id": "wolf_top_1773785134532_2",
+      "timestamp": "2026-03-17T22:05:34.532Z",
+      "category": "newpairs",
+      "emoji": "🆕",
+      "symbol": "PAWAN",
+      "token": "PAWAN",
+      "score": 58,
+      "confidence": 58,
+      "type": "top_pair"
+    },
+    {
+      "id": "wolf_top_1773785134532_3",
+      "timestamp": "2026-03-17T22:05:34.532Z",
+      "category": "newpairs",
+      "emoji": "🆕",
+      "symbol": "TRUST",
+      "token": "TRUST",
+      "score": 53,
+      "confidence": 53,
+      "type": "top_pair"
+    }
+  ],
+  "analysis": {
+    "summary": {
+      "totalAlerts": 4,
+      "byCategory": {
+        "newpairs": 4
+      },
+      "byScore": {
+        "high": 2,
+        "medium": 0,
+        "low": 2
+      },
+      "byHour": {
+        "0": 4
+      }
+    },
+    "topTokens": [
+      {
+        "symbol": "TRUMPPEPE",
+        "count": 2,
+        "totalScore": 166,
+        "categories": [
+          "newpairs"
+        ],
+        "latestAlert": "2026-03-17T22:05:34.531Z",
+        "avgScore": 83
+      },
+      {
+        "symbol": "PAWAN",
+        "count": 1,
+        "totalScore": 58,
+        "categories": [
+          "newpairs"
+        ],
+        "latestAlert": "2026-03-17T22:05:34.532Z",
+        "avgScore": 58
+      },
+      {
+        "symbol": "TRUST",
+        "count": 1,
+        "totalScore": 53,
+        "categories": [
+          "newpairs"
+        ],
+        "latestAlert": "2026-03-17T22:05:34.532Z",
+        "avgScore": 53
+      }
+    ],
+    "trends": [
+      {
+        "symbol": "TRUMPPEPE",
+        "alertCount": 2,
+        "avgScore": 83,
+        "categories": [
+          "newpairs"
+        ],
+        "strength": 40
+      }
+    ],
+    "hourlyActivity": [
+      {
+        "hour": 0,
+        "count": 4
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "type": "high_confidence",
+      "priority": "high",
+      "message": "High confidence signals for TRUMPPEPE",
+      "action": "Consider immediate research on these tokens",
+      "tokens": [
+        "TRUMPPEPE"
+      ]
+    },
+    {
+      "type": "new_pair_trend",
+      "priority": "medium",
+      "message": "Multiple alerts for new pairs: TRUMPPEPE",
+      "action": "Monitor for early liquidity and volume growth",
+      "tokens": [
+        "TRUMPPEPE"
+      ]
+    },
+    {
+      "type": "timing_insight",
+      "priority": "low",
+      "message": "Peak alert activity at 0:00 UTC (4 alerts)",
+      "action": "Schedule monitoring during active hours"
+    }
+  ]
+}

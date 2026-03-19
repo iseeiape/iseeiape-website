@@ -8,21 +8,30 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
-        <a href="/insights/agent-governance-systems" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+        <a href="/insights/psychology-agent-human-trading" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 17</span>
-            <h2 style={{ marginTop: '15px', color: '#fff' }}>🏛️ Agent Governance Systems: The Next Evolution of DAOs</h2>
-            <p style={{ color: '#aaa' }}>AI agents are evolving from passive participants to active governors in decentralized protocols, creating autonomous organizations that optimize themselves 24/7 without human intervention.</p>
-            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology & Governance • Agent Governance • DAO Evolution →</p>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 19</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🧠 The Psychology of Agent-Human Trading Relationships</h2>
+            <p style={{ color: '#aaa' }}>AI agents aren't just tools — they're becoming trading partners, competitors, and psychological mirrors. Understanding this relationship is the next frontier in trading psychology and behavioral finance.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Psychology & Behavioral Finance • AI Agents • Human-Agent Interaction →</p>
           </article>
         </a>
 
-        <a href="/insights/ai-agents-in-crypto-how-autonomous-systems-are-reshaping-markets" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+        <a href="/insights/evolution-market-making-ai-agents" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 16</span>
-            <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 AI Agents in Crypto: How Autonomous Systems Are Reshaping Markets</h2>
-            <p style={{ color: '#aaa' }}>Artificial intelligence is no longer just a buzzword in crypto — it's becoming the backbone of market infrastructure. From autonomous trading agents to AI-governed protocols.</p>
-            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • AI Agents • Market Structure →</p>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 18</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 The Evolution of Market Making: From Humans to AI Agents</h2>
+            <p style={{ color: '#aaa' }}>Market making has evolved through three phases: Human Era, Algorithmic Era, and now the Agent Era. AI agents account for 42% of DEX liquidity provision and are redefining how markets function.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Strategy & Technology • Market Making • AI Agents • DeFi Evolution →</p>
+          </article>
+        </a>
+
+        <a href="/insights/agent-governance-systems" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Mar 17</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🏛️ Agent Governance Systems: The Next Evolution of DAOs</h2>
+            <p style={{ color: '#aaa' }}>AI agents are evolving from passive participants to active governors in decentralized protocols, creating autonomous organizations that optimize themselves 24/7 without human intervention.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology & Governance • Agent Governance • DAO Evolution →</p>
           </article>
         </a>
 

@@ -465,4 +465,26 @@ async function main() {
       
       if (analysis.trends.length > 0) {
         console.log(`  • Top historical trends:`);
-        analysis.trends.slice(0, 3
+        analysis.trends.slice(0, 3).forEach(trend => {
+          console.log(`    - ${trend.symbol}: ${trend.strength}% strength (${trend.alertCount} alerts)`);
+        });
+      }
+    } else {
+      console.log('⚠️  No cached alerts found');
+    }
+  }
+}
+
+// Run main function if this script is executed directly
+if (require.main === module) {
+  main().catch(error => {
+    console.error('❌ Fatal error:', error);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  fetchWolfPackAlerts,
+  analyzeAlerts,
+  generateDashboardData
+};
