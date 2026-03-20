@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/psychology-agent-human-trading-day2" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 20</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🧠 The Psychology of Agent-Human Trading Relationships: Part 2</h2>
+            <p style={{ color: '#aaa' }}>Building on yesterday's foundation, we dive deeper into the trust paradox, psychological risks, and practical frameworks for mastering agent-human collaboration in trading.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Psychology & Behavioral Finance • AI Agents • Human-Agent Interaction • Practical Framework →</p>
+          </article>
+        </a>
+
         <a href="/insights/psychology-agent-human-trading" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 19</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 19</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🧠 The Psychology of Agent-Human Trading Relationships</h2>
             <p style={{ color: '#aaa' }}>AI agents aren't just tools — they're becoming trading partners, competitors, and psychological mirrors. Understanding this relationship is the next frontier in trading psychology and behavioral finance.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Psychology & Behavioral Finance • AI Agents • Human-Agent Interaction →</p>
