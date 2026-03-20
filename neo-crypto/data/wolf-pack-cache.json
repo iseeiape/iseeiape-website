@@ -50,6 +50,54 @@
         "Volume spike: 3x average",
         "Key resistance broken at $1.25"
       ]
+    },
+    {
+      "id": "wolf_1773957942920_0",
+      "timestamp": "2026-03-19T22:05:42.920Z",
+      "category": "alpha",
+      "emoji": "🐺",
+      "token": "CHIBI",
+      "symbol": "CHIBI",
+      "score": 86,
+      "maxScore": 100,
+      "confidence": 86,
+      "alertType": "🔔 ALERT",
+      "bot": "🐺 WOLF MAIN",
+      "raw": "✅ Alert sent via 🐺 WOLF MAIN: CHIBI (score=86, type=🔔 ALERT)",
+      "details": [],
+      "metrics": {}
+    },
+    {
+      "id": "wolf_1773957942920_1",
+      "timestamp": "2026-03-19T22:05:42.920Z",
+      "category": "momentum",
+      "emoji": "📈",
+      "token": "GERALD",
+      "symbol": "GERALD",
+      "score": 73,
+      "maxScore": 100,
+      "confidence": 73,
+      "alertType": "🚀 BREAKOUT",
+      "bot": "📈 WOLF MOMENTUM",
+      "raw": "✅ Alert sent via 📈 WOLF MOMENTUM: GERALD (score=73, type=🚀 BREAKOUT)",
+      "details": [],
+      "metrics": {}
+    },
+    {
+      "id": "wolf_1773957942920_2",
+      "timestamp": "2026-03-19T22:05:42.920Z",
+      "category": "new_pair",
+      "emoji": "🆕",
+      "token": "CHIBI",
+      "symbol": "CHIBI",
+      "score": 55,
+      "maxScore": 100,
+      "confidence": 55,
+      "alertType": "🆕 NEW_PAIR",
+      "bot": "🆕 WOLF NEWPAIRS",
+      "raw": "✅ Alert sent via 🆕 WOLF NEWPAIRS: CHIBI (score=55, type=🆕 NEW_PAIR)",
+      "details": [],
+      "metrics": {}
     }
   ],
   "lastFetch": "2026-03-17T22:02:03.400Z",
@@ -59,80 +107,169 @@
       "totalAlerts": 3,
       "byCategory": {
         "alpha": 1,
-        "newpairs": 1,
-        "momentum": 1
+        "momentum": 1,
+        "new_pair": 1
       },
       "byConfidence": {
-        "high": 2,
+        "high": 1,
         "medium": 1,
-        "low": 0
+        "low": 1
       },
-      "timeDistribution": {
-        "21": 1,
-        "22": 1,
-        "23": 1
-      }
+      "avgScore": 71,
+      "timestamp": "2026-03-19T22:05:42.920Z"
     },
-    "topTokens": {
-      "WIF": {
-        "count": 1,
-        "totalScore": 95,
+    "topTokens": [
+      {
+        "symbol": "CHIBI",
+        "token": "CHIBI",
+        "count": 2,
+        "totalScore": 141,
         "categories": [
-          "alpha"
+          "alpha",
+          "new_pair"
         ],
-        "latestAlert": "2026-03-17T21:02:03.398Z",
-        "avgScore": 95
+        "latestAlert": "2026-03-19T22:05:42.920Z",
+        "metrics": {},
+        "avgScore": 71
       },
-      "POPCAT": {
+      {
+        "symbol": "GERALD",
+        "token": "GERALD",
         "count": 1,
-        "totalScore": 65,
-        "categories": [
-          "newpairs"
-        ],
-        "latestAlert": "2026-03-17T20:02:03.398Z",
-        "avgScore": 65
-      },
-      "JUP": {
-        "count": 1,
-        "totalScore": 82,
+        "totalScore": 73,
         "categories": [
           "momentum"
         ],
-        "latestAlert": "2026-03-17T19:02:03.398Z",
-        "avgScore": 82
+        "latestAlert": "2026-03-19T22:05:42.920Z",
+        "metrics": {},
+        "avgScore": 73
       }
+    ],
+    "marketInsights": [
+      {
+        "type": "strong_alpha",
+        "message": "Strong alpha signals detected (1 high-confidence alerts)",
+        "tokens": [
+          "CHIBI"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "new_pairs",
+        "message": "1 new trading pairs detected",
+        "tokens": [
+          "CHIBI"
+        ],
+        "priority": "medium"
+      },
+      {
+        "type": "momentum",
+        "message": "Momentum building for 1 tokens",
+        "tokens": [
+          "GERALD"
+        ],
+        "priority": "medium"
+      }
+    ],
+    "recommendations": [
+      {
+        "type": "top_performer",
+        "message": "CHIBI showing strongest signals (2 alerts, avg score: 71)",
+        "action": "Consider deeper research",
+        "priority": "high"
+      }
+    ]
+  },
+  "lastRun": "2026-03-19T22:05:42.921Z",
+  "summary": {
+    "metadata": {
+      "generatedAt": "2026-03-19T22:05:42.921Z",
+      "source": "wolf-pack-runner",
+      "version": "1.0.0"
     },
-    "trends": [],
-    "topTokensSorted": [
+    "snapshot": {
+      "totalAlerts": 3,
+      "highConfidenceAlerts": 1,
+      "avgScore": 71,
+      "lastUpdated": "2026-03-19T22:05:42.920Z"
+    },
+    "recentAlerts": [
       {
-        "symbol": "WIF",
-        "count": 1,
-        "totalScore": 95,
-        "categories": [
-          "alpha"
-        ],
-        "latestAlert": "2026-03-17T21:02:03.398Z",
-        "avgScore": 95
+        "timestamp": "2026-03-19T22:05:42.920Z",
+        "category": "alpha",
+        "symbol": "CHIBI",
+        "score": 86,
+        "confidence": 86,
+        "summary": "No details"
       },
       {
-        "symbol": "POPCAT",
-        "count": 1,
-        "totalScore": 65,
-        "categories": [
-          "newpairs"
-        ],
-        "latestAlert": "2026-03-17T20:02:03.398Z",
-        "avgScore": 65
+        "timestamp": "2026-03-19T22:05:42.920Z",
+        "category": "momentum",
+        "symbol": "GERALD",
+        "score": 73,
+        "confidence": 73,
+        "summary": "No details"
       },
       {
-        "symbol": "JUP",
-        "count": 1,
-        "totalScore": 82,
+        "timestamp": "2026-03-19T22:05:42.920Z",
+        "category": "new_pair",
+        "symbol": "CHIBI",
+        "score": 55,
+        "confidence": 55,
+        "summary": "No details"
+      }
+    ],
+    "topTokens": [
+      {
+        "symbol": "CHIBI",
+        "alertCount": 2,
+        "avgScore": 71,
+        "categories": [
+          "alpha",
+          "new_pair"
+        ]
+      },
+      {
+        "symbol": "GERALD",
+        "alertCount": 1,
+        "avgScore": 73,
         "categories": [
           "momentum"
+        ]
+      }
+    ],
+    "insights": [
+      {
+        "type": "strong_alpha",
+        "message": "Strong alpha signals detected (1 high-confidence alerts)",
+        "tokens": [
+          "CHIBI"
         ],
-        "latestAlert": "2026-03-17T19:02:03.398Z",
-        "avgScore": 82
+        "priority": "high"
+      },
+      {
+        "type": "new_pairs",
+        "message": "1 new trading pairs detected",
+        "tokens": [
+          "CHIBI"
+        ],
+        "priority": "medium"
+      },
+      {
+        "type": "momentum",
+        "message": "Momentum building for 1 tokens",
+        "tokens": [
+          "GERALD"
+        ],
+        "priority": "medium"
+      }
+    ],
+    "recommendations": [
+      {
+        "type": "top_performer",
+        "message": "CHIBI showing strongest signals (2 alerts, avg score: 71)",
+        "action": "Consider deeper research",
+        "priority": "high"
       }
     ]
   }

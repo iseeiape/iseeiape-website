@@ -44,7 +44,7 @@ async function main() {
     const startTime = Date.now();
     
     // Execute the main script
-    const scriptPath = path.join(__dirname, '../../scripts/wolf-pack-runner.js');
+    const scriptPath = path.join(__dirname, '../scripts/wolf-pack-runner.js');
     const args = [];
     
     log(`Executing: node ${scriptPath} ${args.join(' ')}`);
@@ -54,7 +54,7 @@ async function main() {
       { 
         encoding: 'utf8',
         stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: path.join(__dirname, '../../')
+        cwd: path.join(__dirname, '../')
       }
     );
     

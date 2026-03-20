@@ -1,115 +1,92 @@
 {
   "metadata": {
-    "generatedAt": "2026-03-18T22:05:07.055Z",
+    "generatedAt": "2026-03-19T22:05:42.921Z",
     "source": "wolf-pack-runner",
-    "version": "1.0.0",
-    "alertCount": 3
+    "version": "1.0.0"
+  },
+  "snapshot": {
+    "totalAlerts": 3,
+    "highConfidenceAlerts": 1,
+    "avgScore": 71,
+    "lastUpdated": "2026-03-19T22:05:42.920Z"
   },
   "recentAlerts": [
     {
-      "id": "wolf_1773871507053_0",
-      "timestamp": "2026-03-18T22:05:07.053Z",
-      "category": "newpairs",
-      "emoji": "🆕",
-      "symbol": "NASCAT",
-      "token": "NASCAT",
-      "score": 73,
-      "confidence": 73,
-      "type": "🆕 NEW_PAIR"
+      "timestamp": "2026-03-19T22:05:42.920Z",
+      "category": "alpha",
+      "symbol": "CHIBI",
+      "score": 86,
+      "confidence": 86,
+      "summary": "No details"
     },
     {
-      "id": "wolf_1773871507053_1",
-      "timestamp": "2026-03-18T22:05:07.053Z",
-      "category": "newpairs",
-      "emoji": "🆕",
-      "symbol": "NASCAT",
-      "token": "NASCAT",
+      "timestamp": "2026-03-19T22:05:42.920Z",
+      "category": "momentum",
+      "symbol": "GERALD",
       "score": 73,
       "confidence": 73,
-      "type": "🆕 NEW_PAIR"
+      "summary": "No details"
     },
     {
-      "id": "wolf_top_1773871507054_2",
-      "timestamp": "2026-03-18T22:05:07.054Z",
-      "category": "newpairs",
-      "emoji": "🆕",
-      "symbol": "ALIENBABY",
-      "token": "ALIENBABY",
-      "score": 58,
-      "confidence": 58,
-      "type": "top_pair"
+      "timestamp": "2026-03-19T22:05:42.920Z",
+      "category": "new_pair",
+      "symbol": "CHIBI",
+      "score": 55,
+      "confidence": 55,
+      "summary": "No details"
     }
   ],
-  "analysis": {
-    "summary": {
-      "totalAlerts": 3,
-      "byCategory": {
-        "newpairs": 3
-      },
-      "byScore": {
-        "high": 0,
-        "medium": 2,
-        "low": 1
-      },
-      "byHour": {
-        "0": 3
-      }
-    },
-    "topTokens": [
-      {
-        "symbol": "NASCAT",
-        "count": 2,
-        "totalScore": 146,
-        "categories": [
-          "newpairs"
-        ],
-        "latestAlert": "2026-03-18T22:05:07.053Z",
-        "avgScore": 73
-      },
-      {
-        "symbol": "ALIENBABY",
-        "count": 1,
-        "totalScore": 58,
-        "categories": [
-          "newpairs"
-        ],
-        "latestAlert": "2026-03-18T22:05:07.054Z",
-        "avgScore": 58
-      }
-    ],
-    "trends": [
-      {
-        "symbol": "NASCAT",
-        "alertCount": 2,
-        "avgScore": 73,
-        "categories": [
-          "newpairs"
-        ],
-        "strength": 40
-      }
-    ],
-    "hourlyActivity": [
-      {
-        "hour": 0,
-        "count": 3
-      }
-    ]
-  },
-  "recommendations": [
+  "topTokens": [
     {
-      "type": "new_pair_trend",
-      "priority": "medium",
-      "message": "Multiple alerts for new pairs: NASCAT",
-      "action": "Monitor for early liquidity and volume growth",
-      "tokens": [
-        "NASCAT"
+      "symbol": "CHIBI",
+      "alertCount": 2,
+      "avgScore": 71,
+      "categories": [
+        "alpha",
+        "new_pair"
       ]
     },
     {
-      "type": "timing_insight",
-      "priority": "low",
-      "message": "Peak alert activity at 0:00 UTC (3 alerts)",
-      "action": "Schedule monitoring during active hours"
+      "symbol": "GERALD",
+      "alertCount": 1,
+      "avgScore": 73,
+      "categories": [
+        "momentum"
+      ]
+    }
+  ],
+  "insights": [
+    {
+      "type": "strong_alpha",
+      "message": "Strong alpha signals detected (1 high-confidence alerts)",
+      "tokens": [
+        "CHIBI"
+      ],
+      "priority": "high"
+    },
+    {
+      "type": "new_pairs",
+      "message": "1 new trading pairs detected",
+      "tokens": [
+        "CHIBI"
+      ],
+      "priority": "medium"
+    },
+    {
+      "type": "momentum",
+      "message": "Momentum building for 1 tokens",
+      "tokens": [
+        "GERALD"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "top_performer",
+      "message": "CHIBI showing strongest signals (2 alerts, avg score: 71)",
+      "action": "Consider deeper research",
+      "priority": "high"
     }
   ]
 }
