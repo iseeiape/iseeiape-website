@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/future-agent-human-collaboration" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 21</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🤝 The Future of Agent-Human Collaboration: Building Symbiotic Trading Systems</h2>
+            <p style={{ color: '#aaa' }}>The next evolution in trading isn't AI replacing humans — it's humans and AI forming symbiotic systems where each amplifies the other's strengths. We explore the 3-layer architecture of future trading systems.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • AI Agents • Human-AI Collaboration • System Architecture • Future of Trading →</p>
+          </article>
+        </a>
+
         <a href="/insights/psychology-agent-human-trading-day2" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 20</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 20</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🧠 The Psychology of Agent-Human Trading Relationships: Part 2</h2>
             <p style={{ color: '#aaa' }}>Building on yesterday's foundation, we dive deeper into the trust paradox, psychological risks, and practical frameworks for mastering agent-human collaboration in trading.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Psychology & Behavioral Finance • AI Agents • Human-Agent Interaction • Practical Framework →</p>
