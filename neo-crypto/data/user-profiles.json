@@ -1,0 +1,89 @@
+{
+  "users": [
+    {
+      "id": "user_001",
+      "name": "Alex Trader",
+      "segment": "aggressive_trader",
+      "preferences": {
+        "riskTolerance": "high",
+        "tradingStyle": "scalping",
+        "favoriteCategories": [
+          "alpha",
+          "momentum"
+        ],
+        "portfolioSize": 50000,
+        "experienceLevel": "advanced",
+        "interests": [
+          "ai_agents",
+          "defi",
+          "new_pairs"
+        ]
+      },
+      "behavior": {
+        "avgTradeSize": 5000,
+        "avgHoldTime": "4h",
+        "successRate": 0.65,
+        "activeHours": [
+          "09:00-12:00",
+          "14:00-18:00"
+        ]
+      }
+    },
+    {
+      "id": "user_002",
+      "name": "Sarah Investor",
+      "segment": "conservative_investor",
+      "preferences": {
+        "riskTolerance": "low",
+        "tradingStyle": "swing_trading",
+        "favoriteCategories": [
+          "whale",
+          "alpha"
+        ],
+        "portfolioSize": 100000,
+        "experienceLevel": "intermediate",
+        "interests": [
+          "defi",
+          "infrastructure",
+          "staking"
+        ]
+      },
+      "behavior": {
+        "avgTradeSize": 10000,
+        "avgHoldTime": "3d",
+        "successRate": 0.75,
+        "activeHours": [
+          "10:00-16:00"
+        ]
+      }
+    },
+    {
+      "id": "user_003",
+      "name": "Mike Beginner",
+      "segment": "new_trader",
+      "preferences": {
+        "riskTolerance": "medium",
+        "tradingStyle": "learning",
+        "favoriteCategories": [
+          "new_pair",
+          "momentum"
+        ],
+        "portfolioSize": 5000,
+        "experienceLevel": "beginner",
+        "interests": [
+          "education",
+          "meme_coins",
+          "community"
+        ]
+      },
+      "behavior": {
+        "avgTradeSize": 500,
+        "avgHoldTime": "1d",
+        "successRate": 0.45,
+        "activeHours": [
+          "18:00-22:00"
+        ]
+      }
+    }
+  ]
+}

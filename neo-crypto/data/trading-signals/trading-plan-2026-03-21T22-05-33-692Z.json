@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "generatedAt": "2026-03-21T22:05:33.691Z",
+    "signalCount": 3,
+    "portfolioSize": 10000,
+    "riskPerTrade": 0.02
+  },
+  "executiveSummary": {
+    "marketOutlook": "Selective - few high-quality opportunities",
+    "recommendedAction": "Conservative allocation - selective positions",
+    "topOpportunity": {
+      "token": "WIF",
+      "signalType": "general_alert",
+      "confidence": 95,
+      "urgency": "LOW"
+    },
+    "riskLevel": "LOW"
+  },
+  "signals": [
+    {
+      "token": "WIF",
+      "signalType": "general_alert",
+      "action": "ENTER",
+      "entry": "0.000000",
+      "stopLoss": "0.000000",
+      "takeProfit": "0.000000",
+      "size": 1330,
+      "confidence": 95,
+      "urgency": "LOW",
+      "holdTime": "1-12 hours"
+    },
+    {
+      "token": "JUP",
+      "signalType": "momentum_breakout",
+      "action": "ENTER",
+      "entry": "0.000000",
+      "stopLoss": "0.000000",
+      "takeProfit": "0.000000",
+      "size": 1640,
+      "confidence": 82,
+      "urgency": "LOW",
+      "holdTime": "1-4 hours"
+    },
+    {
+      "token": "CHIBI",
+      "signalType": "general_alert",
+      "action": "ENTER",
+      "entry": "0.000000",
+      "stopLoss": "0.000000",
+      "takeProfit": "0.000000",
+      "size": 1204,
+      "confidence": 86,
+      "urgency": "LOW",
+      "holdTime": "1-12 hours"
+    }
+  ],
+  "portfolioAllocation": {
+    "allocation": [
+      {
+        "token": "WIF",
+        "signalType": "general_alert",
+        "allocationUSD": 1330,
+        "allocationPercent": "13.3%",
+        "entryPrice": "0.000000",
+        "stopLoss": "0.000000",
+        "takeProfit": "0.000000",
+        "riskReward": "0.00",
+        "urgency": "LOW"
+      },
+      {
+        "token": "CHIBI",
+        "signalType": "general_alert",
+        "allocationUSD": 1204,
+        "allocationPercent": "12.0%",
+        "entryPrice": "0.000000",
+        "stopLoss": "0.000000",
+        "takeProfit": "0.000000",
+        "riskReward": "0.00",
+        "urgency": "LOW"
+      },
+      {
+        "token": "JUP",
+        "signalType": "momentum_breakout",
+        "allocationUSD": 1640,
+        "allocationPercent": "16.4%",
+        "entryPrice": "0.000000",
+        "stopLoss": "0.000000",
+        "takeProfit": "0.000000",
+        "riskReward": "0.00",
+        "urgency": "LOW"
+      }
+    ],
+    "totalAllocated": "4174.00",
+    "cashRemaining": "5826.00",
+    "allocationPercent": "41.7%",
+    "signalCount": 3,
+    "recommendation": "Conservative allocation - selective positions",
+    "generatedAt": "2026-03-21T22:05:33.691Z"
+  },
+  "riskManagement": {
+    "maxPortfolioRisk": "6.0%",
+    "positionSizing": "Dynamic based on confidence and signal type",
+    "stopLossStrategy": "Technical levels adjusted for volatility",
+    "profitTaking": "Scale out at 50%, 100%, 150% of target"
+  },
+  "monitoring": {
+    "checkFrequency": "15 minutes for high urgency, 1 hour for medium, 4 hours for low",
+    "adjustmentTriggers": [
+      "Price hits stop loss",
+      "Price reaches take profit",
+      "New higher confidence signal emerges",
+      "Market conditions change significantly"
+    ],
+    "exitCriteria": [
+      "Stop loss triggered",
+      "Take profit reached",
+      "Signal invalidated (24+ hours without progress)",
+      "Better opportunity identified"
+    ]
+  }
+}
