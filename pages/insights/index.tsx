@@ -4,6 +4,12 @@ import Layout from '../../components/Layout'
 export default function Insights() {
   const articles = [
     {
+      title: "💰 The Economics of Agent Swarms: How AI Networks Are Creating New Market Structures",
+      date: "March 22, 2026",
+      slug: "economics-agent-swarms",
+      description: "AI agent swarms are creating entirely new economic systems with their own incentive structures, value flows, and market dynamics."
+    },
+    {
       title: "🤖 The Alpha Intelligence Swarm: Building the Future of On-Chain Analysis",
       date: "March 4, 2026",
       slug: "alpha-intelligence-swarm",
