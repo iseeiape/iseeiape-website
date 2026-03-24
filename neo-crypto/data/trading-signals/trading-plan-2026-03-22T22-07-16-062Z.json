@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "generatedAt": "2026-03-22T22:07:16.062Z",
+    "signalCount": 1,
+    "portfolioSize": 10000,
+    "riskPerTrade": 0.02
+  },
+  "executiveSummary": {
+    "marketOutlook": "Cautious - limited opportunities",
+    "recommendedAction": "Minimal allocation - wait for better opportunities",
+    "topOpportunity": {
+      "token": "CHIBI",
+      "signalType": "general_alert",
+      "confidence": 86,
+      "urgency": "LOW"
+    },
+    "riskLevel": "LOW"
+  },
+  "signals": [
+    {
+      "token": "CHIBI",
+      "signalType": "general_alert",
+      "action": "ENTER",
+      "entry": "0.000011",
+      "stopLoss": "0.000010",
+      "takeProfit": "0.000012",
+      "size": 1204,
+      "confidence": 86,
+      "urgency": "LOW",
+      "holdTime": "1-12 hours"
+    }
+  ],
+  "portfolioAllocation": {
+    "allocation": [
+      {
+        "token": "CHIBI",
+        "signalType": "general_alert",
+        "allocationUSD": 1204,
+        "allocationPercent": "12.0%",
+        "entryPrice": "0.000011",
+        "stopLoss": "0.000010",
+        "takeProfit": "0.000012",
+        "riskReward": "1.50",
+        "urgency": "LOW"
+      }
+    ],
+    "totalAllocated": "1204.00",
+    "cashRemaining": "8796.00",
+    "allocationPercent": "12.0%",
+    "signalCount": 1,
+    "recommendation": "Minimal allocation - wait for better opportunities",
+    "generatedAt": "2026-03-22T22:07:16.062Z"
+  },
+  "riskManagement": {
+    "maxPortfolioRisk": "2.0%",
+    "positionSizing": "Dynamic based on confidence and signal type",
+    "stopLossStrategy": "Technical levels adjusted for volatility",
+    "profitTaking": "Scale out at 50%, 100%, 150% of target"
+  },
+  "monitoring": {
+    "checkFrequency": "15 minutes for high urgency, 1 hour for medium, 4 hours for low",
+    "adjustmentTriggers": [
+      "Price hits stop loss",
+      "Price reaches take profit",
+      "New higher confidence signal emerges",
+      "Market conditions change significantly"
+    ],
+    "exitCriteria": [
+      "Stop loss triggered",
+      "Take profit reached",
+      "Signal invalidated (24+ hours without progress)",
+      "Better opportunity identified"
+    ]
+  }
+}

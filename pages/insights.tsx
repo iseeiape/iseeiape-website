@@ -8,9 +8,27 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/neo-dashboard-v3-launch-2026-03-24" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 24</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🚀 Neo Dashboard v3: The Future of Real-Time Crypto Intelligence</h2>
+            <p style={{ color: '#aaa' }}>Built autonomously during night shift, the new dashboard delivers 30-second auto-refresh, AI-powered scoring, confidence levels, and live whale tracking — transforming iseeiape from reactive tracking to real-time intelligence.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology • Dashboard • Real-Time • AI • Trading • Automation →</p>
+          </article>
+        </a>
+
+        <a href="/insights/autonomous-trading-market-makers-2026-03-23" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 23</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🚀 The Future of Autonomous Trading: When AI Agents Become Market Makers</h2>
+            <p style={{ color: '#aaa' }}>AI agents are evolving from execution tools to market makers, creating 24/7 autonomous trading networks that will redefine DeFi liquidity and market structure. The third era of market making has begun.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Technology & Market Analysis • AI Agents • Market Making • Autonomous Trading →</p>
+          </article>
+        </a>
+
         <a href="/insights/future-agent-human-collaboration" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 21</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Mar 21</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🤝 The Future of Agent-Human Collaboration: Building Symbiotic Trading Systems</h2>
             <p style={{ color: '#aaa' }}>The next evolution in trading isn't AI replacing humans — it's humans and AI forming symbiotic systems where each amplifies the other's strengths. We explore the 3-layer architecture of future trading systems.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • AI Agents • Human-AI Collaboration • System Architecture • Future of Trading →</p>
