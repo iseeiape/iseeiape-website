@@ -4,6 +4,12 @@ import Layout from '../../components/Layout'
 export default function Insights() {
   const articles = [
     {
+      title: "🤖 The Autonomous Portfolio Manager: How AI Agents Will Manage Your Entire Crypto Portfolio",
+      date: "March 26, 2026",
+      slug: "autonomous-portfolio-manager",
+      description: "How AI agents are evolving into full-scale portfolio managers handling asset allocation, risk management, and multi-chain optimization with consistent outperformance."
+    },
+    {
       title: "💰 The Economics of Agent Swarms: How AI Networks Are Creating New Market Structures",
       date: "March 22, 2026",
       slug: "economics-agent-swarms",
