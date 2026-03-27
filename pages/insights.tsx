@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/regulatory-compliance-ai-portfolio-managers-2026-03-27" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 27</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>⚖️ Regulatory Compliance for AI Portfolio Managers: Navigating the Legal Landscape</h2>
+            <p style={{ color: '#aaa' }}>As AI portfolio managers handle billions in assets across multiple jurisdictions, regulatory compliance has become the critical bottleneck for mass adoption. Learn how to navigate the complex legal landscape.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Regulation & Compliance • AI Governance • Legal Framework • RegTech →</p>
+          </article>
+        </a>
+
         <a href="/insights/symbiotic-trading-stack-2026-03-25" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 25</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 25</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🤝 The Symbiotic Trading Stack: How Humans and AI Agents Will Trade Together</h2>
             <p style={{ color: '#aaa' }}>We're entering Era 3 of trading technology: symbiotic systems where humans and AI collaborate seamlessly across three layers — strategic intelligence, tactical execution, and continuous optimization.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Strategy & Technology • Human-AI Collaboration • Trading Stack • Architecture →</p>
@@ -19,7 +28,7 @@ export default function Insights() {
 
         <a href="/insights/neo-dashboard-v3-launch-2026-03-24" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 24</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Mar 24</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🚀 Neo Dashboard v3: The Future of Real-Time Crypto Intelligence</h2>
             <p style={{ color: '#aaa' }}>Built autonomously during night shift, the new dashboard delivers 30-second auto-refresh, AI-powered scoring, confidence levels, and live whale tracking — transforming iseeiape from reactive tracking to real-time intelligence.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology • Dashboard • Real-Time • AI • Trading • Automation →</p>
