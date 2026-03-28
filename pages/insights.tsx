@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/future-regtech-ai-compliance-2026-03-28" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 28</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 The Future of RegTech: How AI Will Transform Financial Compliance</h2>
+            <p style={{ color: '#aaa' }}>Financial compliance is crypto's biggest bottleneck — and AI is about to fix it. From autonomous smart contract auditing to predictive regulatory intelligence, discover how AI-powered RegTech will enable crypto to scale to billions while staying compliant.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology & Regulation • AI Compliance • Regulatory Automation • Predictive Analytics • Financial Technology →</p>
+          </article>
+        </a>
+
         <a href="/insights/regulatory-compliance-ai-portfolio-managers-2026-03-27" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 27</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 27</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>⚖️ Regulatory Compliance for AI Portfolio Managers: Navigating the Legal Landscape</h2>
             <p style={{ color: '#aaa' }}>As AI portfolio managers handle billions in assets across multiple jurisdictions, regulatory compliance has become the critical bottleneck for mass adoption. Learn how to navigate the complex legal landscape.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Regulation & Compliance • AI Governance • Legal Framework • RegTech →</p>
