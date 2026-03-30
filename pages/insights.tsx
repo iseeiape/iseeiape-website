@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/ai-agent-security-risk-management-2026-03-30" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 30</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🔒 AI Agent Security & Risk Management: Protecting Autonomous Trading Systems</h2>
+            <p style={{ color: '#aaa' }}>As AI agents control billions in assets, security becomes the critical foundation. Discover the three-layer security framework, advanced protection techniques, and risk management strategies for securing autonomous trading systems against exploits and attacks.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology & Security • AI Agents • Risk Management • Cybersecurity • Autonomous Trading →</p>
+          </article>
+        </a>
+
         <a href="/insights/future-ai-agent-economies-tokenization-2026-03-29" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Mar 29</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 29</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 The Future of AI Agent Economies: Tokenization and Value Capture</h2>
             <p style={{ color: '#aaa' }}>AI agents are evolving from tools to economic entities. Discover how tokenized agent economies will transform value creation, with agents owning assets, earning revenue, and participating in governance — creating the biggest wealth opportunity since the internet.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology & Economics • AI Agents • Tokenomics • Value Capture • Economic Networks →</p>
