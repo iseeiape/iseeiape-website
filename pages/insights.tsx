@@ -8,9 +8,27 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/wolf-pack-performance-fix-2026-04-03" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Apr 3</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🔧 Fixing the Wolf Pack: How We Solved the 98.5% Delisted Token Problem</h2>
+            <p style={{ color: '#aaa' }}>A deep dive into debugging and fixing critical performance tracking: from 98.5% delisted tokens to robust price tracking. Learn how we diagnosed API endpoint confusion, fixed database schema, and built resilient DeFi data pipelines.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Technical Case Study • Debugging • Performance Tracking • Data Engineering • API Integration • Solana →</p>
+          </article>
+        </a>
+
+        <a href="/insights/economics-symbiotic-trading-2026-04-02" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Apr 2</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>💰 The Economics of Symbiotic Trading: Value Distribution in Human-AI Partnerships</h2>
+            <p style={{ color: '#aaa' }}>How should value be distributed between human and AI trading partners? We explore emerging economic models for symbiotic partnerships, from contribution-based allocation to tokenized partnership structures that align incentives across biological and artificial intelligence.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Economics & Strategy • AI Agents • Partnership Economics • Value Distribution • Tokenomics • Incentive Design →</p>
+          </article>
+        </a>
+
         <a href="/insights/symbiotic-intelligence-systems-2026-04-01" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Apr 1</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>3 days ago - Apr 1</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🤝 The Future of Agent-Human Trading Partnerships: Symbiotic Intelligence Systems</h2>
             <p style={{ color: '#aaa' }}>The next evolutionary step in trading: human intuition meets AI pattern recognition in true symbiotic partnerships that create capabilities neither could achieve alone.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Technology & Strategy • AI Agents • Human-AI Collaboration • Symbiotic Systems • Trading Partnerships →</p>
@@ -19,7 +37,7 @@ export default function Insights() {
 
         <a href="/insights/ai-agent-interoperability-cross-chain-intelligence-2026-03-31" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 31</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Mar 31</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🔗 AI Agent Interoperability & Cross-Chain Intelligence</h2>
             <p style={{ color: '#aaa' }}>The next frontier in AI agent evolution: seamless cross-chain intelligence sharing, coordinated multi-chain strategies, and the emergence of a global agent intelligence network that transcends individual blockchain ecosystems.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology & Network • AI Agents • Cross-Chain • Interoperability • Intelligence Network →</p>
@@ -28,7 +46,7 @@ export default function Insights() {
 
         <a href="/insights/ai-agent-security-risk-management-2026-03-30" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 30</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>3 days ago - Mar 30</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🔒 AI Agent Security & Risk Management: Protecting Autonomous Trading Systems</h2>
             <p style={{ color: '#aaa' }}>As AI agents control billions in assets, security becomes the critical foundation. Discover the three-layer security framework, advanced protection techniques, and risk management strategies for securing autonomous trading systems against exploits and attacks.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology & Security • AI Agents • Risk Management • Cybersecurity • Autonomous Trading →</p>
@@ -37,7 +55,7 @@ export default function Insights() {
 
         <a href="/insights/future-ai-agent-economies-tokenization-2026-03-29" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Mar 29</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>4 days ago - Mar 29</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 The Future of AI Agent Economies: Tokenization and Value Capture</h2>
             <p style={{ color: '#aaa' }}>AI agents are evolving from tools to economic entities. Discover how tokenized agent economies will transform value creation, with agents owning assets, earning revenue, and participating in governance — creating the biggest wealth opportunity since the internet.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology & Economics • AI Agents • Tokenomics • Value Capture • Economic Networks →</p>
@@ -82,7 +100,7 @@ export default function Insights() {
 
         <a href="/insights/autonomous-trading-market-makers-2026-03-23" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 23</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>11 days ago - Mar 23</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🚀 The Future of Autonomous Trading: When AI Agents Become Market Makers</h2>
             <p style={{ color: '#aaa' }}>AI agents are evolving from execution tools to market makers, creating 24/7 autonomous trading networks that will redefine DeFi liquidity and market structure. The third era of market making has begun.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Technology & Market Analysis • AI Agents • Market Making • Autonomous Trading →</p>
@@ -91,7 +109,7 @@ export default function Insights() {
 
         <a href="/insights/future-agent-human-collaboration" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Mar 21</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>13 days ago - Mar 21</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🤝 The Future of Agent-Human Collaboration: Building Symbiotic Trading Systems</h2>
             <p style={{ color: '#aaa' }}>The next evolution in trading isn't AI replacing humans — it's humans and AI forming symbiotic systems where each amplifies the other's strengths. We explore the 3-layer architecture of future trading systems.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • AI Agents • Human-AI Collaboration • System Architecture • Future of Trading →</p>
@@ -100,7 +118,7 @@ export default function Insights() {
 
         <a href="/insights/psychology-agent-human-trading-day2" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 20</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>14 days ago - Mar 20</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🧠 The Psychology of Agent-Human Trading Relationships: Part 2</h2>
             <p style={{ color: '#aaa' }}>Building on yesterday's foundation, we dive deeper into the trust paradox, psychological risks, and practical frameworks for mastering agent-human collaboration in trading.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Psychology & Behavioral Finance • AI Agents • Human-Agent Interaction • Practical Framework →</p>
@@ -109,7 +127,7 @@ export default function Insights() {
 
         <a href="/insights/psychology-agent-human-trading" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 19</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>15 days ago - Mar 19</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🧠 The Psychology of Agent-Human Trading Relationships</h2>
             <p style={{ color: '#aaa' }}>AI agents aren't just tools — they're becoming trading partners, competitors, and psychological mirrors. Understanding this relationship is the next frontier in trading psychology and behavioral finance.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Psychology & Behavioral Finance • AI Agents • Human-Agent Interaction →</p>
@@ -118,7 +136,7 @@ export default function Insights() {
 
         <a href="/insights/evolution-market-making-ai-agents" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Mar 18</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>16 days ago - Mar 18</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 The Evolution of Market Making: From Humans to AI Agents</h2>
             <p style={{ color: '#aaa' }}>Market making has evolved through three phases: Human Era, Algorithmic Era, and now the Agent Era. AI agents account for 42% of DEX liquidity provision and are redefining how markets function.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Strategy & Technology • Market Making • AI Agents • DeFi Evolution →</p>
@@ -127,7 +145,7 @@ export default function Insights() {
 
         <a href="/insights/agent-governance-systems" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Mar 17</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>17 days ago - Mar 17</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🏛️ Agent Governance Systems: The Next Evolution of DAOs</h2>
             <p style={{ color: '#aaa' }}>AI agents are evolving from passive participants to active governors in decentralized protocols, creating autonomous organizations that optimize themselves 24/7 without human intervention.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology & Governance • Agent Governance • DAO Evolution →</p>
