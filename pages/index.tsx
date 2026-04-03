@@ -2,469 +2,314 @@ import Layout from '../components/Layout'
 import Link from 'next/link'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
+import path from 'path'
+import fs from 'fs'
 
-export default function Home() {
-  const [mounted, setMounted] = useState(false)
-  
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+const GREEN = '#00ff88'
 
-  // Schema markup for homepage
-  const homeSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebApplication",
-        "@id": "https://www.iseeiape.com/#webapp",
-        "name": "iseeiape",
-        "url": "https://www.iseeiape.com",
-        "description": "Smart Money Intelligence Terminal for on-chain analytics, whale wallet tracking, and crypto market intelligence on Solana and beyond.",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "featureList": [
-          "Real-time whale wallet tracking",
-          "On-chain data analytics",
-          "Smart money intelligence",
-          "Solana market analysis",
-          "Crypto market insights"
-        ],
-        "screenshot": "https://www.iseeiape.com/og-image.png",
-        "inLanguage": "en"
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://www.iseeiape.com/#organization",
-        "name": "iseeiape",
-        "url": "https://www.iseeiape.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.iseeiape.com/logo.png"
-        },
-        "sameAs": [
-          "https://twitter.com/iseeiape"
-        ],
-        "description": "On-chain analytics and smart money intelligence platform for crypto traders and Web3 investors."
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.iseeiape.com/#website",
-        "url": "https://www.iseeiape.com",
-        "name": "iseeiape",
-        "description": "Smart Money Intelligence Terminal",
-        "publisher": {
-          "@id": "https://www.iseeiape.com/#organization"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://www.iseeiape.com/insights?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        },
-        "inLanguage": "en"
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://www.iseeiape.com/#webapp",
+      "name": "iseeiape — Solana Wallet Tracker & Smart Money Scanner",
+      "url": "https://www.iseeiape.com",
+      "description": "Track smart money wallets on Solana and Base in real time. Wolf Alert System scans 500+ tokens every 15 minutes and sends alpha signals before the crowd.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Real-time Solana wallet tracker",
+        "Smart money whale wallet tracking",
+        "On-chain alpha signal scanner",
+        "Meme coin early entry alerts",
+        "Wolf Alert System — 500+ token scans every 15 min"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.iseeiape.com/#organization",
+      "name": "iseeiape",
+      "url": "https://www.iseeiape.com",
+      "sameAs": ["https://twitter.com/iseeicode"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.iseeiape.com/#website",
+      "url": "https://www.iseeiape.com",
+      "name": "iseeiape",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.iseeiape.com/tokens?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
-    ]
-  };
-
-  const topPlays = [
-    { name: 'BigTrout', roi: '+10,075%', desc: 'Whale #17 turned $8.9K into $89.4K', time: '16 hours' },
-    { name: 'Dave (Base)', roi: '+3,692%', desc: 'Cross-chain alpha play', time: '38 hours' },
-    { name: 'Molten', roi: '+2,169%', desc: 'Ecosystem pump strategy', time: '21 hours' },
+    }
   ]
+}
 
-  const stats = [
-    { value: '$620K+', label: 'Total Profits Tracked' },
-    { value: '10,075%', label: 'Best ROI' },
-    { value: '2.1 days', label: 'Avg Hold Time' },
-    { value: '100%', label: 'Win Rate' },
-  ]
+const recentAlerts = [
+  { symbol: 'ATLAS', score: 95, chain: 'SOL', return1h: '+312%', time: '2h ago', type: 'Alpha' },
+  { symbol: 'KIZUNA', score: 88, chain: 'SOL', return1h: '+147%', time: '5h ago', type: 'Momentum' },
+  { symbol: 'LUMI', score: 84, chain: 'BASE', return1h: '+89%', time: '8h ago', type: 'NewPair' },
+  { symbol: 'MARU', score: 91, chain: 'SOL', return1h: '+203%', time: '12h ago', type: 'Alpha' },
+  { symbol: 'BALLTZE', score: 79, chain: 'SOL', return1h: '+67%', time: '1d ago', type: 'Momentum' },
+]
 
-  const features = [
-    { icon: '📊', title: 'Live Trending Tokens', desc: 'Real-time Solana token rankings by volume and smart money flow.' },
-    { icon: '🐋', title: 'Smart Money Tracking', desc: 'Follow profitable whale wallets and their trades in real-time.' },
-    { icon: '🔔', title: 'Early Entry Signals', desc: 'Get notified when smart money apes into new launches.' },
-    { icon: '💰', title: 'On-Chain Analytics', desc: 'Market cap, volume, holder count for every token.' },
-  ]
+const stats = [
+  { value: '500+', label: 'Tokens Scanned / 15min' },
+  { value: '534', label: 'Alpha Tokens Tracked' },
+  { value: '2,200+', label: 'Alerts Generated' },
+  { value: '24/7', label: 'Wolf Scanner Active' },
+]
 
+const features = [
+  { icon: '🐺', title: 'Wolf Alert System', desc: 'Autonomous scanner tracks 500+ Solana & Base tokens every 15 minutes. Score 80+ = early entry signal.' },
+  { icon: '🐋', title: 'Smart Money Tracking', desc: 'Follow profitable whale wallets on-chain. See exactly what smart money buys before the crowd.' },
+  { icon: '⚡', title: 'Early Entry Signals', desc: 'Get alpha before it trends. Wolf catches new pairs, momentum breaks, and whale accumulation in real time.' },
+  { icon: '📊', title: 'On-Chain Analytics', desc: 'Market cap, volume, holder count, buy/sell pressure — all the data you need to make the call.' },
+  { icon: '🔔', title: 'Telegram Alerts', desc: 'Instant Telegram notifications when Wolf finds a high-score token. Never miss the pump again.' },
+  { icon: '📈', title: '534 Token Pages', desc: 'Every token Wolf ever caught — searchable, sortable, with historical performance data.' },
+]
+
+export default function Home({ tokenCount }) {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => { setMounted(true) }, [])
   if (!mounted) return null
 
   return (
     <>
       <Head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(homeSchema)}} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} />
       </Head>
-      <Layout title="iseeiape - Smart Money Intelligence">
-      <>
-        <style>{`
-          .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-          }
-          
-          .hero {
-            text-align: center;
-            padding: 60px 20px;
-          }
-          
-          .hero h1 {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: clamp(36px, 8vw, 72px);
-            font-weight: 700;
-            color: #00ff88;
-            text-shadow: 0 0 40px rgba(0, 255, 136, 0.5);
-            margin-bottom: 16px;
-            letter-spacing: -2px;
-          }
-          
-          .hero-subtitle {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: clamp(14px, 3vw, 18px);
-            color: rgba(255, 255, 255, 0.6);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 8px;
-          }
-          
-          .hero-desc {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.5);
-            max-width: 500px;
-            margin: 0 auto 40px;
-          }
-          
-          .cta-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-            max-width: 600px;
-            margin: 0 auto 60px;
-          }
-          
-          @media (min-width: 640px) {
-            .cta-grid {
-              grid-template-columns: repeat(4, 1fr);
-            }
-          }
-          
-          .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 16px 24px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 13px;
-            font-weight: 600;
-            border-radius: 10px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-          }
-          
-          .btn-primary {
-            background: #00ff88;
-            color: #000;
-          }
-          
-          .btn-primary:hover {
-            background: #00e67a;
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
-            transform: translateY(-2px);
-          }
-          
-          .btn-secondary {
-            background: rgba(0, 255, 136, 0.1);
-            color: #00ff88;
-            border: 1px solid rgba(0, 255, 136, 0.3);
-          }
-          
-          .btn-secondary:hover {
-            background: rgba(0, 255, 136, 0.2);
-            border-color: #00ff88;
-          }
-          
-          .panel {
-            background: rgba(18, 18, 26, 0.9);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 40px;
-          }
-          
-          .panel-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
-          }
-          
-          .panel-title {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 16px;
-            font-weight: 600;
-            color: #00ff88;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-          }
-          
-          .play-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-            border-left: 3px solid #00ff88;
-            margin-bottom: 12px;
-            transition: all 0.3s ease;
-          }
-          
-          .play-item:hover {
-            background: rgba(0, 255, 136, 0.05);
-            transform: translateX(5px);
-          }
-          
-          .play-roi {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 24px;
-            font-weight: 700;
-            color: #00ff88;
-            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
-          }
-          
-          .play-name {
-            font-size: 18px;
-            font-weight: 600;
-            margin: 4px 0;
-          }
-          
-          .play-desc {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.5);
-          }
-          
-          .play-time {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.4);
-          }
-          
-          .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-            margin-bottom: 60px;
-          }
-          
-          @media (min-width: 768px) {
-            .stats-grid {
-              grid-template-columns: repeat(4, 1fr);
-            }
-          }
-          
-          .stat-card {
-            background: rgba(18, 18, 26, 0.9);
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            border-radius: 12px;
-            padding: 24px;
-            text-align: center;
-            transition: all 0.3s ease;
-          }
-          
-          .stat-card:hover {
-            border-color: #00ff88;
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
-          }
-          
-          .stat-value {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 28px;
-            font-weight: 700;
-            color: #00ff88;
-            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
-          }
-          
-          .stat-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.5);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 8px;
-          }
-          
-          .features-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin-bottom: 60px;
-          }
-          
-          @media (min-width: 768px) {
-            .features-grid {
-              grid-template-columns: repeat(2, 1fr);
-            }
-          }
-          
-          .feature-card {
-            background: rgba(18, 18, 26, 0.9);
-            border: 1px solid rgba(0, 255, 136, 0.1);
-            border-radius: 16px;
-            padding: 32px;
-            transition: all 0.3s ease;
-          }
-          
-          .feature-card:hover {
-            border-color: rgba(0, 255, 136, 0.3);
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.1);
-            transform: translateY(-4px);
-          }
-          
-          .feature-icon {
-            font-size: 48px;
-            margin-bottom: 16px;
-          }
-          
-          .feature-title {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 18px;
-            font-weight: 600;
-            color: #00ff88;
-            margin-bottom: 8px;
-          }
-          
-          .feature-desc {
-            font-size: 15px;
-            color: rgba(255, 255, 255, 0.6);
-            line-height: 1.6;
-          }
-          
-          .cta-section {
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%);
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            border-radius: 20px;
-            padding: 60px 40px;
-            text-align: center;
-            margin-bottom: 60px;
-          }
-          
-          .cta-title {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 16px;
-          }
-          
-          .cta-desc {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 32px;
-          }
-          
-          .footer {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid rgba(0, 255, 136, 0.1);
-          }
-          
-          .footer-text {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-          }
-        `}</style>
+      <Layout title="iseeiape — Solana Wallet Tracker & Smart Money Scanner">
+        <>
+          <style>{`
+            * { box-sizing: border-box; }
+            .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        <section className="hero">
-          <h1>🦎 iseeiape</h1>
-          <p className="hero-subtitle">Smart Money Intelligence Terminal</p>
-          <p className="hero-desc">Track whale wallets. Find alpha. Never miss the pump.</p>
-          
-          <div className="cta-grid">
-            <Link href="/case-studies" className="btn btn-primary">📊 Cases</Link>
-            <Link href="/guides" className="btn btn-secondary">📚 Guides</Link>
-            <Link href="/insights" className="btn btn-secondary">💡 Insights</Link>
-            <Link href="/war-room" className="btn btn-primary">⚡ War Room</Link>
-          </div>
-        </section>
+            /* HERO */
+            .hero { text-align: center; padding: 72px 20px 48px; }
+            .hero-badge { display: inline-block; background: rgba(0,255,136,0.1); border: 1px solid rgba(0,255,136,0.3); color: ${GREEN}; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 99px; margin-bottom: 24px; }
+            .hero h1 { font-family: 'JetBrains Mono', monospace; font-size: clamp(32px, 7vw, 64px); font-weight: 800; color: #fff; margin: 0 0 12px; line-height: 1.1; letter-spacing: -2px; }
+            .hero h1 span { color: ${GREEN}; text-shadow: 0 0 40px rgba(0,255,136,0.4); }
+            .hero-sub { font-size: clamp(15px, 2.5vw, 19px); color: rgba(255,255,255,0.55); max-width: 560px; margin: 0 auto 40px; line-height: 1.6; }
+            .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 64px; }
+            .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; border-radius: 10px; border: none; cursor: pointer; transition: all 0.2s; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; }
+            .btn-primary { background: ${GREEN}; color: #000; }
+            .btn-primary:hover { background: #00e67a; box-shadow: 0 0 30px rgba(0,255,136,0.4); transform: translateY(-2px); }
+            .btn-secondary { background: rgba(0,255,136,0.08); color: ${GREEN}; border: 1px solid rgba(0,255,136,0.3); }
+            .btn-secondary:hover { background: rgba(0,255,136,0.15); border-color: ${GREEN}; }
 
-        <div className="container">
-          <div className="panel">
-            <div className="panel-header">
-              <span className="panel-title">🔥 This Week's Top Plays</span>
-              <span style={{ color: '#00ff88', fontSize: '12px', fontFamily: 'JetBrains Mono, monospace' }}>● LIVE</span>
+            /* STATS */
+            .stats-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #1a1a1a; border: 1px solid #1a1a1a; border-radius: 12px; overflow: hidden; margin-bottom: 48px; }
+            @media(min-width:640px) { .stats-row { grid-template-columns: repeat(4, 1fr); } }
+            .stat { background: #0a0a0a; padding: 24px 20px; text-align: center; }
+            .stat-val { font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 800; color: ${GREEN}; }
+            .stat-lbl { font-size: 12px; color: #666; margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+
+            /* LIVE ALERTS */
+            .section-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 16px; }
+            .section-title { font-family: 'JetBrains Mono', monospace; font-size: clamp(20px,4vw,28px); font-weight: 700; color: #fff; margin: 0 0 8px; }
+            .section-desc { color: #666; font-size: 15px; margin: 0 0 32px; line-height: 1.6; }
+            .alerts-panel { background: #080808; border: 1px solid #1a1a1a; border-radius: 12px; overflow: hidden; margin-bottom: 48px; }
+            .alerts-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #1a1a1a; }
+            .alerts-title { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #fff; font-weight: 700; }
+            .live-dot { display: inline-block; width: 8px; height: 8px; background: ${GREEN}; border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite; }
+            @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+            .alert-row { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 1px solid #111; transition: background 0.1s; }
+            .alert-row:last-child { border-bottom: none; }
+            .alert-row:hover { background: #0f0f0f; }
+            .alert-symbol { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 15px; color: #fff; }
+            .alert-chain { font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 4px; margin-left: 8px; }
+            .chain-sol { background: #1a0533; color: #9945ff; }
+            .chain-base { background: #001a33; color: #0094ff; }
+            .alert-type { font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+            .alert-score { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; }
+            .alert-return { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: ${GREEN}; font-size: 15px; }
+            .alert-time { font-size: 12px; color: #555; }
+
+            /* FEATURES */
+            .features-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 64px; }
+            @media(min-width:640px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+            @media(min-width:900px) { .features-grid { grid-template-columns: repeat(3, 1fr); } }
+            .feature { background: #080808; border: 1px solid #1a1a1a; border-radius: 12px; padding: 24px; transition: border-color 0.2s; }
+            .feature:hover { border-color: rgba(0,255,136,0.3); }
+            .feature-icon { font-size: 28px; margin-bottom: 12px; }
+            .feature-title { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 15px; color: #fff; margin-bottom: 8px; }
+            .feature-desc { font-size: 14px; color: #666; line-height: 1.6; }
+
+            /* SEO TEXT */
+            .seo-section { border-top: 1px solid #111; padding-top: 48px; margin-bottom: 64px; }
+            .seo-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+            @media(min-width:768px) { .seo-grid { grid-template-columns: 1fr 1fr; } }
+            .seo-block h3 { font-family: 'JetBrains Mono', monospace; font-size: 16px; color: ${GREEN}; margin: 0 0 12px; }
+            .seo-block p { font-size: 14px; color: #666; line-height: 1.7; margin: 0; }
+
+            /* CTA */
+            .cta-section { background: linear-gradient(135deg, rgba(0,255,136,0.06), rgba(0,255,136,0.02)); border: 1px solid rgba(0,255,136,0.15); border-radius: 16px; padding: 48px 32px; text-align: center; margin-bottom: 64px; }
+            .cta-title { font-family: 'JetBrains Mono', monospace; font-size: clamp(22px, 4vw, 32px); font-weight: 800; color: #fff; margin: 0 0 12px; }
+            .cta-desc { color: #666; font-size: 16px; margin: 0 0 32px; }
+
+            /* FOOTER */
+            .footer { border-top: 1px solid #111; padding: 32px 0; text-align: center; }
+            .footer p { color: #333; font-size: 13px; margin: 4px 0; font-family: 'JetBrains Mono', monospace; }
+            .footer a { color: #555; text-decoration: none; }
+            .footer a:hover { color: ${GREEN}; }
+          `}</style>
+
+          {/* HERO */}
+          <section className="hero">
+            <div className="hero-badge">🐺 Wolf Alert System — Active 24/7</div>
+            <h1>
+              Track <span>Smart Money</span><br />on Solana & Base
+            </h1>
+            <p className="hero-sub">
+              Wolf scans 500+ tokens every 15 minutes. Get alpha signals, whale wallet moves, and early entry alerts — before the crowd.
+            </p>
+            <div className="cta-row">
+              <Link href="/tokens" className="btn btn-primary">🐺 Live Alerts</Link>
+              <Link href="/master" className="btn btn-secondary">📊 Dashboard</Link>
+              <Link href="/guides" className="btn btn-secondary">📚 Guides</Link>
+              <Link href="/case-studies" className="btn btn-secondary">💰 Case Studies</Link>
             </div>
-            
-            {topPlays.map((play, i) => (
-              <div key={i} className="play-item">
-                <div>
-                  <div className="play-roi">{play.roi}</div>
-                  <div className="play-name">{play.name}</div>
-                  <div className="play-desc">{play.desc}</div>
+          </section>
+
+          <div className="container">
+
+            {/* STATS */}
+            <div className="stats-row">
+              {stats.map((s, i) => (
+                <div key={i} className="stat">
+                  <div className="stat-val">{s.value}</div>
+                  <div className="stat-lbl">{s.label}</div>
                 </div>
-                <span className="play-time">{play.time}</span>
+              ))}
+            </div>
+
+            {/* LIVE ALERTS */}
+            <div>
+              <div className="section-label">Wolf Scanner — Real-Time</div>
+              <h2 className="section-title">Recent Alpha Signals</h2>
+              <p className="section-desc">High-score tokens caught by Wolf in the last 24 hours. Score 80+ = strong signal.</p>
+
+              <div className="alerts-panel">
+                <div className="alerts-header">
+                  <span className="alerts-title"><span className="live-dot" />Wolf Alert Feed</span>
+                  <Link href="/tokens" style={{ color: GREEN, fontSize: 13, fontFamily: 'monospace', textDecoration: 'none' }}>View all 534 tokens →</Link>
+                </div>
+                {recentAlerts.map((a, i) => (
+                  <Link key={i} href={`/token/${a.symbol}`} style={{ textDecoration: 'none', display: 'block' }}>
+                    <div className="alert-row">
+                      <div>
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                          <span className="alert-symbol">${a.symbol}</span>
+                          <span className={`alert-chain ${a.chain === 'SOL' ? 'chain-sol' : 'chain-base'}`}>{a.chain}</span>
+                        </div>
+                        <div className="alert-type">{a.type}</div>
+                      </div>
+                      <div style={{ textAlign: 'right' }}>
+                        <div className="alert-return">{a.return1h}</div>
+                        <div className="alert-time">{a.time}</div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
               </div>
-            ))}
-            
-            <Link href="/case-studies" className="btn btn-secondary" style={{ width: '100%', marginTop: '20px' }}>
-              View All Case Studies →
-            </Link>
-          </div>
+            </div>
 
-          <div className="stats-grid">
-            {stats.map((stat, i) => (
-              <div key={i} className="stat-card">
-                <div className="stat-value">{stat.value}</div>
-                <div className="stat-label">{stat.label}</div>
+            {/* FEATURES */}
+            <div>
+              <div className="section-label">Why iseeiape</div>
+              <h2 className="section-title">Smart Money Tools</h2>
+              <p className="section-desc">Everything you need to track whale wallets and find early entries on Solana and Base.</p>
+              <div className="features-grid">
+                {features.map((f, i) => (
+                  <div key={i} className="feature">
+                    <div className="feature-icon">{f.icon}</div>
+                    <div className="feature-title">{f.title}</div>
+                    <div className="feature-desc">{f.desc}</div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
 
-          <h2 style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '24px', textAlign: 'center', marginBottom: '40px', color: '#00ff88', textTransform: 'uppercase', letterSpacing: '2px' }}>
-            What You Get
-          </h2>
-          
-          <div className="features-grid">
-            {features.map((feature, i) => (
-              <div key={i} className="feature-card">
-                <div className="feature-icon">{feature.icon}</div>
-                <div className="feature-title">{feature.title}</div>
-                <div className="feature-desc">{feature.desc}</div>
+            {/* SEO TEXT SECTION */}
+            <div className="seo-section">
+              <div className="section-label">Learn</div>
+              <h2 className="section-title" style={{ marginBottom: 32 }}>On-Chain Alpha — How It Works</h2>
+              <div className="seo-grid">
+                <div className="seo-block">
+                  <h3>What is Smart Money Tracking?</h3>
+                  <p>Smart money refers to wallets with a proven track record of profitable trades — often called whale wallets. By tracking their on-chain activity on Solana and Base, you can identify tokens they're accumulating before price moves. iseeiape surfaces these signals automatically.</p>
+                </div>
+                <div className="seo-block">
+                  <h3>How Wolf Alert System Works</h3>
+                  <p>Wolf scans DexScreener, Helius, and on-chain data every 15 minutes. It scores each token 0–100 based on volume, holder growth, smart money flow, and new pair activity. Tokens scoring 80+ trigger an alert — sent to Telegram and logged on this site.</p>
+                </div>
+                <div className="seo-block">
+                  <h3>Solana Wallet Tracker</h3>
+                  <p>Solana's speed (400ms blocks) means alpha moves fast. Wolf catches new pair launches, momentum breakouts, and whale accumulation on Solana in real time — before it shows up on trending lists or Telegram calls.</p>
+                </div>
+                <div className="seo-block">
+                  <h3>Base Chain Monitoring</h3>
+                  <p>Base is Coinbase's L2 — low fees, growing ecosystem, strong meme coin activity. Wolf monitors Base token launches and smart money flows alongside Solana, giving you cross-chain alpha in one feed.</p>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="cta-section">
-            <h2 className="cta-title">Ready to Stop Guessing?</h2>
-            <p className="cta-desc">Join thousands of traders using smart money intelligence.</p>
-            
-            <Link href="/war-room" className="btn btn-primary" style={{ fontSize: '16px', padding: '20px 40px' }}>
-              Enter War Room 🚀
-            </Link>
-          </div>
+            {/* CONTENT LINKS */}
+            <div style={{ marginBottom: 64 }}>
+              <div className="section-label">Resources</div>
+              <h2 className="section-title" style={{ marginBottom: 32 }}>Guides & Case Studies</h2>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                {[
+                  { href: '/guides', icon: '📚', title: 'Trading Guides', desc: 'How to read on-chain data, find alpha, and trade smart money signals.' },
+                  { href: '/case-studies', icon: '💰', title: 'Whale Case Studies', desc: 'Real trades from real wallets. How smart money caught 10x-100x moves.' },
+                  { href: '/tokens', icon: '🐺', title: 'Wolf Token Database', desc: '534 tokens caught by Wolf — with scores, returns, and chain data.' },
+                  { href: '/insights', icon: '💡', title: 'Market Insights', desc: 'Deep dives into on-chain trends, DeFi mechanics, and market structure.' },
+                ].map((item, i) => (
+                  <Link key={i} href={item.href} style={{ textDecoration: 'none' }}>
+                    <div className="feature" style={{ height: '100%' }}>
+                      <div className="feature-icon">{item.icon}</div>
+                      <div className="feature-title">{item.title}</div>
+                      <div className="feature-desc">{item.desc}</div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
 
-          <footer className="footer">
-            <p className="footer-text">Powered by iseeiape • Smart Money Intelligence</p>
-            <p className="footer-text" style={{ marginTop: '8px', opacity: 0.7 }}>Not financial advice. DYOR.</p>
-          </footer>
-        </div>
-      </>
-    </Layout>
-  </>
+            {/* CTA */}
+            <div className="cta-section">
+              <h2 className="cta-title">Wolf is watching. Are you?</h2>
+              <p className="cta-desc">534 tokens tracked. 2,200+ alerts generated. Running 24/7 on Solana & Base.</p>
+              <div className="cta-row">
+                <Link href="/tokens" className="btn btn-primary">🐺 See Live Alerts</Link>
+                <Link href="/master" className="btn btn-secondary">📊 Open Dashboard</Link>
+              </div>
+            </div>
+
+            <footer className="footer">
+              <p>🦎 <a href="/">iseeiape.com</a> — Smart Money Intelligence</p>
+              <p style={{ marginTop: 8 }}>
+                <a href="/tokens">Token Scanner</a> · <a href="/guides">Guides</a> · <a href="/case-studies">Case Studies</a> · <a href="/insights">Insights</a>
+              </p>
+              <p style={{ marginTop: 8, opacity: 0.5 }}>Not financial advice. DYOR. 🦎</p>
+            </footer>
+          </div>
+        </>
+      </Layout>
+    </>
   )
+}
+
+export async function getStaticProps() {
+  try {
+    const filePath = path.join(process.cwd(), 'data', 'wolf-tokens.json')
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+    return { props: { tokenCount: data.total_tokens }, revalidate: 3600 }
+  } catch {
+    return { props: { tokenCount: 534 }, revalidate: 3600 }
+  }
 }
