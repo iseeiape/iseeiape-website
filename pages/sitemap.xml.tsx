@@ -11,8 +11,8 @@ function generateSitemap(tokens) {
     { url: `${base}/tokens`, priority: '0.9', changefreq: 'hourly' },
   ]
 
-  const tokenPages = tokens.map(t => ({
-    url: `${base}/token/${t.symbol}`,
+  const tokenPages = tokens.filter(t => t.slug).map(t => ({
+    url: `${base}/token/${t.slug}`,
     priority: t.best_score >= 85 ? '0.9' : '0.8',
     changefreq: 'daily',
     lastmod: t.first_seen ? t.first_seen.split('T')[0] : now.split('T')[0],

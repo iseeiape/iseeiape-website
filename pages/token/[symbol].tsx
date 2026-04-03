@@ -116,13 +116,15 @@ export default function TokenPage({ token }) {
 export async function getStaticPaths() {
   const filePath = path.join(process.cwd(), 'data', 'wolf-tokens.json')
   const { tokens } = JSON.parse(fs.readFileSync(filePath, 'utf8'))
-  const paths = tokens.map(t => ({ params: { symbol: t.symbol } }))
+  const paths = tokens
+    .filter(t => t.slug)
+    .map(t => ({ params: { symbol: t.slug } }))
   return { paths, fallback: 'blocking' }
 }
 
 export async function getStaticProps({ params }) {
   const filePath = path.join(process.cwd(), 'data', 'wolf-tokens.json')
   const { tokens } = JSON.parse(fs.readFileSync(filePath, 'utf8'))
-  const token = tokens.find(t => t.symbol === params.symbol) || null
+  const token = tokens.find(t => t.slug === params.symbol) || null
   return { props: { token }, revalidate: 3600 }
 }

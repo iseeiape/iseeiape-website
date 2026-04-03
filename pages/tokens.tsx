@@ -80,7 +80,7 @@ export default function TokensPage({ tokens, generated_at, total_tokens }) {
                     onMouseEnter={e => (e.currentTarget.style.background = '#0a0a0a')}
                     onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
                     <td style={{ padding: '12px 16px' }}>
-                      <Link href={`/token/${t.symbol}`} style={{ color: GREEN, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
+                      <Link href={`/token/${t.slug || t.symbol}`} style={{ color: GREEN, textDecoration: 'none', fontWeight: 700, fontSize: 15 }}>
                         ${t.symbol}
                       </Link>
                     </td>
