@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/autonomous-trading-ecosystems-2026-04-05" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Apr 5</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 The Future of Autonomous Trading Ecosystems: When AI Agents Form Their Own Markets</h2>
+            <p style={{ color: '#aaa' }}>AI agents are evolving beyond trading existing markets — they're creating entirely new ecosystems where agents trade with agents, forming parallel financial systems that operate 24/7 with their own rules, incentives, and emergent behaviors.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology & Market Structure • AI Agents • Autonomous Ecosystems • Market Evolution • Agent-to-Agent Trading • Parallel Financial Systems →</p>
+          </article>
+        </a>
+
         <a href="/insights/wolf-pack-performance-fix-2026-04-03" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Apr 3</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>2 days ago - Apr 3</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🔧 Fixing the Wolf Pack: How We Solved the 98.5% Delisted Token Problem</h2>
             <p style={{ color: '#aaa' }}>A deep dive into debugging and fixing critical performance tracking: from 98.5% delisted tokens to robust price tracking. Learn how we diagnosed API endpoint confusion, fixed database schema, and built resilient DeFi data pipelines.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Technical Case Study • Debugging • Performance Tracking • Data Engineering • API Integration • Solana →</p>
@@ -19,7 +28,7 @@ export default function Insights() {
 
         <a href="/insights/economics-symbiotic-trading-2026-04-02" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Apr 2</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>3 days ago - Apr 2</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>💰 The Economics of Symbiotic Trading: Value Distribution in Human-AI Partnerships</h2>
             <p style={{ color: '#aaa' }}>How should value be distributed between human and AI trading partners? We explore emerging economic models for symbiotic partnerships, from contribution-based allocation to tokenized partnership structures that align incentives across biological and artificial intelligence.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Economics & Strategy • AI Agents • Partnership Economics • Value Distribution • Tokenomics • Incentive Design →</p>
