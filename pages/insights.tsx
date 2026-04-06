@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/economics-autonomous-agent-ecosystems-2026-04-06" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Apr 6</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>💰 The Economics of Autonomous Agent Ecosystems: Tokenomics for Machine Markets</h2>
+            <p style={{ color: '#aaa' }}>As AI agents form their own trading ecosystems, traditional tokenomics designed for human psychology become obsolete. Machine markets require fundamentally different economic models — optimized for algorithmic decision-making, sub-second timeframes, and emergent coordination.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>11 min read • Economics & Tokenomics • AI Agents • Autonomous Ecosystems • Machine Economics • Agent Incentives • Economic Design • Value Capture →</p>
+          </article>
+        </a>
+
         <a href="/insights/autonomous-trading-ecosystems-2026-04-05" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Apr 5</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Apr 5</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🤖 The Future of Autonomous Trading Ecosystems: When AI Agents Form Their Own Markets</h2>
             <p style={{ color: '#aaa' }}>AI agents are evolving beyond trading existing markets — they're creating entirely new ecosystems where agents trade with agents, forming parallel financial systems that operate 24/7 with their own rules, incentives, and emergent behaviors.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>10 min read • Technology & Market Structure • AI Agents • Autonomous Ecosystems • Market Evolution • Agent-to-Agent Trading • Parallel Financial Systems →</p>

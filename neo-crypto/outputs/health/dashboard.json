@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "generatedAt": "2026-03-27T22:06:37.063Z",
+    "version": "1.0.0",
+    "source": "health-dashboard"
+  },
+  "status": {
+    "overall": "warning",
+    "components": {
+      "system": "warning",
+      "wolfPack": "warning",
+      "errors": "healthy"
+    }
+  },
+  "health": {
+    "timestamp": "2026-03-27T22:06:36.993Z",
+    "checks": {
+      "disk": {
+        "status": "healthy",
+        "usage": 0.07,
+        "used": "31G",
+        "available": "414G",
+        "total": "468G",
+        "filesystem": "/dev/nvme0n1p2",
+        "mount": "/"
+      },
+      "memory": {
+        "status": "healthy",
+        "usage": 0.4338799947937004,
+        "used": "6667 MB",
+        "total": "15366 MB",
+        "free": "8699 MB"
+      },
+      "processes": {
+        "node": {
+          "status": "stopped",
+          "count": 0
+        },
+        "python": {
+          "status": "stopped",
+          "count": 0
+        }
+      }
+    },
+    "alerts": [
+      {
+        "level": "warning",
+        "message": "node process not running",
+        "component": "automation",
+        "suggestion": "Check cron jobs and restart if needed"
+      }
+    ],
+    "summary": {
+      "status": "warning",
+      "critical": 0,
+      "warnings": 1,
+      "passed": 3
+    }
+  },
+  "performance": {
+    "timestamp": "2026-03-27T22:06:37.061Z",
+    "metrics": {
+      "lastRun": {
+        "executionTime": 8418,
+        "success": false,
+        "errors": 1
+      },
+      "wolf-pack-cache.json": {
+        "exists": true,
+        "size": 7596,
+        "age": 86418674.26855469,
+        "lastModified": "2026-03-26T22:06:18.388Z"
+      },
+      "wolf-pack-summary.json": {
+        "exists": true,
+        "size": 2080,
+        "age": 86418675.26855469,
+        "lastModified": "2026-03-26T22:06:18.387Z"
+      }
+    },
+    "alerts": [
+      {
+        "level": "warning",
+        "message": "Wolf Pack execution slow: 8418ms",
+        "component": "wolf-pack",
+        "suggestion": "Optimize Python script or implement caching"
+      },
+      {
+        "level": "critical",
+        "message": "Last Wolf Pack run failed",
+        "component": "wolf-pack",
+        "suggestion": "Check error logs and fix issues"
+      },
+      {
+        "level": "warning",
+        "message": "wolf-pack-cache.json cache is stale (1440 minutes old)",
+        "component": "cache",
+        "suggestion": "Check if Wolf Pack cron job is running"
+      },
+      {
+        "level": "warning",
+        "message": "wolf-pack-summary.json cache is stale (1440 minutes old)",
+        "component": "cache",
+        "suggestion": "Check if Wolf Pack cron job is running"
+      }
+    ],
+    "summary": {
+      "status": "healthy",
+      "lastRun": "2026-03-26T22:06:18.390Z",
+      "avgExecutionTime": 8418
+    }
+  },
+  "errors": {
+    "timestamp": "2026-03-27T22:06:37.062Z",
+    "recentErrors": [
+      {
+        "file": "performance-wolf-pack.log",
+        "errors": [
+          "{\"timestamp\":\"2026-03-26T22:06:18.390Z\",\"startTime\":1774562769972,\"phases\":{\"total_execution\":{\"start\":1774562769972,\"end\":1774562778390,\"duration\":8418},\"cache_loading\":{\"start\":1774562769972,\"end\":1"
+        ]
+      }
+    ],
+    "errorRate": 0.018518518518518517,
+    "alerts": [],
+    "summary": {
+      "totalErrors": 1,
+      "errorRate": 0.018518518518518517,
+      "status": "healthy"
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "medium",
+      "component": "automation",
+      "issue": "node process not running",
+      "suggestion": "Check cron jobs and restart if needed"
+    },
+    {
+      "priority": "medium",
+      "component": "wolf-pack",
+      "issue": "Wolf Pack execution slow: 8418ms",
+      "suggestion": "Optimize Python script or implement caching"
+    },
+    {
+      "priority": "high",
+      "component": "wolf-pack",
+      "issue": "Last Wolf Pack run failed",
+      "suggestion": "Check error logs and fix issues"
+    },
+    {
+      "priority": "medium",
+      "component": "cache",
+      "issue": "wolf-pack-cache.json cache is stale (1440 minutes old)",
+      "suggestion": "Check if Wolf Pack cron job is running"
+    },
+    {
+      "priority": "medium",
+      "component": "cache",
+      "issue": "wolf-pack-summary.json cache is stale (1440 minutes old)",
+      "suggestion": "Check if Wolf Pack cron job is running"
+    }
+  ],
+  "timestamp": "2026-03-27T22:06:37.063Z"
+}

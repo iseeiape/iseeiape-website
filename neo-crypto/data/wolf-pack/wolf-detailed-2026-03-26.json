@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "generatedAt": "2026-03-26T22:03:12.006Z",
+    "alertCount": 1
+  },
+  "alerts": [
+    {
+      "id": "wolf_1774562592004_0",
+      "timestamp": "2026-03-26T22:03:12.004Z",
+      "category": "new_pair",
+      "emoji": "🆕",
+      "token": "DEADWHALE",
+      "symbol": "DEADWHALE",
+      "score": 66,
+      "maxScore": 100,
+      "confidence": 66,
+      "alertType": "🆕 NEW_PAIR",
+      "bot": "🆕 WOLF NEWPAIRS",
+      "raw": "✅ Alert sent via 🆕 WOLF NEWPAIRS: DEADWHALE (score=66, type=🆕 NEW_PAIR)",
+      "details": [],
+      "metrics": {}
+    }
+  ],
+  "analysis": {
+    "summary": {
+      "totalAlerts": 1,
+      "byCategory": {
+        "new_pair": 1
+      },
+      "byConfidence": {
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "avgScore": 66,
+      "timestamp": "2026-03-26T22:03:12.005Z"
+    },
+    "topTokens": [
+      {
+        "symbol": "DEADWHALE",
+        "token": "DEADWHALE",
+        "count": 1,
+        "totalScore": 66,
+        "categories": [
+          "new_pair"
+        ],
+        "latestAlert": "2026-03-26T22:03:12.004Z",
+        "metrics": {},
+        "avgScore": 66
+      }
+    ],
+    "marketInsights": [
+      {
+        "type": "new_pairs",
+        "message": "1 new trading pairs detected",
+        "tokens": [
+          "DEADWHALE"
+        ],
+        "priority": "medium"
+      }
+    ],
+    "recommendations": [
+      {
+        "type": "top_performer",
+        "message": "DEADWHALE showing strongest signals (1 alerts, avg score: 66)",
+        "action": "Consider deeper research",
+        "priority": "high"
+      }
+    ]
+  }
+}

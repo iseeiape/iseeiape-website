@@ -1,105 +1,39 @@
 {
-  "alerts": [
-    {
-      "id": "wolf_1773784923398_1",
-      "timestamp": "2026-03-17T21:02:03.398Z",
-      "category": "alpha",
-      "emoji": "🐺",
-      "token": "dogwifhat",
-      "symbol": "WIF",
-      "score": 95,
-      "maxScore": 100,
-      "confidence": 95,
-      "raw": "🐺 ALERT: dogwifhat (WIF) - Score: 95/100",
-      "details": [
-        "Solana meme coin showing strong momentum",
-        "Volume up 250% in last hour",
-        "Whale accumulation detected"
-      ]
+  "alerts": {
+    "🐺 WOLF TEST_undefined": {
+      "symbol": "🐺 WOLF TEST",
+      "score": 50,
+      "type": "92",
+      "timestamp": 1775336667813,
+      "source": "wolf_pack",
+      "raw": "✅ Alert sent via 🐺 WOLF TEST: TEST3 (score=92, type=📈 TRENDING)",
+      "createdAt": 1775336626844,
+      "updatedAt": 1775336667813,
+      "updateCount": 21
     },
-    {
-      "id": "wolf_1773784923398_2",
-      "timestamp": "2026-03-17T20:02:03.398Z",
-      "category": "newpairs",
-      "emoji": "🆕",
-      "token": "Popcat",
-      "symbol": "POPCAT",
-      "score": 65,
-      "maxScore": 100,
-      "confidence": 65,
-      "raw": "🆕 ALERT: Popcat (POPCAT) - Score: 65/100",
-      "details": [
-        "New trading pair on Raydium",
-        "Initial liquidity: $250k",
-        "Early momentum building"
-      ]
+    "TEST1_undefined": {
+      "symbol": "TEST1",
+      "score": 85,
+      "type": "ALERT",
+      "timestamp": 1775336667813,
+      "source": "wolf_pack",
+      "raw": "🐺 ALERT: TEST1 (score: 85)",
+      "createdAt": 1775336626844,
+      "updatedAt": 1775336667813,
+      "updateCount": 7
     },
-    {
-      "id": "wolf_1773784923398_3",
-      "timestamp": "2026-03-17T19:02:03.398Z",
-      "category": "momentum",
-      "emoji": "📈",
-      "token": "Jupiter",
-      "symbol": "JUP",
-      "score": 82,
-      "maxScore": 100,
-      "confidence": 82,
-      "raw": "📈 ALERT: Jupiter (JUP) - Score: 82/100",
-      "details": [
-        "Breaking out of consolidation",
-        "Volume spike: 3x average",
-        "Key resistance broken at $1.25"
-      ]
-    },
-    {
-      "id": "wolf_1773957942920_0",
-      "timestamp": "2026-03-19T22:05:42.920Z",
-      "category": "alpha",
-      "emoji": "🐺",
-      "token": "CHIBI",
-      "symbol": "CHIBI",
-      "score": 86,
-      "maxScore": 100,
-      "confidence": 86,
-      "alertType": "🔔 ALERT",
-      "bot": "🐺 WOLF MAIN",
-      "raw": "✅ Alert sent via 🐺 WOLF MAIN: CHIBI (score=86, type=🔔 ALERT)",
-      "details": [],
-      "metrics": {}
-    },
-    {
-      "id": "wolf_1773957942920_1",
-      "timestamp": "2026-03-19T22:05:42.920Z",
-      "category": "momentum",
-      "emoji": "📈",
-      "token": "GERALD",
-      "symbol": "GERALD",
-      "score": 73,
-      "maxScore": 100,
-      "confidence": 73,
-      "alertType": "🚀 BREAKOUT",
-      "bot": "📈 WOLF MOMENTUM",
-      "raw": "✅ Alert sent via 📈 WOLF MOMENTUM: GERALD (score=73, type=🚀 BREAKOUT)",
-      "details": [],
-      "metrics": {}
-    },
-    {
-      "id": "wolf_1773957942920_2",
-      "timestamp": "2026-03-19T22:05:42.920Z",
-      "category": "new_pair",
-      "emoji": "🆕",
-      "token": "CHIBI",
-      "symbol": "CHIBI",
-      "score": 55,
-      "maxScore": 100,
-      "confidence": 55,
-      "alertType": "🆕 NEW_PAIR",
-      "bot": "🆕 WOLF NEWPAIRS",
-      "raw": "✅ Alert sent via 🆕 WOLF NEWPAIRS: CHIBI (score=55, type=🆕 NEW_PAIR)",
-      "details": [],
-      "metrics": {}
+    "TEST2_undefined": {
+      "symbol": "TEST2",
+      "score": 15,
+      "type": "ALERT",
+      "timestamp": 1775336667813,
+      "source": "wolf_pack",
+      "raw": "📈 TRENDING: TEST2 +15%",
+      "createdAt": 1775336626844,
+      "updatedAt": 1775336667813,
+      "updateCount": 7
     }
-  ],
+  },
   "lastFetch": "2026-03-17T22:02:03.400Z",
   "performance": {},
   "analysis": {
@@ -272,5 +206,6 @@
         "priority": "high"
       }
     ]
-  }
+  },
+  "lastUpdate": 1775336667814
 }

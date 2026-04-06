@@ -1,0 +1,32 @@
+
+🚀 ISEEIAPE HEALTH DASHBOARD
+============================
+Generated: 2026-03-27T22:06:37.064Z
+Overall Status: WARNING
+
+📊 SYSTEM HEALTH:
+• Disk: healthy (7%)
+• Memory: healthy (43%)
+• Processes: 2 monitored
+
+🐺 WOLF PACK:
+• Last Run: 2026-03-26T22:06:18.390Z
+• Execution Time: 8418ms
+• Status: ❌
+
+❌ ERRORS:
+• Recent Errors: 1
+• Error Rate: 2%
+• Status: healthy
+
+🚨 ALERTS: 5
+  • warning: node process not running
+  • warning: Wolf Pack execution slow: 8418ms
+  • critical: Last Wolf Pack run failed
+  • warning: wolf-pack-cache.json cache is stale (1440 minutes old)
+  • warning: wolf-pack-summary.json cache is stale (1440 minutes old)
+
+🎯 RECOMMENDATIONS: 5
+  • [MEDIUM] node process not running
+  • [MEDIUM] Wolf Pack execution slow: 8418ms
+  • [HIGH] Last Wolf Pack run failed

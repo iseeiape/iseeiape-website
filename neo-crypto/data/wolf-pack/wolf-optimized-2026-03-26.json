@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "generatedAt": "2026-03-26T22:06:18.389Z",
+    "alertCount": 3,
+    "optimized": true
+  },
+  "alerts": [
+    {
+      "id": "wolf_1774562778385_0_DEADWHALE",
+      "timestamp": "2026-03-26T22:06:18.385Z",
+      "category": "new_pair",
+      "emoji": "🆕",
+      "token": "DEADWHALE",
+      "symbol": "DEADWHALE",
+      "score": 78,
+      "maxScore": 100,
+      "confidence": 78,
+      "alertType": "🆕 NEW_PAIR",
+      "bot": "🆕 WOLF NEWPAIRS",
+      "details": [],
+      "metrics": {}
+    },
+    {
+      "id": "wolf_top_1774562778385_1_SPEEDRUN",
+      "timestamp": "2026-03-26T22:06:18.385Z",
+      "category": "new_pair",
+      "emoji": "🆕",
+      "token": "SPEEDRUN",
+      "symbol": "SPEEDRUN",
+      "score": 65,
+      "maxScore": 100,
+      "confidence": 65,
+      "alertType": "🆕 NEW_PAIR",
+      "bot": "top_pairs_list",
+      "details": [
+        "5m: +61.4%",
+        "1h: +23.1%",
+        "Age: 0.3h"
+      ],
+      "metrics": {
+        "change5m": 61.4,
+        "change1h": 23.1,
+        "ageHours": 0.3
+      }
+    },
+    {
+      "id": "wolf_top_1774562778385_2_PIXEL",
+      "timestamp": "2026-03-26T22:06:18.385Z",
+      "category": "new_pair",
+      "emoji": "🆕",
+      "token": "PIXEL",
+      "symbol": "PIXEL",
+      "score": 62,
+      "maxScore": 100,
+      "confidence": 62,
+      "alertType": "🆕 NEW_PAIR",
+      "bot": "top_pairs_list",
+      "details": [
+        "5m: +28.4%",
+        "1h: +22.1%",
+        "Age: 2.9h"
+      ],
+      "metrics": {
+        "change5m": 28.4,
+        "change1h": 22.1,
+        "ageHours": 2.9
+      }
+    }
+  ],
+  "analysis": {
+    "summary": {
+      "totalAlerts": 11,
+      "byCategory": {
+        "new_pair": 6,
+        "alpha": 2,
+        "momentum": 2,
+        "newpairs": 1
+      },
+      "byConfidence": {
+        "high": 3,
+        "medium": 7,
+        "low": 1
+      },
+      "avgScore": 72,
+      "timestamp": "2026-03-26T22:06:18.386Z",
+      "incrementalUpdates": 3
+    },
+    "topTokens": [
+      {
+        "symbol": "WIF",
+        "token": "dogwifhat",
+        "count": 1,
+        "totalScore": 95,
+        "categories": [
+          "alpha"
+        ],
+        "latestAlert": "2026-03-17T21:02:03.398Z",
+        "avgScore": 95
+      },
+      {
+        "symbol": "JUP",
+        "token": "Jupiter",
+        "count": 1,
+        "totalScore": 82,
+        "categories": [
+          "momentum"
+        ],
+        "latestAlert": "2026-03-17T19:02:03.398Z",
+        "avgScore": 82
+      },
+      {
+        "symbol": "GERALD",
+        "token": "GERALD",
+        "count": 1,
+        "totalScore": 73,
+        "categories": [
+          "momentum"
+        ],
+        "latestAlert": "2026-03-19T22:05:42.920Z",
+        "avgScore": 73
+      },
+      {
+        "symbol": "CHIBI",
+        "token": "CHIBI",
+        "count": 2,
+        "totalScore": 141,
+        "categories": [
+          "alpha",
+          "new_pair"
+        ],
+        "latestAlert": "2026-03-19T22:05:42.920Z",
+        "avgScore": 71
+      },
+      {
+        "symbol": "DEADWHALE",
+        "token": "DEADWHALE",
+        "count": 3,
+        "totalScore": 210,
+        "categories": [
+          "new_pair"
+        ],
+        "latestAlert": "2026-03-26T22:06:18.385Z",
+        "avgScore": 70
+      }
+    ],
+    "marketInsights": [
+      {
+        "type": "strong_signals",
+        "message": "3 high-confidence alerts",
+        "count": 3,
+        "priority": "high"
+      },
+      {
+        "type": "new_opportunities",
+        "message": "6 new trading pairs",
+        "count": 6,
+        "priority": "medium"
+      }
+    ],
+    "recommendations": [
+      {
+        "type": "focus_token",
+        "message": "Focus on WIF (score: 95, alerts: 1)",
+        "action": "Research trading opportunities",
+        "priority": "high"
+      }
+    ]
+  }
+}

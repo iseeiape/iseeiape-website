@@ -1,0 +1,160 @@
+{
+  "timestamp": "2026-03-26T22:03:05.633Z",
+  "summary": {
+    "wolfPackPerformance": 9266,
+    "cacheSize": 18675,
+    "apiEndpoints": 15,
+    "totalRecommendations": 1
+  },
+  "wolfPackAnalysis": {
+    "executionTimes": [
+      9266
+    ],
+    "averageTime": 9266,
+    "bottlenecks": [
+      {
+        "file": "wolf-pack-2026-03-17T22-05-25-270Z.log",
+        "executionTime": 9266,
+        "issue": "Wolf Pack execution took 9266ms (threshold: 5000ms)"
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "high",
+        "action": "Optimize Wolf Pack runner",
+        "details": "Average execution time: 9266ms (threshold: 5000ms)",
+        "suggestions": [
+          "Implement parallel processing for alert parsing",
+          "Add incremental updates instead of full runs",
+          "Optimize Python script execution"
+        ]
+      }
+    ]
+  },
+  "cacheAnalysis": {
+    "cacheFiles": [
+      {
+        "name": "api-cache.json",
+        "path": "/home/matrix/.openclaw/workspace/iseeiape-website/neo-crypto/data/api-cache.json",
+        "size": 1832
+      },
+      {
+        "name": "cache",
+        "path": "/home/matrix/.openclaw/workspace/iseeiape-website/neo-crypto/data/cache",
+        "size": 4096
+      },
+      {
+        "name": "wolf-pack",
+        "path": "/home/matrix/.openclaw/workspace/iseeiape-website/neo-crypto/data/wolf-pack",
+        "size": 4096
+      },
+      {
+        "name": "wolf-pack-cache.json",
+        "path": "/home/matrix/.openclaw/workspace/iseeiape-website/neo-crypto/data/wolf-pack-cache.json",
+        "size": 6749
+      },
+      {
+        "name": "wolf-pack-summary.json",
+        "path": "/home/matrix/.openclaw/workspace/iseeiape-website/neo-crypto/data/wolf-pack-summary.json",
+        "size": 1902
+      }
+    ],
+    "hitRate": 0,
+    "recommendations": []
+  },
+  "apiAnalysis": {
+    "endpoints": [
+      {
+        "path": "/api/crypto-news",
+        "file": "crypto-news.ts"
+      },
+      {
+        "path": "/api/enhanced-market-data",
+        "file": "enhanced-market-data.js"
+      },
+      {
+        "path": "/api/market-data",
+        "file": "market-data.js"
+      },
+      {
+        "path": "/api/system-status",
+        "file": "system-status.js"
+      },
+      {
+        "path": "/api/trending-repos",
+        "file": "trending-repos.ts"
+      },
+      {
+        "path": "/api/unified-market-data",
+        "file": "unified-market-data.js"
+      },
+      {
+        "path": "/api/wolf-alerts",
+        "file": "wolf-alerts.ts"
+      },
+      {
+        "path": "/api/analytics/track",
+        "file": "analytics/track.ts"
+      },
+      {
+        "path": "/api/cielo/wallets",
+        "file": "cielo/wallets.ts"
+      },
+      {
+        "path": "/api/dexscreener/trending",
+        "file": "dexscreener/trending.ts"
+      },
+      {
+        "path": "/api/enhanced/data-v2",
+        "file": "enhanced/data-v2.ts"
+      },
+      {
+        "path": "/api/enhanced/data",
+        "file": "enhanced/data.ts"
+      },
+      {
+        "path": "/api/enhanced/market-data-v2",
+        "file": "enhanced/market-data-v2.js"
+      },
+      {
+        "path": "/api/enhanced/market-data-v3",
+        "file": "enhanced/market-data-v3.js"
+      },
+      {
+        "path": "/api/premium",
+        "file": "premium/index.ts"
+      }
+    ],
+    "responseTimes": [],
+    "recommendations": []
+  },
+  "allRecommendations": [
+    {
+      "priority": "high",
+      "action": "Optimize Wolf Pack runner",
+      "details": "Average execution time: 9266ms (threshold: 5000ms)",
+      "suggestions": [
+        "Implement parallel processing for alert parsing",
+        "Add incremental updates instead of full runs",
+        "Optimize Python script execution"
+      ]
+    }
+  ],
+  "quickWins": [],
+  "implementationPlan": {
+    "immediate": [
+      {
+        "priority": "high",
+        "action": "Optimize Wolf Pack runner",
+        "details": "Average execution time: 9266ms (threshold: 5000ms)",
+        "suggestions": [
+          "Implement parallel processing for alert parsing",
+          "Add incremental updates instead of full runs",
+          "Optimize Python script execution"
+        ]
+      }
+    ],
+    "shortTerm": [],
+    "longTerm": []
+  }
+}
