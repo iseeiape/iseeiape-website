@@ -1,296 +1,360 @@
 {
   "alerts": [
     {
-      "symbol": "PEP",
-      "name": "peptide",
-      "score": 69,
-      "alert_type": "🆕 NEW_PAIR",
-      "price": 4.401e-05,
-      "price_change_5m": 35.22,
-      "price_change_1h": 101.0,
-      "price_change_24h": 25.56,
-      "volume_24h": 639847.94,
-      "liquidity": 17150.85,
-      "market_cap": 44012.0,
-      "pair_url": "https://dexscreener.com/solana/5AzpW3d8nLJZNgyZZLyh8Tt7NeNX62qUfua91Uapump",
-      "token_address": "5AzpW3d8nLJZNgyZZLyh8Tt7NeNX62qUfua91Uapump",
-      "chain": "solana",
-      "signals": [
-        "⚡ 5m rocket: +35.2%",
-        "📈 1h surge: +101.0%",
-        "💰 High volume: $639,848",
-        "🎯 Micro cap gem: $44,012",
-        "🔥 Active trading: 14,641 txns (24h)",
-        "👛 Unique swappers: 25 (recent)"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "GAMEBAY",
-      "name": "GameBay",
-      "score": 69,
-      "alert_type": "🆕 NEW_PAIR",
-      "price": 5.232e-05,
-      "price_change_5m": 16.92,
-      "price_change_1h": 27.39,
-      "price_change_24h": 50.95,
-      "volume_24h": 175332.52,
-      "liquidity": 17978.75,
-      "market_cap": 52328.0,
-      "pair_url": "https://dexscreener.com/solana/13YRWhuYBvMqYYqWsBNs6j6K1CU2MNKx2d9c1xN9pump",
-      "token_address": "13YRWhuYBvMqYYqWsBNs6j6K1CU2MNKx2d9c1xN9pump",
-      "chain": "solana",
-      "signals": [
-        "⚡ 5m rocket: +16.9%",
-        "📈 1h surge: +27.4%",
-        "🔥 Daily moon: +51.0% (24h)",
-        "💪 Buy pressure: 1827 buys vs 961 sells (1h)",
-        "🎯 Micro cap gem: $52,328",
-        "👛 Unique swappers: 24 (recent)"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "MAGA",
-      "name": "Make Aliens Great Again ",
-      "score": 53,
-      "alert_type": "🔔 ALERT",
-      "price": 0.01408,
-      "price_change_5m": 2.49,
-      "price_change_1h": 8.36,
-      "price_change_24h": -7.88,
-      "volume_24h": 241542.14,
-      "liquidity": 235963.4,
-      "market_cap": 13800656.0,
-      "pair_url": "https://dexscreener.com/solana/Hon2rHAiqkcDtUzL5gA2vjXPr7T1MPCK2UT2AHKCpump",
-      "token_address": "Hon2rHAiqkcDtUzL5gA2vjXPr7T1MPCK2UT2AHKCpump",
-      "chain": "solana",
-      "signals": [
-        "⚡ Heavy buying: 3 buys vs 0 sells (5m)",
-        "💪 Buy pressure: 41 buys vs 13 sells (1h)",
-        "💧 Strong liquidity: $235,963"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "SR",
-      "name": "Strike Robot",
-      "score": 37,
-      "alert_type": "🔔 ALERT",
-      "price": 0.003925,
-      "price_change_5m": 0.0,
-      "price_change_1h": 3.59,
-      "price_change_24h": 27.2,
-      "volume_24h": 48534.33,
-      "liquidity": 193477.1,
-      "market_cap": 3925400.0,
-      "pair_url": "https://dexscreener.com/solana/0x10c56F005a379f8eAfc88ff5c3f40d30F0031AC9",
-      "token_address": "0x10c56F005a379f8eAfc88ff5c3f40d30F0031AC9",
-      "chain": "base",
-      "signals": [
-        "💪 Buy pressure: 4 buys vs 0 sells (1h)",
-        "💧 Strong liquidity: $193,477",
-        "💎 Small cap: $3,925,400"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "DOG",
-      "name": "Dog (Bitcoin)",
-      "score": 34,
-      "alert_type": "🔔 ALERT",
-      "price": 0.0007816,
-      "price_change_5m": 0.01,
-      "price_change_1h": 1.12,
-      "price_change_24h": -1.26,
-      "volume_24h": 55126.1,
-      "liquidity": 69762.24,
-      "market_cap": 78165504.0,
-      "pair_url": "https://dexscreener.com/solana/dog1viwbb2vWDpER5FrJ4YFG6gq6XuyFohUe9TXN65u",
-      "token_address": "dog1viwbb2vWDpER5FrJ4YFG6gq6XuyFohUe9TXN65u",
-      "chain": "solana",
-      "signals": [
-        "⚡ Heavy buying: 3 buys vs 0 sells (5m)",
-        "💪 Buy pressure: 64 buys vs 5 sells (1h)",
-        "💧 Strong liquidity: $69,762"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "MAGA",
-      "name": "Make Aliens Great Again ",
-      "score": 32,
-      "alert_type": "🔔 ALERT",
-      "price": 0.01399,
-      "price_change_5m": 1.66,
-      "price_change_1h": 7.52,
-      "price_change_24h": -7.14,
-      "volume_24h": 489661.79,
-      "liquidity": 401314.89,
-      "market_cap": 13685830.0,
-      "pair_url": "https://dexscreener.com/solana/Hon2rHAiqkcDtUzL5gA2vjXPr7T1MPCK2UT2AHKCpump",
-      "token_address": "Hon2rHAiqkcDtUzL5gA2vjXPr7T1MPCK2UT2AHKCpump",
-      "chain": "solana",
-      "signals": [
-        "💧 Strong liquidity: $401,315",
-        "🔥 Active trading: 69,883 txns (24h)"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "PCOW",
-      "name": "The PURPose Cow",
-      "score": 32,
-      "alert_type": "🆕 NEW_PAIR",
-      "price": 4.418e-05,
-      "price_change_5m": -0.3,
-      "price_change_1h": 15.57,
-      "price_change_24h": 25.43,
-      "volume_24h": 24060.32,
-      "liquidity": 16265.13,
-      "market_cap": 44187.0,
-      "pair_url": "https://dexscreener.com/solana/FAh7wkNcRsnY3oFz6Bf94vnzugwLXFSnmqMYcGkmpump",
-      "token_address": "FAh7wkNcRsnY3oFz6Bf94vnzugwLXFSnmqMYcGkmpump",
-      "chain": "solana",
-      "signals": [
-        "📈 1h surge: +15.6%",
-        "⚡ Heavy buying: 2 buys vs 1 sells (5m)",
-        "🎯 Micro cap gem: $44,187"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
       "symbol": "TROLLJAK",
       "name": "Troll Wojak",
-      "score": 29,
+      "score": 55,
       "alert_type": "🆕 NEW_PAIR",
-      "price": 8.667e-05,
-      "price_change_5m": -6.13,
-      "price_change_1h": -30.16,
-      "price_change_24h": 138.0,
-      "volume_24h": 518936.09,
-      "liquidity": 23665.51,
-      "market_cap": 86676.0,
+      "price": 8.924e-05,
+      "price_change_5m": 23.01,
+      "price_change_1h": -36.32,
+      "price_change_24h": 145.0,
+      "volume_24h": 579966.43,
+      "liquidity": 24187.27,
+      "market_cap": 89245.0,
       "pair_url": "https://dexscreener.com/solana/GtWeBeErLkeZCRSVFZHeukcghQKbJoz3w22j2nnYpump",
       "token_address": "GtWeBeErLkeZCRSVFZHeukcghQKbJoz3w22j2nnYpump",
       "chain": "solana",
       "signals": [
-        "🔥 Daily moon: +138.0% (24h)",
-        "💪 Buy pressure: 5468 buys vs 2004 sells (1h)",
-        "💰 High volume: $518,936",
-        "🎯 Micro cap gem: $86,676",
-        "🔥 Active trading: 20,090 txns (24h)"
+        "⚡ 5m rocket: +23.0%",
+        "🔥 Daily moon: +145.0% (24h)",
+        "⚡ Heavy buying: 304 buys vs 155 sells (5m)",
+        "💪 Buy pressure: 4099 buys vs 1968 sells (1h)",
+        "💰 High volume: $579,966",
+        "🎯 Micro cap gem: $89,245",
+        "🔥 Active trading: 21,509 txns (24h)"
       ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "UNIPUMP",
-      "name": "Unipump",
-      "score": 27,
-      "alert_type": "🔔 ALERT",
-      "price": 6.825e-05,
-      "price_change_5m": 0.63,
-      "price_change_1h": 4.39,
-      "price_change_24h": -52.37,
-      "volume_24h": 201051.04,
-      "liquidity": 24101.68,
-      "market_cap": 68251.0,
-      "pair_url": "https://dexscreener.com/solana/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
-      "token_address": "9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
-      "chain": "solana",
-      "signals": [
-        "🎯 Micro cap gem: $68,251"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "IMOUT",
-      "name": "I AM OUT",
-      "score": 25,
-      "alert_type": "🔔 ALERT",
-      "price": 0.001252,
-      "price_change_5m": 1.95,
-      "price_change_1h": -5.74,
-      "price_change_24h": 22.22,
-      "volume_24h": 954251.47,
-      "liquidity": 171576.26,
-      "market_cap": 1252644.0,
-      "pair_url": "https://dexscreener.com/solana/DACYVx34V5aQaehN3MZGYxPfoyQYHZSnFAFw3T2Vbonk",
-      "token_address": "DACYVx34V5aQaehN3MZGYxPfoyQYHZSnFAFw3T2Vbonk",
-      "chain": "solana",
-      "signals": [
-        "💰 High volume: $954,251",
-        "💧 Strong liquidity: $171,576",
-        "💎 Small cap: $1,252,644",
-        "🔥 Active trading: 17,688 txns (24h)"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "KING",
-      "name": "the vaguepost king",
-      "score": 23,
-      "alert_type": "🔔 ALERT",
-      "price": 3.558e-05,
-      "price_change_5m": -2.12,
-      "price_change_1h": -9.43,
-      "price_change_24h": 22.61,
-      "volume_24h": 28752.16,
-      "liquidity": 15190.31,
-      "market_cap": 34859.0,
-      "pair_url": "https://dexscreener.com/solana/4u1xmmG794nNLg3qCFb8ZSek9BAcoNua1ZYcskZrpump",
-      "token_address": "4u1xmmG794nNLg3qCFb8ZSek9BAcoNua1ZYcskZrpump",
-      "chain": "solana",
-      "signals": [
-        "⚡ Heavy buying: 9 buys vs 1 sells (5m)",
-        "💪 Buy pressure: 40 buys vs 9 sells (1h)",
-        "🎯 Micro cap gem: $34,859"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
+      "timestamp": "2026-05-04T05:15:10.080193"
     },
     {
       "symbol": "STACCANA",
       "name": "Solana Fork Staccana ",
-      "score": 18,
+      "score": 47,
       "alert_type": "🆕 NEW_PAIR",
-      "price": 7.96e-05,
-      "price_change_5m": -8.78,
-      "price_change_1h": -15.97,
-      "price_change_24h": 130.0,
-      "volume_24h": 678296.11,
-      "liquidity": 23113.75,
-      "market_cap": 79602.0,
+      "price": 7.916e-05,
+      "price_change_5m": 4.64,
+      "price_change_1h": 13.28,
+      "price_change_24h": 129.0,
+      "volume_24h": 682773.12,
+      "liquidity": 23109.13,
+      "market_cap": 79161.0,
       "pair_url": "https://dexscreener.com/solana/73edX6xoGY4v5y2hzuKdrUbJXLntqgmo74au1Ki1pump",
       "token_address": "73edX6xoGY4v5y2hzuKdrUbJXLntqgmo74au1Ki1pump",
       "chain": "solana",
       "signals": [
-        "🔥 Daily moon: +130.0% (24h)",
-        "💰 High volume: $678,296",
-        "🎯 Micro cap gem: $79,602",
-        "🔥 Active trading: 15,650 txns (24h)"
+        "📈 1h surge: +13.3%",
+        "🔥 Daily moon: +129.0% (24h)",
+        "⚡ Heavy buying: 27 buys vs 14 sells (5m)",
+        "💰 High volume: $682,773",
+        "🎯 Micro cap gem: $79,161",
+        "🔥 Active trading: 15,802 txns (24h)"
       ],
-      "timestamp": "2026-05-04T05:00:18.672360"
+      "timestamp": "2026-05-04T05:15:10.080193"
     },
     {
       "symbol": "MAY4TH",
       "name": "May the 4th be with you",
-      "score": 16,
+      "score": 45,
       "alert_type": "🔔 ALERT",
-      "price": 4.745e-05,
-      "price_change_5m": 0.19,
-      "price_change_1h": 3.39,
-      "price_change_24h": -43.18,
-      "volume_24h": 300677.91,
-      "liquidity": 21384.59,
-      "market_cap": 47297.0,
+      "price": 5.112e-05,
+      "price_change_5m": 10.63,
+      "price_change_1h": 14.46,
+      "price_change_24h": -40.8,
+      "volume_24h": 305046.23,
+      "liquidity": 22254.53,
+      "market_cap": 50958.0,
       "pair_url": "https://dexscreener.com/solana/4rofaXgSuYt4d2Zc81PKPwc3stYb7Uecq6Fug28Mpump",
       "token_address": "4rofaXgSuYt4d2Zc81PKPwc3stYb7Uecq6Fug28Mpump",
       "chain": "solana",
       "signals": [
-        "🎯 Micro cap gem: $47,297",
-        "🔥 Active trading: 14,533 txns (24h)"
+        "⚡ 5m rocket: +10.6%",
+        "📈 1h surge: +14.5%",
+        "🎯 Micro cap gem: $50,958",
+        "🔥 Active trading: 14,442 txns (24h)"
       ],
-      "timestamp": "2026-05-04T05:00:18.672360"
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "DOG",
+      "name": "Dog (Bitcoin)",
+      "score": 44,
+      "alert_type": "🔔 ALERT",
+      "price": 0.0007934,
+      "price_change_5m": 0.53,
+      "price_change_1h": 2.45,
+      "price_change_24h": 0.29,
+      "volume_24h": 56776.08,
+      "liquidity": 70509.35,
+      "market_cap": 79348551.0,
+      "pair_url": "https://dexscreener.com/solana/dog1viwbb2vWDpER5FrJ4YFG6gq6XuyFohUe9TXN65u",
+      "token_address": "dog1viwbb2vWDpER5FrJ4YFG6gq6XuyFohUe9TXN65u",
+      "chain": "solana",
+      "signals": [
+        "⚡ Heavy buying: 1 buys vs 0 sells (5m)",
+        "💪 Buy pressure: 66 buys vs 6 sells (1h)",
+        "💧 Strong liquidity: $70,509"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "FLORK",
+      "name": "Flork",
+      "score": 42,
+      "alert_type": "🚀 BREAKOUT",
+      "price": 0.000178,
+      "price_change_5m": 3.06,
+      "price_change_1h": 41.55,
+      "price_change_24h": 659.0,
+      "volume_24h": 628328.15,
+      "liquidity": 34718.2,
+      "market_cap": 178093.0,
+      "pair_url": "https://dexscreener.com/solana/EnqCw742Nbk3dHn4aZhHiLjo6awAhpd5gSzrunb7pump",
+      "token_address": "EnqCw742Nbk3dHn4aZhHiLjo6awAhpd5gSzrunb7pump",
+      "chain": "solana",
+      "signals": [
+        "📈 1h surge: +41.5%",
+        "🔥 Daily moon: +659.0% (24h)",
+        "⚡ Heavy buying: 18 buys vs 9 sells (5m)",
+        "💰 High volume: $628,328",
+        "🎯 Micro cap gem: $178,093",
+        "🔥 Active trading: 6,749 txns (24h)"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "GAMEBAY",
+      "name": "GameBay",
+      "score": 38,
+      "alert_type": "🆕 NEW_PAIR",
+      "price": 4.678e-05,
+      "price_change_5m": 7.04,
+      "price_change_1h": -2.86,
+      "price_change_24h": 34.96,
+      "volume_24h": 185215.19,
+      "liquidity": 17056.15,
+      "market_cap": 46786.0,
+      "pair_url": "https://dexscreener.com/solana/13YRWhuYBvMqYYqWsBNs6j6K1CU2MNKx2d9c1xN9pump",
+      "token_address": "13YRWhuYBvMqYYqWsBNs6j6K1CU2MNKx2d9c1xN9pump",
+      "chain": "solana",
+      "signals": [
+        "⚡ 5m rocket: +7.0%",
+        "🎯 Micro cap gem: $46,786",
+        "🔥 Active trading: 5,240 txns (24h)"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "SR",
+      "name": "Strike Robot",
+      "score": 33,
+      "alert_type": "🔔 ALERT",
+      "price": 0.003954,
+      "price_change_5m": 0.0,
+      "price_change_1h": 3.86,
+      "price_change_24h": 28.13,
+      "volume_24h": 48534.63,
+      "liquidity": 194891.64,
+      "market_cap": 3954099.0,
+      "pair_url": "https://dexscreener.com/solana/0x10c56F005a379f8eAfc88ff5c3f40d30F0031AC9",
+      "token_address": "0x10c56F005a379f8eAfc88ff5c3f40d30F0031AC9",
+      "chain": "base",
+      "signals": [
+        "💪 Buy pressure: 4 buys vs 1 sells (1h)",
+        "💧 Strong liquidity: $194,892",
+        "💎 Small cap: $3,954,099"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "MAGA",
+      "name": "Make Aliens Great Again ",
+      "score": 32,
+      "alert_type": "🔔 ALERT",
+      "price": 0.01411,
+      "price_change_5m": 1.43,
+      "price_change_1h": 7.5,
+      "price_change_24h": -7.93,
+      "volume_24h": 488161.25,
+      "liquidity": 403907.65,
+      "market_cap": 13804169.0,
+      "pair_url": "https://dexscreener.com/solana/Hon2rHAiqkcDtUzL5gA2vjXPr7T1MPCK2UT2AHKCpump",
+      "token_address": "Hon2rHAiqkcDtUzL5gA2vjXPr7T1MPCK2UT2AHKCpump",
+      "chain": "solana",
+      "signals": [
+        "💧 Strong liquidity: $403,908",
+        "🔥 Active trading: 70,813 txns (24h)"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "BUTT",
+      "name": "Sir Buttington Fartworth Esq.",
+      "score": 30,
+      "alert_type": "🔔 ALERT",
+      "price": 5.779e-05,
+      "price_change_5m": 2.81,
+      "price_change_1h": -18.63,
+      "price_change_24h": -67.13,
+      "volume_24h": 857750.51,
+      "liquidity": 21443.57,
+      "market_cap": 57343.0,
+      "pair_url": "https://dexscreener.com/solana/DcSLSZkhxBECsJF4Jny57c1xTaMwKo9HQMKiyXYbpump",
+      "token_address": "DcSLSZkhxBECsJF4Jny57c1xTaMwKo9HQMKiyXYbpump",
+      "chain": "solana",
+      "signals": [
+        "⚡ Heavy buying: 6 buys vs 3 sells (5m)",
+        "💰 High volume: $857,751",
+        "🎯 Micro cap gem: $57,343",
+        "🔥 Active trading: 18,785 txns (24h)"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "GMEBAY",
+      "name": "GameStop x eBay",
+      "score": 29,
+      "alert_type": "🔔 ALERT",
+      "price": 0.0001452,
+      "price_change_5m": 3.6,
+      "price_change_1h": -24.72,
+      "price_change_24h": 55.02,
+      "volume_24h": 125261.0,
+      "liquidity": 32170.94,
+      "market_cap": 145277.0,
+      "pair_url": "https://dexscreener.com/solana/5zT51ri9kKSTXzJZVT83t3T2rU14bTvo2a6EwwLXpump",
+      "token_address": "5zT51ri9kKSTXzJZVT83t3T2rU14bTvo2a6EwwLXpump",
+      "chain": "solana",
+      "signals": [
+        "🔥 Daily moon: +55.0% (24h)",
+        "🎯 Micro cap gem: $145,277"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "PCOW",
+      "name": "The PURPose Cow",
+      "score": 28,
+      "alert_type": "🆕 NEW_PAIR",
+      "price": 4.313e-05,
+      "price_change_5m": -1.76,
+      "price_change_1h": 7.24,
+      "price_change_24h": 22.44,
+      "volume_24h": 24169.07,
+      "liquidity": 16109.27,
+      "market_cap": 43133.0,
+      "pair_url": "https://dexscreener.com/solana/FAh7wkNcRsnY3oFz6Bf94vnzugwLXFSnmqMYcGkmpump",
+      "token_address": "FAh7wkNcRsnY3oFz6Bf94vnzugwLXFSnmqMYcGkmpump",
+      "chain": "solana",
+      "signals": [
+        "🎯 Micro cap gem: $43,133"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "MAY4TH",
+      "name": "Star Wars",
+      "score": 25,
+      "alert_type": "🔔 ALERT",
+      "price": 0.0001847,
+      "price_change_5m": 3.59,
+      "price_change_1h": -7.11,
+      "price_change_24h": 559.0,
+      "volume_24h": 253306.25,
+      "liquidity": 34048.92,
+      "market_cap": 183825.0,
+      "pair_url": "https://dexscreener.com/solana/7wC7z6FbueVpDhb724xg7VHvsLwMPuQgwvHUfMbq5Z89",
+      "token_address": "7wC7z6FbueVpDhb724xg7VHvsLwMPuQgwvHUfMbq5Z89",
+      "chain": "solana",
+      "signals": [
+        "🔥 Daily moon: +559.0% (24h)",
+        "🎯 Micro cap gem: $183,825",
+        "🔥 Active trading: 15,898 txns (24h)"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "MAGA",
+      "name": "Make Aliens Great Again ",
+      "score": 25,
+      "alert_type": "🔔 ALERT",
+      "price": 0.01387,
+      "price_change_5m": 0.0,
+      "price_change_1h": 4.45,
+      "price_change_24h": -8.21,
+      "volume_24h": 242059.2,
+      "liquidity": 236738.6,
+      "market_cap": 13593816.0,
+      "pair_url": "https://dexscreener.com/solana/Hon2rHAiqkcDtUzL5gA2vjXPr7T1MPCK2UT2AHKCpump",
+      "token_address": "Hon2rHAiqkcDtUzL5gA2vjXPr7T1MPCK2UT2AHKCpump",
+      "chain": "solana",
+      "signals": [
+        "💧 Strong liquidity: $236,739"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "UNIPUMP",
+      "name": "Unipump",
+      "score": 22,
+      "alert_type": "🔔 ALERT",
+      "price": 7.047e-05,
+      "price_change_5m": -0.66,
+      "price_change_1h": 9.84,
+      "price_change_24h": -46.57,
+      "volume_24h": 198457.99,
+      "liquidity": 24554.87,
+      "market_cap": 70476.0,
+      "pair_url": "https://dexscreener.com/solana/9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
+      "token_address": "9KrdYnHHrsWYpWMxyzbmmrjcXRr7ERWpB3byNeb1pump",
+      "chain": "solana",
+      "signals": [
+        "🎯 Micro cap gem: $70,476"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "IMOUT",
+      "name": "I AM OUT",
+      "score": 20,
+      "alert_type": "🔔 ALERT",
+      "price": 0.00125,
+      "price_change_5m": 0.17,
+      "price_change_1h": 0.74,
+      "price_change_24h": 22.27,
+      "volume_24h": 951889.44,
+      "liquidity": 171954.28,
+      "market_cap": 1250492.0,
+      "pair_url": "https://dexscreener.com/solana/DACYVx34V5aQaehN3MZGYxPfoyQYHZSnFAFw3T2Vbonk",
+      "token_address": "DACYVx34V5aQaehN3MZGYxPfoyQYHZSnFAFw3T2Vbonk",
+      "chain": "solana",
+      "signals": [
+        "💰 High volume: $951,889",
+        "💧 Strong liquidity: $171,954",
+        "💎 Small cap: $1,250,492",
+        "🔥 Active trading: 17,664 txns (24h)"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
+    },
+    {
+      "symbol": "KING",
+      "name": "the vaguepost king",
+      "score": 19,
+      "alert_type": "🔔 ALERT",
+      "price": 3.56e-05,
+      "price_change_5m": 0.0,
+      "price_change_1h": -9.76,
+      "price_change_24h": 26.47,
+      "volume_24h": 28644.34,
+      "liquidity": 15240.28,
+      "market_cap": 34882.0,
+      "pair_url": "https://dexscreener.com/solana/4u1xmmG794nNLg3qCFb8ZSek9BAcoNua1ZYcskZrpump",
+      "token_address": "4u1xmmG794nNLg3qCFb8ZSek9BAcoNua1ZYcskZrpump",
+      "chain": "solana",
+      "signals": [
+        "💪 Buy pressure: 39 buys vs 10 sells (1h)",
+        "🎯 Micro cap gem: $34,882"
+      ],
+      "timestamp": "2026-05-04T05:15:10.080193"
     },
     {
       "symbol": "PEPE",
@@ -311,7 +375,7 @@
         "💧 Strong liquidity: $3,148,329",
         "💎 Small cap: $4,202,702"
       ],
-      "timestamp": "2026-05-04T05:00:18.672360"
+      "timestamp": "2026-05-04T05:15:10.080193"
     },
     {
       "symbol": "PEPE",
@@ -332,7 +396,7 @@
         "💧 Strong liquidity: $1,319,283",
         "💎 Small cap: $2,631,880"
       ],
-      "timestamp": "2026-05-04T05:00:18.672360"
+      "timestamp": "2026-05-04T05:15:10.080193"
     },
     {
       "symbol": "PEPE",
@@ -353,96 +417,33 @@
         "💧 Strong liquidity: $2,281,871",
         "💎 Small cap: $2,607,779"
       ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "GMEBAY",
-      "name": "GameStop x eBay",
-      "score": 14,
-      "alert_type": "🔔 ALERT",
-      "price": 0.0001365,
-      "price_change_5m": -3.2,
-      "price_change_1h": -11.83,
-      "price_change_24h": 39.01,
-      "volume_24h": 125279.22,
-      "liquidity": 31110.9,
-      "market_cap": 136506.0,
-      "pair_url": "https://dexscreener.com/solana/5zT51ri9kKSTXzJZVT83t3T2rU14bTvo2a6EwwLXpump",
-      "token_address": "5zT51ri9kKSTXzJZVT83t3T2rU14bTvo2a6EwwLXpump",
-      "chain": "solana",
-      "signals": [
-        "🎯 Micro cap gem: $136,506"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
+      "timestamp": "2026-05-04T05:15:10.080193"
     },
     {
       "symbol": "SPIRIT2.0",
       "name": "Spirit Airlines 2.0",
       "score": 13,
       "alert_type": "🆕 NEW_PAIR",
-      "price": 0.0002014,
-      "price_change_5m": -17.85,
-      "price_change_1h": -13.13,
-      "price_change_24h": 481.0,
-      "volume_24h": 1316449.9,
-      "liquidity": 37817.54,
-      "market_cap": 201454.0,
+      "price": 0.0002137,
+      "price_change_5m": -11.96,
+      "price_change_1h": -24.6,
+      "price_change_24h": 516.0,
+      "volume_24h": 1339489.8,
+      "liquidity": 39081.72,
+      "market_cap": 213757.0,
       "pair_url": "https://dexscreener.com/solana/xeyk1xdpFf4vPtcrq64E7tNrQ5QX8Q6heXazp4Xpump",
       "token_address": "xeyk1xdpFf4vPtcrq64E7tNrQ5QX8Q6heXazp4Xpump",
       "chain": "solana",
       "signals": [
-        "🔥 Daily moon: +481.0% (24h)",
-        "💰 High volume: $1,316,450",
-        "🎯 Micro cap gem: $201,454",
-        "🔥 Active trading: 30,184 txns (24h)"
+        "🔥 Daily moon: +516.0% (24h)",
+        "💰 High volume: $1,339,490",
+        "🎯 Micro cap gem: $213,757",
+        "🔥 Active trading: 30,600 txns (24h)"
       ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "BUTT",
-      "name": "Sir Buttington Fartworth Esq.",
-      "score": 12,
-      "alert_type": "🔔 ALERT",
-      "price": 5.599e-05,
-      "price_change_5m": -8.55,
-      "price_change_1h": -17.39,
-      "price_change_24h": -63.79,
-      "volume_24h": 900171.78,
-      "liquidity": 21053.57,
-      "market_cap": 55554.0,
-      "pair_url": "https://dexscreener.com/solana/DcSLSZkhxBECsJF4Jny57c1xTaMwKo9HQMKiyXYbpump",
-      "token_address": "DcSLSZkhxBECsJF4Jny57c1xTaMwKo9HQMKiyXYbpump",
-      "chain": "solana",
-      "signals": [
-        "💰 High volume: $900,172",
-        "🎯 Micro cap gem: $55,554",
-        "🔥 Active trading: 19,553 txns (24h)"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
-    },
-    {
-      "symbol": "SR",
-      "name": "Strike Robot",
-      "score": 12,
-      "alert_type": "🔔 ALERT",
-      "price": 0.00429,
-      "price_change_5m": 0.0,
-      "price_change_1h": 0.0,
-      "price_change_24h": 9.67,
-      "volume_24h": 20999.39,
-      "liquidity": 225811.05,
-      "market_cap": 4290617.0,
-      "pair_url": "https://dexscreener.com/solana/0x10c56F005a379f8eAfc88ff5c3f40d30F0031AC9",
-      "token_address": "0x10c56F005a379f8eAfc88ff5c3f40d30F0031AC9",
-      "chain": "base",
-      "signals": [
-        "💧 Strong liquidity: $225,811",
-        "💎 Small cap: $4,290,617"
-      ],
-      "timestamp": "2026-05-04T05:00:18.672360"
+      "timestamp": "2026-05-04T05:15:10.080193"
     }
   ],
-  "lastUpdated": "2026-05-04T05:00:18.672360",
-  "totalScanned": 145,
-  "generatedAt": "05:00"
+  "lastUpdated": "2026-05-04T05:15:10.080193",
+  "totalScanned": 144,
+  "generatedAt": "05:15"
 }
