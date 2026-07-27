@@ -18,12 +18,15 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="T8iO7AdN5z_luWy-Xn3QQRa9mz3u2JPZtLrTSYm5_YM" />
         
+        {/* Bing Webmaster Tools Verification */}
+        <meta name="msvalidate.01" content="6344903EC8E96B412B093C98F3AEAF3A" />
+        
         {/* Default Open Graph */}
         <meta property="og:site_name" content="iseeiape" />
         <meta property="og:locale" content="en_US" />
         
         {/* Default Twitter */}
-        <meta name="twitter:site" content="@iseeiape" />
+        <meta name="twitter:site" content="@wolf_onchain" />
         <meta name="twitter:card" content="summary_large_image" />
         
         {/* Favicon */}
