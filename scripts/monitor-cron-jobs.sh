@@ -1,8 +1,8 @@
 #!/bin/bash
 # Wolf Pack Cron Jobs Monitor
 
-LOGS_DIR="/home/matrix/.openclaw/workspace/iseeiape-website/logs"
-SCRIPTS_DIR="/home/matrix/.openclaw/workspace/iseeiape-website/scripts"
+LOGS_DIR="/home/matrix/matrix-army/iseeiape-website/logs"
+SCRIPTS_DIR="/home/matrix/matrix-army/iseeiape-website/scripts"
 
 echo "🐺 Wolf Pack Cron Jobs Monitor"
 echo "================================"
@@ -51,4 +51,4 @@ echo "💡 Commands:"
 echo "  • View all logs: ls -la ${LOGS_DIR}/"
 echo "  • Follow daily content: tail -f ${LOGS_DIR}/wolf-pack-daily-content.log"
 echo "  • Check errors: grep -i error ${LOGS_DIR}/*.error.log"
-echo "  • Run manually: cd /home/matrix/.openclaw/workspace/iseeiape-website && node scripts/content-automation.js"
+echo "  • Run manually: cd /home/matrix/matrix-army/iseeiape-website && node scripts/content-automation.js"

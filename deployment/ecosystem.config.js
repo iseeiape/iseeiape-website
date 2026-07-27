@@ -4,7 +4,7 @@ module.exports = {
       name: 'iseeiape-automation',
       script: './scripts/cron-manager.js',
       args: 'start',
-      cwd: '/home/matrix/.openclaw/workspace/iseeiape-website',
+      cwd: '/home/matrix/matrix-army/iseeiape-website',
       interpreter: 'node',
       
       // Environment
@@ -55,7 +55,7 @@ module.exports = {
       name: 'iseeiape-website',
       script: 'npm',
       args: 'start',
-      cwd: '/home/matrix/.openclaw/workspace/iseeiape-website',
+      cwd: '/home/matrix/matrix-army/iseeiape-website',
       interpreter: 'none',
       
       // Environment
@@ -107,7 +107,7 @@ module.exports = {
       host: 'localhost',
       ref: 'origin/main',
       repo: 'git@github.com:iseeiape/iseeiape-website.git',
-      path: '/home/matrix/.openclaw/workspace/iseeiape-website',
+      path: '/home/matrix/matrix-army/iseeiape-website',
       'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production',
       env: {
         NODE_ENV: 'production'

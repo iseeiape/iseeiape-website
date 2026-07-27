@@ -124,7 +124,7 @@ async function main() {
   if (!isServerRunning) {
     console.log('⚠️  Next.js server not detected on port 3000');
     console.log('💡 To test the API, first run:');
-    console.log('   cd /home/matrix/.openclaw/workspace/iseeiape-website');
+    console.log('   cd /home/matrix/matrix-army/iseeiape-website');
     console.log('   npm run dev');
     console.log('\n📋 Running local file test instead...');
     await runLocalTest();

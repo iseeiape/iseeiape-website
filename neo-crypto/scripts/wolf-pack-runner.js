@@ -16,7 +16,7 @@ const execPromise = util.promisify(exec);
 
 // Configuration
 const CONFIG = {
-  pythonScript: '/home/matrix/.openclaw/workspace/wolf_pack_v8_complete.py',
+  pythonScript: '/home/matrix/matrix-army/wolf_pack_v8_complete.py',
   outputDir: path.join(__dirname, '../data/wolf-pack'),
   cacheFile: path.join(__dirname, '../data/wolf-pack-cache.json'),
   summaryFile: path.join(__dirname, '../data/wolf-pack-summary.json'),
@@ -31,7 +31,7 @@ const CONFIG = {
   },
   
   // Performance tracking
-  performanceDb: '/home/matrix/.openclaw/workspace/wolf_performance.db'
+  performanceDb: '/home/matrix/matrix-army/wolf_performance.db'
 };
 
 // Ensure directories exist

@@ -20,7 +20,7 @@ The iseeiape automation system consists of:
 ### Dependencies
 ```bash
 # Node.js dependencies
-cd /home/matrix/.openclaw/workspace/iseeiape-website
+cd /home/matrix/matrix-army/iseeiape-website
 npm install
 
 # Python dependencies (for Wolf Pack)
@@ -39,7 +39,7 @@ PM2 provides process management, monitoring, and auto-restart.
 npm install -g pm2
 
 # Start automation system
-cd /home/matrix/.openclaw/workspace/iseeiape-website
+cd /home/matrix/matrix-army/iseeiape-website
 pm2 start deployment/ecosystem.config.js --env production
 
 # Save PM2 configuration
@@ -113,7 +113,7 @@ NODE_ENV=production
 PORT=3000
 DEXSCREENER_API_KEY=your_key_here
 COINGECKO_API_KEY=your_key_here
-WOLF_PACK_PATH=/home/matrix/.openclaw/workspace/wolf_pack_v8_complete.py
+WOLF_PACK_PATH=/home/matrix/matrix-army/wolf_pack_v8_complete.py
 ```
 
 ### Neo Crypto Engine Configuration
@@ -195,7 +195,7 @@ pm2 monit
 top -p $(pgrep -f "cron-manager")
 
 # Check disk space
-df -h /home/matrix/.openclaw/workspace
+df -h /home/matrix/matrix-army
 
 # Check log sizes
 du -sh neo-crypto/logs/

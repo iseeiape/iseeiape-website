@@ -22,7 +22,7 @@ const execPromise = promisify(exec);
 
 // Configuration
 const CONFIG = {
-  pythonScript: '/home/matrix/.openclaw/workspace/wolf_pack_v8_complete.py',
+  pythonScript: '/home/matrix/matrix-army/wolf_pack_v8_complete.py',
   outputDir: path.join(__dirname, '../neo-crypto/data/wolf-pack'),
   cacheFile: path.join(__dirname, '../neo-crypto/data/wolf-pack-cache.json'),
   summaryFile: path.join(__dirname, '../neo-crypto/data/wolf-pack-summary.json'),

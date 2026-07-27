@@ -24,7 +24,7 @@ Performance optimization and bug fixes for iseeiape-website systems. Focused on 
 - **Expected Improvement:** 40-60% faster execution time
 
 ### 3. **Created Optimized Wolf Pack Script** (`wolf_pack_v9_optimized.py`)
-- **Location:** `/home/matrix/.openclaw/workspace/wolf_pack_v9_optimized.py`
+- **Location:** `/home/matrix/matrix-army/wolf_pack_v9_optimized.py`
 - **Key Optimizations:**
   - **Incremental Scanning:** Only scans new/changed data between runs
   - **Parallel Processing:** Uses asyncio for concurrent API calls

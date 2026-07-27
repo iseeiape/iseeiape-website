@@ -20,8 +20,8 @@ const execPromise = promisify(exec);
 
 // Configuration
 const CONFIG = {
-  pythonScript: '/home/matrix/.openclaw/workspace/wolf_pack_v8_complete.py',
-  optimizedScript: '/home/matrix/.openclaw/workspace/wolf_pack_v9_optimized.py',
+  pythonScript: '/home/matrix/matrix-army/wolf_pack_v8_complete.py',
+  optimizedScript: '/home/matrix/matrix-army/wolf_pack_v9_optimized.py',
   logsDir: path.join(__dirname, '../neo-crypto/logs'),
   dataDir: path.join(__dirname, '../neo-crypto/data'),
   outputDir: path.join(__dirname, '../neo-crypto/outputs/performance'),

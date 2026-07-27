@@ -14,7 +14,7 @@ const axios = require('axios');
 
 // Configuration
 const CONFIG = {
-  wolfPackScript: '/home/matrix/.openclaw/workspace/wolf_pack_v8_complete.py',
+  wolfPackScript: '/home/matrix/matrix-army/wolf_pack_v8_complete.py',
   outputDir: path.join(__dirname, '../data/wolf-pack'),
   cacheFile: path.join(__dirname, '../data/wolf-pack-cache.json'),
   

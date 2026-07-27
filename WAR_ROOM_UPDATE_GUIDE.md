@@ -34,7 +34,7 @@
 ## 📁 FIȘIERE NOI:
 
 ```
-/home/matrix/.openclaw/workspace/iseeiape-website/components/
+/home/matrix/matrix-army/iseeiape-website/components/
 ├── Opportunities.tsx     # NOU
 ├── XTrends.tsx          # NOU
 ├── LatestNews.tsx       # NOU
@@ -78,12 +78,12 @@ import TeamStatus from '../components/TeamStatus'
 
 **Fișier backup:**
 ```
-/home/matrix/.openclaw/workspace/iseeiape-website/pages/war-room.tsx.backup
+/home/matrix/matrix-army/iseeiape-website/pages/war-room.tsx.backup
 ```
 
 **Dacă ceva nu merge:**
 ```bash
-cd /home/matrix/.openclaw/workspace/iseeiape-website
+cd /home/matrix/matrix-army/iseeiape-website
 cp pages/war-room.tsx.backup pages/war-room.tsx
 npm run build
 ```
@@ -95,7 +95,7 @@ npm run build
 ### Opțiunea 1: Vercel CLI (Local)
 
 ```bash
-cd /home/matrix/.openclaw/workspace/iseeiape-website
+cd /home/matrix/matrix-army/iseeiape-website
 
 # Build local
 npm run build
@@ -107,7 +107,7 @@ vercel --prod
 ### Opțiunea 2: Git Push (Auto-deploy)
 
 ```bash
-cd /home/matrix/.openclaw/workspace/iseeiape-website
+cd /home/matrix/matrix-army/iseeiape-website
 
 # Adaugă fișiere noi
 git add components/Opportunities.tsx components/XTrends.tsx components/LatestNews.tsx components/TeamStatus.tsx

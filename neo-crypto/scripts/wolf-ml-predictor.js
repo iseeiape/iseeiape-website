@@ -13,7 +13,7 @@ const sqlite3 = require('sqlite3').verbose();
 
 // Configuration
 const CONFIG = {
-  performanceDb: '/home/matrix/.openclaw/workspace/wolf_performance.db',
+  performanceDb: '/home/matrix/matrix-army/wolf_performance.db',
   outputDir: path.join(__dirname, '../data/wolf-ml'),
   modelFile: path.join(__dirname, '../data/wolf-ml/model.json'),
   
