@@ -82,7 +82,7 @@ export default function AutonomousTradingEcosystems() {
             </p>
           </div>
           
-          <div style={{ background: '#111', padding: '25px', borderRadius: '12px', marginBottom: '20px', borderLeft: '4px solid '#feca57'' }}>
+          <div style={{ background: '#111', padding: '25px', borderRadius: '12px', marginBottom: '20px', borderLeft: "4px solid #feca57" }}>
             <h3 style={{ color: '#feca57', marginBottom: '10px' }}>2. Sub-Second Decision Cycles</h3>
             <p style={{ color: '#aaa', lineHeight: '1.6' }}>
               <strong>Human Decision:</strong> 500ms-5s reaction time, emotional processing, cognitive load<br/>
@@ -91,7 +91,7 @@ export default function AutonomousTradingEcosystems() {
             </p>
           </div>
           
-          <div style={{ background: '#111', padding: '25px', borderRadius: '12px', marginBottom: '20px', borderLeft: '4px solid '#ff9ff3'' }}>
+          <div style={{ background: '#111', padding: '25px', borderRadius: '12px', marginBottom: '20px', borderLeft: "4px solid #ff9ff3" }}>
             <h3 style={{ color: '#ff9ff3', marginBottom: '10px' }}>3. Machine Learning-Driven Evolution</h3>
             <p style={{ color: '#aaa', lineHeight: '1.6' }}>
               <strong>Human Markets:</strong> Evolve through psychology, narrative, social dynamics<br/>
@@ -100,7 +100,7 @@ export default function AutonomousTradingEcosystems() {
             </p>
           </div>
 
-          <div style={{ background: '#111', padding: '25px', borderRadius: '12px', marginBottom: '20px', borderLeft: '4px solid '#ff6b6b'' }}>
+          <div style={{ background: '#111', padding: '25px', borderRadius: '12px', marginBottom: '20px', borderLeft: "4px solid #ff6b6b" }}>
             <h3 style={{ color: '#ff6b6b', marginBottom: '10px' }}>4. Emergent Coordination & Swarm Intelligence</h3>
             <p style={{ color: '#aaa', lineHeight: '1.6' }}>
               <strong>Human Coordination:</strong> Explicit communication, social networks, herd behavior<br/>

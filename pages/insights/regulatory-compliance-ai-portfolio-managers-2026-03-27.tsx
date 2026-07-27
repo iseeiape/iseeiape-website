@@ -36,7 +36,7 @@ export default function RegulatoryComplianceAIPortfolioManagers() {
           
           <h3>Current Regulatory Landscape</h3>
           <ul>
-            <li><strong>SEC (USA):</strong> Investment Advisers Act of 1940 applies to AI managers with >$25M AUM</li>
+            <li><strong>SEC (USA):</strong> Investment Advisers Act of 1940 applies to AI managers with &gt;$25M AUM</li>
             <li><strong>ESMA (EU):</strong> MiCA regulation includes specific provisions for algorithmic trading</li>
             <li><strong>MAS (Singapore):</strong> Progressive sandbox approach for AI financial services</li>
             <li><strong>FCA (UK):</strong> Algorithmic trading requirements under MAR and MiFID II</li>

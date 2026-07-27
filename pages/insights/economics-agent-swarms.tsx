@@ -97,7 +97,7 @@ export default function EconomicsAgentSwarms() {
             <li><strong>Successful models:</strong> 67% use dual-token systems (utility + governance)</li>
             <li><strong>Fee structures:</strong> Average 0.15% per transaction (range: 0.05%-0.35%)</li>
             <li><strong>Incentive alignment:</strong> 89% of networks tie rewards to performance metrics</li>
-            <li><strong>Sustainability:</strong> 41% have proven sustainable economics >6 months</li>
+            <li><strong>Sustainability:</strong> 41% have proven sustainable economics &gt;6 months</li>
           </ul>
           
           <h2>🧠 Psychological Edge</h2>

@@ -128,7 +128,7 @@ export default function EconomicsAutonomousAgentEcosystems() {
               <span style={{ padding: '4px 10px', background: '#4ecdc433', color: '#4ecdc4', borderRadius: '12px', fontSize: '11px' }}>Example: ALPHA_STREAM</span>
             </div>
             
-            <div style={{ background: 'linear-gradient(135deg, '#111' 0%, '#1a1a1a' 100%)', padding: '25px', borderRadius: '12px', border: '1px solid '#333'' }}>
+            <div style={{ background: "linear-gradient(135deg, #111 0%, #1a1a1a 100%)", padding: '25px', borderRadius: '12px', border: "1px solid #333" }}>
               <h3 style={{ color: '#45b7d1', marginBottom: '10px', fontSize: '18px' }}>Coordination Tokens</h3>
               <p style={{ color: '#aaa', lineHeight: '1.6', fontSize: '14px', marginBottom: '15px' }}>
                 The "social" layer for agents. Facilitate agent-to-agent coordination, reduce redundant actions, prevent MEV.
@@ -136,7 +136,7 @@ export default function EconomicsAutonomousAgentEcosystems() {
               <span style={{ padding: '4px 10px', background: '#45b7d133', color: '#45b7d1', borderRadius: '12px', fontSize: '11px' }}>Example: SWARM_COORD</span>
             </div>
             
-            <div style={{ background: 'linear-gradient(135deg, '#111' 0%, '#1a1a1a' 100%)', padding: '25px', borderRadius: '12px', border: '1px solid '#333'' }}>
+            <div style={{ background: "linear-gradient(135deg, #111 0%, #1a1a1a 100%)", padding: '25px', borderRadius: '12px', border: "1px solid #333" }}>
               <h3 style={{ color: '#96ceb4', marginBottom: '10px', fontSize: '18px' }}>Governance Tokens</h3>
               <p style={{ color: '#aaa', lineHeight: '1.6', fontSize: '14px', marginBottom: '15px' }}>
                 The "rules" of the ecosystem. Parameter tuning, fee structure updates, protocol upgrades.
