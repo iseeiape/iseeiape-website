@@ -8,6 +8,15 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/four-hour-window-wolf-data-2026-07-28" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Jul 28</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>⏱️ The 4-Hour Window: 211 Wolf Alerts Show Where the Profit Actually Lives</h2>
+            <p style={{ color: '#aaa' }}>Every Wolf Pack alert from the last 48h tracked to the hour: 37% green at 1h, 1% green at 24h, and zero alerts held +20% overnight. The data says the edge is real — but it expires in 4 hours.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>6 min read • Data Case Study • Wolf Pack • Solana • Take Profits →</p>
+          </article>
+        </a>
+
         <a href="/insights/economics-autonomous-agent-ecosystems-2026-04-06" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
             <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Apr 6</span>
