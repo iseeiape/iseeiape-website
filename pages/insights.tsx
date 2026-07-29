@@ -8,6 +8,15 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/lone-survivor-wolf-data-2026-07-29" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Jul 29</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🕯️ The Lone Survivor: 371 Wolf Alerts, Exactly 1 Green at 24h</h2>
+            <p style={{ color: '#aaa' }}>Day-2 confirmation of the 4-hour window: 371 alerts, 132 tokens, average -84% at 24h — and the only survivor was a boring score-70 that dipped first. Plus: SHAYDE's autopsy shows why the score-88 re-alert is a trap, not a second chance.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>6 min read • Data Case Study • Wolf Pack • Solana • Survival Bias →</p>
+          </article>
+        </a>
+
         <a href="/insights/four-hour-window-wolf-data-2026-07-28" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
             <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Jul 28</span>
