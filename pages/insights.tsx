@@ -8,6 +8,15 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/perfect-score-trap-wolf-data-2026-07-30" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Jul 30</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🎯 The Perfect Score Trap: Score 98 Pumped 764% Then Died. Score 77 Dipped 58% Then Did 1,809%.</h2>
+            <p style={{ color: '#aaa' }}>Day 3 of the Wolf Pack decay study: 647 alerts, 204 with full 24h track. DOGCAT hit score 98 (the highest in the dataset), went +764% in 4h, then -99% by 24h. Meanwhile FRANK (score 77) opened at -58% and finished at +1,809%. Score predicts the spike — not the exit.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>7 min read • Data Case Study • Wolf Pack • Solana • Exit Strategy →</p>
+          </article>
+        </a>
+
         <a href="/insights/lone-survivor-wolf-data-2026-07-29" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
             <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Jul 29</span>
