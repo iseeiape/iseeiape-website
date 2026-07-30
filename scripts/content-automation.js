@@ -22,8 +22,16 @@ async function generateDailyContent() {
   console.log(`📝 Generating daily content for ${DATE}...`);
   
   try {
-    // Open database
-    const db = new sqlite3.Database(DB_PATH);
+    // Open database with WAL + busy_timeout (night-shift 2026-07-31)
+    // Prevents 'database is locked' when concurrent cron scripts hit wolf_performance.db
+    const db = new sqlite3.Database(DB_PATH, sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE);
+    await new Promise((resolve, reject) => {
+      db.run('PRAGMA journal_mode=WAL', (err) => err ? reject(err) : resolve());
+    });
+    await new Promise((resolve, reject) => {
+      db.run('PRAGMA busy_timeout=30000', (err) => err ? reject(err) : resolve());
+    });
+    db.run('PRAGMA synchronous=NORMAL');
 
     // Get performance data for last 24h
     const dayAgo = Math.floor(Date.now() / 1000) - 86400;

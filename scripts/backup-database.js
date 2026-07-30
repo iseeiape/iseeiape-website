@@ -29,8 +29,21 @@ async function backupDatabase() {
     return;
   }
   
-  // Create backup
-  try {
+  // Create backup using SQLite backup API (night-shift 2026-07-31)
+    // Plain `cp` on a WAL-mode DB misses uncheckpointed pages → corrupt backup.
+    // Using sqlite3 CLI .backup ensures a consistent snapshot.
+    try {
+    const sqlite3mod = require('sqlite3').verbose();
+    const srcDb = new sqlite3mod.Database(DB_PATH, sqlite3mod.OPEN_READONLY);
+    await new Promise((resolve, reject) => {
+      srcDb.run('PRAGMA wal_checkpoint(TRUNCATE)', (err) => {
+        if (err) reject(err); else resolve();
+      });
+    });
+    await new Promise((resolve, reject) => {
+      srcDb.close((err) => err ? reject(err) : resolve());
+    });
+    // Now safe to copy the checkpointed DB file
     await execAsync(`cp "${DB_PATH}" "${BACKUP_PATH}"`);
     console.log(`✅ Backup created: ${BACKUP_PATH}`);
     
