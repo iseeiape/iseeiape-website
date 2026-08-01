@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/moondogecoin-rug-breaks-thesis-wolf-data-2026-08-01" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Aug 1</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>💸 The $23M Rug: MOONDOGECOIN Breaks the Mcap Survival Thesis</h2>
+            <p style={{ color: '#aaa' }}>Day 5 of the Wolf Pack decay study: 722 alerts, 330 with full 24h track. Yesterday's test case MOONDOGECOIN peaked at $23M mcap with score 100 — then rugged to -99.9%. The mcap-survival thesis is dead. Score 100 is now 0 for 76 across all mcaps. Meanwhile NASCAT (score 69, $42K mcap) did +449%. ORGANIC win rate: 0.7%.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Data Case Study • Wolf Pack • Solana • Thesis Broken →</p>
+          </article>
+        </a>
+
         <a href="/insights/score-100-death-sentence-wolf-data-2026-07-31" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Jul 31</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Yesterday - Jul 31</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>💀 Score 100 Is a Death Sentence: 17 of 18 Perfect-Score Tokens Rugged to -99%</h2>
             <p style={{ color: '#aaa' }}>Day 4 of the Wolf Pack decay study: 781 alerts, 313 with full 24h track. 18 ORGANIC tokens got score 100 — 17 went to -99% within 24h. The sole survivor (USWR) had $1.6M+ mcap. Every score-100 below $500K rugged. Plus: COPIUM re-alerted 5x in 102 min, every one dead. SYBIL cluster had 67.7% win rate vs ORGANIC's 6.6%.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Data Case Study • Wolf Pack • Solana • Rug Analysis →</p>
