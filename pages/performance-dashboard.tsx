@@ -1,10 +1,17 @@
 import { useEffect } from "react"
 import { useRouter } from "next/router"
-
-// performance-dashboard temporarily redirects to /master while the
-// dashboard component is being rebuilt (static-data version, week 2).
+import Head from "next/head"
 export default function Redirect() {
   const router = useRouter()
   useEffect(() => { router.replace("/master") }, [router])
-  return null
+  return (
+    <>
+      <Head>
+        <title>Performance Dashboard — iseeiape | Token Performance Tracker</title>
+        <meta name="description" content="Track token performance across Solana and Base. Historical ROI, win rates, and smart money performance analytics. Redirecting to master dashboard." />
+        <meta name="robots" content="index, follow" />
+      </Head>
+      <h1 style={{ position: "absolute", left: "-9999px" }}>Performance Dashboard — iseeiape</h1>
+    </>
+  )
 }
