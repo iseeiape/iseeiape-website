@@ -24,14 +24,24 @@ export default async function handler(req, res) {
     };
 
     if (fs.existsSync(wolfLiveFile)) {
-      const stats = fs.statSync(wolfLiveFile);
-      status.components.wolfPack.lastUpdated = stats.mtime.toISOString();
-      status.components.wolfPack.ageMinutes = Math.floor((new Date() - stats.mtime) / (1000 * 60));
-      
       try {
         const data = JSON.parse(fs.readFileSync(wolfLiveFile, 'utf8'));
         const alerts = data.alerts || data;
         status.components.wolfPack.alertCount = Array.isArray(alerts) ? alerts.length : 0;
+
+        // Night shift 2026-08-02: use content timestamp, not fs.statSync().mtime.
+        // On Vercel serverless, file mtime reflects the BUILD time (git checkout),
+        // not when the cron scanner actually wrote the data. This made the API
+        // report data as 4M+ minutes old. The data file itself contains an
+        // ISO timestamp from the scanner that reflects true freshness.
+        const contentTs = data.lastUpdated || data.timestamp || data.generatedAt;
+        if (contentTs) {
+          const dataDate = new Date(contentTs);
+          if (!isNaN(dataDate.getTime())) {
+            status.components.wolfPack.lastUpdated = dataDate.toISOString();
+            status.components.wolfPack.ageMinutes = Math.floor((Date.now() - dataDate.getTime()) / (1000 * 60));
+          }
+        }
       } catch (e) {
         status.components.wolfPack.alertCount = 0;
       }
