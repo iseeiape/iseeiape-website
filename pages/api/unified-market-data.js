@@ -13,11 +13,16 @@ export default async function handler(req, res) {
       return res.status(200).end();
     }
 
-    // Load Wolf Alerts data
-    const wolfDataPath = path.join(process.cwd(), 'data/wolf-alerts-latest.json');
+    // Load Wolf Alerts data — prefer live (updated every 15 min) over legacy
+    const liveDataPath = path.join(process.cwd(), 'data/wolf-live.json');
+    const legacyDataPath = path.join(process.cwd(), 'data/wolf-alerts-latest.json');
     let wolfAlerts = [];
-    if (fs.existsSync(wolfDataPath)) {
-      const rawWolfData = fs.readFileSync(wolfDataPath, 'utf8');
+    if (fs.existsSync(liveDataPath)) {
+      const rawLive = fs.readFileSync(liveDataPath, 'utf8');
+      const liveData = JSON.parse(rawLive);
+      wolfAlerts = liveData.alerts || [];
+    } else if (fs.existsSync(legacyDataPath)) {
+      const rawWolfData = fs.readFileSync(legacyDataPath, 'utf8');
       wolfAlerts = JSON.parse(rawWolfData);
     }
 

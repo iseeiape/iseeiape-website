@@ -4,16 +4,32 @@ import path from 'path';
 
 export default async function handler(req, res) {
   try {
-    // Read from committed data file (updated by cron job)
-    const dataFile = path.join(process.cwd(), 'data/wolf-alerts-latest.json');
-    
-    if (!fs.existsSync(dataFile)) {
-      console.log('Wolf alerts file not found, using sample data');
-      return res.status(200).json(getSampleData());
+    // Night shift 2026-08-10: prefer wolf-live.json (updated every 15 min by scanner cron).
+    // wolf-alerts-latest.json is a legacy file last updated April 2026 — kept only as fallback.
+    const liveDataFile = path.join(process.cwd(), 'data/wolf-live.json');
+    const legacyDataFile = path.join(process.cwd(), 'data/wolf-alerts-latest.json');
+
+    let wolfAlerts = [];
+    let lastScan = null;
+
+    if (fs.existsSync(liveDataFile)) {
+      const rawData = fs.readFileSync(liveDataFile, 'utf8');
+      const liveData = JSON.parse(rawData);
+      wolfAlerts = liveData.alerts || [];
+      lastScan = liveData.lastUpdated || liveData.generatedAt || null;
+      const stats = fs.statSync(liveDataFile);
+      if (!lastScan) lastScan = stats.mtime.toISOString();
+    } else if (fs.existsSync(legacyDataFile)) {
+      const rawData = fs.readFileSync(legacyDataFile, 'utf8');
+      wolfAlerts = JSON.parse(rawData);
+      const stats = fs.statSync(legacyDataFile);
+      lastScan = stats.mtime.toISOString();
     }
 
-    const rawData = fs.readFileSync(dataFile, 'utf8');
-    const wolfAlerts = JSON.parse(rawData);
+    if (!wolfAlerts || wolfAlerts.length === 0) {
+      console.log('No Wolf alerts data found, using sample data');
+      return res.status(200).json(getSampleData());
+    }
 
     // Transform Wolf alerts to dashboard format
     const topTokens = wolfAlerts
@@ -55,7 +71,7 @@ export default async function handler(req, res) {
     ].filter(n => n.tokens.length > 0);
 
     // Get file stats for last scan time
-    const stats = fs.statSync(dataFile);
+    // lastScan is already set from wolf-live.json above
 
     // Transform the data for the frontend
     const transformedData = {
@@ -77,8 +93,8 @@ export default async function handler(req, res) {
         totalNarratives: narratives.length || 0,
         totalWhales: 11,
       },
-      source: 'Wolf Alerts v4.2',
-      lastScan: stats.mtime.toISOString()
+      source: 'Wolf Alerts v5 (Live)',
+      lastScan: lastScan || new Date().toISOString()
     };
 
     // Set cache headers (30 seconds for Wolf data)
