@@ -8,9 +8,27 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/bark-four-hour-trap-wolf-data-2026-08-11" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Aug 11</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>⚡ The 4-Hour Trap: BARK Pumped +931% at 4H. All 14 Tracked Alerts Lost at 24H.</h2>
+            <p style={{ color: '#aaa' }}>Day 15 of the Wolf Pack tracking experiment: 569 alerts, 220 with full 24h track. BARK fired 15 alerts with euphoric 4h candles (+931%, +915%) — 0/14 survived to 24h. REMUS fired 16 alerts in the same window with messy 4h candles — 9/13 were green at 24h (+577% best). ALFE re-launched on a new pair and did +7,939%. Score &lt;60: 26.3% win rate. Score 80-89: 5.3%. Score 100: extinct Day 9.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Data Case Study • Wolf Pack • 4H Trap • Mirror Image →</p>
+          </article>
+        </a>
+
+        <a href="/insights/toad-decay-curve-wolf-data-2026-08-10" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Aug 10</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>📈 The Decay Curve: TOAD Pumped 66x From $190K. 11 Alerts Later at $14.7M, It Lost 44%.</h2>
+            <p style={{ color: '#aaa' }}>Day 14: 526 alerts, 120 unique tokens, 19.9% win rate (highest yet). TOAD traced a complete pump-dump arc across 15 alerts: first at $190K mcap +6,577%, last at $14.7M mcap -43.7%. FROHORSE (score 66) did +31,688% (317x). Score 80-89 was the best band for the first time at 30% win rate.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Data Case Study • Wolf Pack • Decay Curve →</p>
+          </article>
+        </a>
+
         <a href="/insights/moondogecoin-rug-breaks-thesis-wolf-data-2026-08-01" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Aug 1</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Aug 1</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>💸 The $23M Rug: MOONDOGECOIN Breaks the Mcap Survival Thesis</h2>
             <p style={{ color: '#aaa' }}>Day 5 of the Wolf Pack decay study: 722 alerts, 330 with full 24h track. Yesterday's test case MOONDOGECOIN peaked at $23M mcap with score 100 — then rugged to -99.9%. The mcap-survival thesis is dead. Score 100 is now 0 for 76 across all mcaps. Meanwhile NASCAT (score 69, $42K mcap) did +449%. ORGANIC win rate: 0.7%.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Data Case Study • Wolf Pack • Solana • Thesis Broken →</p>
