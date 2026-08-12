@@ -8,9 +8,18 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
-        <a href="/insights/bark-four-hour-trap-wolf-data-2026-08-11" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+        <a href="/insights/record-101k-x-print-wolf-data-2026-08-12" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Aug 11</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Aug 12</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🚀 The 10-Million-Percent Print: 忘忘 Did 101,273x From $52K. Score 97 XST Did -99.7% From $1.4M.</h2>
+            <p style={{ color: '#aaa' }}>Day 16 of the Wolf Pack tracking experiment: 572 alerts, 262 with full 24h track. 忘忘 (score 88, SYBIL, $52K mcap) did +10,127,280% at 24h (101,273x) — 7x bigger than PETE's all-time record. Score 97 XST at $1.4M mcap went -99.7%. Sub-$50K mcap: 20% win rate. $500K+: 0%. Score 90+: 1/7. Score 80-89 was the best band at 22.6% win rate. Score 100 extinct Day 10.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Data Case Study • Wolf Pack • All-Time Record • Mcap Inversion →</p>
+          </article>
+        </a>
+
+        <a href="/insights/bark-four-hour-trap-wolf-data-2026-08-11" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #222', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Aug 11</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>⚡ The 4-Hour Trap: BARK Pumped +931% at 4H. All 14 Tracked Alerts Lost at 24H.</h2>
             <p style={{ color: '#aaa' }}>Day 15 of the Wolf Pack tracking experiment: 569 alerts, 220 with full 24h track. BARK fired 15 alerts with euphoric 4h candles (+931%, +915%) — 0/14 survived to 24h. REMUS fired 16 alerts in the same window with messy 4h candles — 9/13 were green at 24h (+577% best). ALFE re-launched on a new pair and did +7,939%. Score &lt;60: 26.3% win rate. Score 80-89: 5.3%. Score 100: extinct Day 9.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Data Case Study • Wolf Pack • 4H Trap • Mirror Image →</p>
