@@ -8,6 +8,15 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/xst-relaunch-casino-wolf-data-2026-08-15" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Aug 15</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>♻️ The XST Relaunch Casino: Same Ticker, 3 Mints, 6 Alerts. Only the $17K Entry Survived.</h2>
+            <p style={{ color: '#aaa' }}>Day 18 of the Wolf Pack tracking experiment: 498 alerts, 221 with full 24h track — win rate 9.5%, best print +488% (a dead session). XST fired 6 alerts across 3 different contract mints in 10 hours: every $1M+ entry went -100%, the fresh $17K relaunch did +488%. The $100K-$1M zone went 0 for 86 — a perfect wall. Score 100 returned from extinction after 15 days (BROS, $3M mcap). Winners avg mcap $97K vs losers $391K.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Data Case Study • Wolf Pack • Ticker Reuse • Mcap Wall →</p>
+          </article>
+        </a>
+
         <a href="/insights/record-101k-x-print-wolf-data-2026-08-12" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
             <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Aug 12</span>
