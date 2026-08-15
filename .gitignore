@@ -48,5 +48,12 @@ data/wolf-alerts-latest.json
 data/wolf-alerts-simplified.json
 data/backups/
 
+# Neo-crypto backup files (cron-generated, not source)
+neo-crypto/data/backups/
+
+# Backup files (editor/cron-generated, not source)
+*.bak
+*.backup
+
 # OS
 Thumbs.db
