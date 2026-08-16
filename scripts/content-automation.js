@@ -34,11 +34,15 @@ async function generateDailyContent() {
     db.run('PRAGMA synchronous=NORMAL');
 
     // Get performance data for last 24h
+    // Night shift 2026-08-17: exclude cluster_killed alerts — they were never
+    // sent to users (killed by SYBIL/BUNDLE detection) so including them skews
+    // the daily content stats with "unknown" category alerts that dominate volume.
     const dayAgo = Math.floor(Date.now() / 1000) - 86400;
-    
+    const activeFilter = "AND status != 'cluster_killed'";
+
     const stats = await new Promise((resolve, reject) => {
       db.get(`
-        SELECT 
+        SELECT
           COUNT(*) as total_alerts,
           COUNT(CASE WHEN return_1h >= 20 THEN 1 END) as wins,
           COUNT(CASE WHEN return_1h = -999 THEN 1 END) as rug_pulls,
@@ -46,7 +50,7 @@ async function generateDailyContent() {
           MAX(CASE WHEN return_1h > -998 THEN return_1h END) as best_return,
           MIN(CASE WHEN return_1h > -998 THEN return_1h END) as worst_return
         FROM alerts
-        WHERE timestamp > ?
+        WHERE timestamp > ? ${activeFilter}
       `, [dayAgo], (err, row) => {
         if (err) reject(err);
         else resolve(row);
@@ -58,7 +62,7 @@ async function generateDailyContent() {
       db.all(`
         SELECT symbol, category, score, return_1h, volume_24h
         FROM alerts
-        WHERE timestamp > ? AND return_1h IS NOT NULL AND return_1h > -998
+        WHERE timestamp > ? AND return_1h IS NOT NULL AND return_1h > -998 ${activeFilter}
         ORDER BY return_1h DESC
         LIMIT 3
       `, [dayAgo], (err, rows) => {
@@ -72,7 +76,7 @@ async function generateDailyContent() {
       db.all(`
         SELECT symbol, category, score, return_1h, volume_24h
         FROM alerts
-        WHERE timestamp > ? AND return_1h IS NOT NULL AND return_1h > -998
+        WHERE timestamp > ? AND return_1h IS NOT NULL AND return_1h > -998 ${activeFilter}
         ORDER BY return_1h ASC
         LIMIT 3
       `, [dayAgo], (err, rows) => {
@@ -84,13 +88,13 @@ async function generateDailyContent() {
     // Get category breakdown
     const categories = await new Promise((resolve, reject) => {
       db.all(`
-        SELECT 
+        SELECT
           category,
           COUNT(*) as total,
           AVG(CASE WHEN return_1h > -998 THEN return_1h END) as avg_return,
           COUNT(CASE WHEN return_1h >= 20 THEN 1 END) as wins
         FROM alerts
-        WHERE timestamp > ? AND category IS NOT NULL
+        WHERE timestamp > ? AND category IS NOT NULL ${activeFilter}
         GROUP BY category
         ORDER BY avg_return DESC
       `, [dayAgo], (err, rows) => {
@@ -186,7 +190,7 @@ ${generateInsights(data)}
 
 ## 🚀 Recommendations
 
-1. **Focus on high-performing categories** - ${categories.length > 0 ? categories[0].category : 'momentum'} showed the best average returns
+1. **Focus on high-performing categories** - ${categories.length > 0 ? (categories[0].category === 'unknown' ? 'Wolf signals' : categories[0].category) : 'momentum'} showed the best average returns
 2. **Avoid low-volume tokens** - Many rug pulls had minimal liquidity
 3. **Set stop-losses** - Protect gains from sudden reversals
 4. **Diversify across categories** - Spread risk across different signal types
@@ -247,7 +251,10 @@ function generateInsights(data) {
   
   if (categories.length > 0) {
     const bestCat = categories[0];
-    insights.push(`**${bestCat.category}** signals performed best with ${formatPercent(bestCat.avg_return)} average returns.`);
+    // Night shift 2026-08-17: "unknown" is the default category for alerts
+    // logged without a bot context. Display as "Wolf signals" for readability.
+    const catLabel = bestCat.category === 'unknown' ? 'Wolf signals' : bestCat.category;
+    insights.push(`**${catLabel}** signals performed best with ${formatPercent(bestCat.avg_return)} average returns.`);
   }
   
   return insights.map(insight => `• ${insight}`).join('\n');
