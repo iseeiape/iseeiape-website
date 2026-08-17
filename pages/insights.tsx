@@ -8,6 +8,15 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
+        <a href="/insights/bull-comes-11-mints-wolf-data-2026-08-17" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Aug 17</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🐂 The Bull Comes 11 Times: 牛来 Spawned 11 Mints in 44 Hours. Only the First Survived.</h2>
+            <p style={{ color: '#aaa' }}>Day 20 of the Wolf Pack tracking experiment: 508 alerts, 222 with full 24h track — win rate 16.7%. 牛来 (&ldquo;bull comes&rdquo;) fired 11 alerts across 11 different contract mints in 44 hours — only mint #1 (BUNDLE, $303K) survived at +658% at 24h. The bull family spans 6 tickers and 17 mints since July: exactly 2 winners. The new cluster_killed filter suppressed 29% of alerts with 97.1% precision. Score 80-89 best band fourth session running. ORGANIC went extinct again (0/7). Score 100: 0/2, all-time 2/171.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Data Case Study • Wolf Pack • Ticker Farm • Cluster Filter →</p>
+          </article>
+        </a>
+
         <a href="/insights/unitree-identity-split-wolf-data-2026-08-16" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
             <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Aug 16</span>
