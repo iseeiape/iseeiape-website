@@ -2,7 +2,26 @@
 /**
  * Content Automation Script
  * Generates daily content drops based on Wolf Pack performance
+ *
+ * ⚠️ RETIRED 2026-08-20 (night shift):
+ * This script wrote content/daily-drops/*.md + twitter-thread-*.txt files that
+ * NOTHING consumed — no page, route, or script reads them. They were untracked,
+ * so the health-check drift guard deleted them as orphans every 6h. Pure waste:
+ * daily DB reads (READWRITE), ~3MB I/O, and disk churn for zero output.
+ *
+ * The live daily insight pages come from wolf_daily_content.py (pages/insights/),
+ * and the ~08:10 insight articles come from a separate night-shift pipeline.
+ * Both commit + push to origin/main. This script was a leftover from the
+ * original content automation setup that was superseded but never removed.
+ *
+ * Cron slot: 0 9 * * * (crontab NOT changed — script self-disables).
+ * To re-enable: delete this early-return block.
  */
+
+// --- RETIRE BLOCK ---
+console.log('ℹ️ content-automation.js retired (2026-08-20). Output was unused. See script header for details.');
+process.exit(0);
+// --- END RETIRE BLOCK ---
 
 const fs = require('fs');
 const path = require('path');

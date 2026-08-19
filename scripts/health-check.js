@@ -62,6 +62,29 @@ async function sendTelegramAlert(message) {
   });
 }
 
+// Remove untracked files that are byte-identical to their origin/main counterpart.
+// Used in both the routine catch-up and real-drift paths: an untracked local
+// file that also exists in origin/main (e.g. insight pages written locally AND
+// pushed via worktree) blocks `git pull --ff-only`. Deleting the local copy is
+// lossless — the content is in git. Non-identical or non-ASCII paths are left
+// untouched (pull fails → "incomplete" alert → human call).
+async function removeIdenticalUntrackedDupes() {
+  const { stdout: untrackedOut } = await execAsync('git ls-files --others --exclude-standard', { cwd: REPO_DIR });
+  for (const f of untrackedOut.trim().split('\n').filter(Boolean).slice(0, 200)) {
+    if (!/^[a-zA-Z0-9._/-]+$/.test(f)) continue;
+    try {
+      // throws (exit 1) when the file is NOT in origin/main → keep, no collision
+      await execAsync(`git cat-file -e "origin/main:${f}"`, { cwd: REPO_DIR });
+      const remote = await execAsync(`git show "origin/main:${f}"`, { cwd: REPO_DIR, maxBuffer: 20 * 1024 * 1024 });
+      const local = fs.readFileSync(path.join(REPO_DIR, f), 'utf8');
+      if (local === remote.stdout) {
+        fs.unlinkSync(path.join(REPO_DIR, f));
+        console.log(`     Removed identical untracked dupe: ${f}`);
+      }
+    } catch (e) { /* not in origin/main or unreadable — keep file */ }
+  }
+}
+
 async function checkDeployDrift() {
   console.log('  📦 Checking deploy drift (local vs origin/main)...');
   try {
@@ -83,6 +106,14 @@ async function checkDeployDrift() {
     const { stdout: remoteSha } = await execAsync('git rev-parse origin/main', { cwd: REPO_DIR });
     const isBehind = localSha.trim() !== remoteSha.trim();
 
+    // Night shift 2026-08-20: being behind alone is NOT drift. Scanner/export
+    // crons push to origin/main every 15-60 min via worktrees; local main always
+    // lags between guard ticks. "Behind + on main + zero missing files" is the
+    // normal steady state — the pull below silently catches up (it still matters
+    // for the 8:30 Vercel build, which ships the local tree). Only wrong-branch
+    // or missing-files states are real drift worth a Telegram alert.
+    const realDrift = missingFiles.length > 0 || branch.trim() !== 'main';
+
     if (branch.trim() !== 'main') {
       console.log(`  ⚠️  Checkout on branch '${branch.trim()}' (not main) — deploy will build stale tree`);
     }
@@ -92,7 +123,29 @@ async function checkDeployDrift() {
       return;
     }
 
-    // DRIFT DETECTED — self-heal
+    // Routine catch-up (on main, nothing missing): fast-forward quietly, no alert.
+    if (!realDrift && isBehind) {
+      try {
+        // Same data/ churn discard as below — pull refuses to ff when a locally
+        // modified data/ file also changed between HEAD and origin/main (which
+        // the scanner crons guarantee). data/ files are disposable churn.
+        try { await execAsync('git checkout -- data/ 2>/dev/null; git reset -q -- data/', { cwd: REPO_DIR }); } catch (e) {}
+        // Also remove untracked files byte-identical to origin/main (e.g. the
+        // 09:00 content cron writes pages/insights/*.tsx locally AND pushes via
+        // worktree — the untracked local copy would block the ff pull forever).
+        await removeIdenticalUntrackedDupes();
+        await execAsync('git pull --ff-only origin main', { cwd: REPO_DIR });
+        const { stdout: newSha } = await execAsync('git rev-parse HEAD', { cwd: REPO_DIR });
+        console.log(newSha.trim() === remoteSha.trim()
+          ? `  ✅ Caught up to origin/main (${remoteSha.trim().slice(0, 7)}) — routine, no drift`
+          : `  ⚠️  Catch-up incomplete — will retry next tick`);
+      } catch (e) {
+        console.log(`  ⚠️  Catch-up pull failed: ${e.message.split('\n')[0]} — will retry next tick`);
+      }
+      return;
+    }
+
+    // REAL DRIFT — self-heal + alert
     console.log(`  🔧 Drift detected: ${missingFiles.length} missing files, branch=${branch.trim()}, behind=${isBehind}`);
     console.log(`     Missing: ${missingFiles.slice(0, 5).join(', ')}${missingFiles.length > 5 ? ' ...' : ''}`);
 
@@ -116,23 +169,9 @@ async function checkDeployDrift() {
     }
     // Untracked files NOT in the diff can still collide with checkout/pull
     // (e.g. yesterday's insight page generated locally AND pushed via worktree).
-    // Remove ONLY byte-identical dupes (content already in origin/main — lossless).
-    // Non-identical collisions are left → pull fails → "incomplete" alert (human call).
-    // Paths limited to safe charset; anything exotic is skipped untouched.
-    const { stdout: untrackedOut } = await execAsync('git ls-files --others --exclude-standard', { cwd: REPO_DIR });
-    for (const f of untrackedOut.trim().split('\n').filter(Boolean).slice(0, 200)) {
-      if (!/^[a-zA-Z0-9._\/-]+$/.test(f)) continue;
-      try {
-        // throws (exit 1) when the file is NOT in origin/main → keep, no collision
-        await execAsync(`git cat-file -e "origin/main:${f}"`, { cwd: REPO_DIR });
-        const remote = await execAsync(`git show "origin/main:${f}"`, { cwd: REPO_DIR, maxBuffer: 20 * 1024 * 1024 });
-        const local = fs.readFileSync(path.join(REPO_DIR, f), 'utf8');
-        if (local === remote.stdout) {
-          fs.unlinkSync(path.join(REPO_DIR, f));
-          console.log(`     Removed identical untracked dupe: ${f}`);
-        }
-      } catch (e) { /* not in origin/main or unreadable — keep file */ }
-    }
+    // Extracted to removeIdenticalUntrackedDupes() — also called from the routine
+    // catch-up path above (same collision risk, same lossless removal).
+    await removeIdenticalUntrackedDupes();
 
     // Checkout main and fast-forward to origin/main
     if (branch.trim() !== 'main') {
