@@ -83,6 +83,14 @@ async function checkDeployDrift() {
     const { stdout: remoteSha } = await execAsync('git rev-parse origin/main', { cwd: REPO_DIR });
     const isBehind = localSha.trim() !== remoteSha.trim();
 
+    // Night shift 2026-08-20: being behind alone is NOT drift. Scanner/export
+    // crons push to origin/main every 15-60 min via worktrees; local main always
+    // lags between guard ticks. "Behind + on main + zero missing files" is the
+    // normal steady state — the pull below silently catches up (it still matters
+    // for the 8:30 Vercel build, which ships the local tree). Only wrong-branch
+    // or missing-files states are real drift worth a Telegram alert.
+    const realDrift = missingFiles.length > 0 || branch.trim() !== 'main';
+
     if (branch.trim() !== 'main') {
       console.log(`  ⚠️  Checkout on branch '${branch.trim()}' (not main) — deploy will build stale tree`);
     }
@@ -92,7 +100,25 @@ async function checkDeployDrift() {
       return;
     }
 
-    // DRIFT DETECTED — self-heal
+    // Routine catch-up (on main, nothing missing): fast-forward quietly, no alert.
+    if (!realDrift && isBehind) {
+      try {
+        // Same data/ churn discard as below — pull refuses to ff when a locally
+        // modified data/ file also changed between HEAD and origin/main (which
+        // the scanner crons guarantee). data/ files are disposable churn.
+        try { await execAsync('git checkout -- data/ 2>/dev/null; git reset -q -- data/', { cwd: REPO_DIR }); } catch (e) {}
+        await execAsync('git pull --ff-only origin main', { cwd: REPO_DIR });
+        const { stdout: newSha } = await execAsync('git rev-parse HEAD', { cwd: REPO_DIR });
+        console.log(newSha.trim() === remoteSha.trim()
+          ? `  ✅ Caught up to origin/main (${remoteSha.trim().slice(0, 7)}) — routine, no drift`
+          : `  ⚠️  Catch-up incomplete — will retry next tick`);
+      } catch (e) {
+        console.log(`  ⚠️  Catch-up pull failed: ${e.message.split('\n')[0]} — will retry next tick`);
+      }
+      return;
+    }
+
+    // REAL DRIFT — self-heal + alert
     console.log(`  🔧 Drift detected: ${missingFiles.length} missing files, branch=${branch.trim()}, behind=${isBehind}`);
     console.log(`     Missing: ${missingFiles.slice(0, 5).join(', ')}${missingFiles.length > 5 ? ' ...' : ''}`);
 
