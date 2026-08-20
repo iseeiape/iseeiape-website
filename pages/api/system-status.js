@@ -18,7 +18,9 @@ export default async function handler(req, res) {
     
     status.components.wolfPack = {
       liveData: fs.existsSync(wolfLiveFile),
+      // Night shift 2026-08-10: legacy file is stale (April 2026) — keep field for compat but mark status
       dashboardData: fs.existsSync(wolfAlertsFile),
+      dashboardDataStale: true, // wolf-alerts-latest.json is a legacy artifact
       summaryData: fs.existsSync(wolfSummaryFile),
       lastUpdated: null
     };
