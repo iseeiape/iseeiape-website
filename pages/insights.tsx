@@ -8,9 +8,36 @@ export default function Insights() {
         <h1 style={{ fontSize: '42px', marginBottom: '15px' }}>📝 Insights</h1>
         <p style={{ color: '#888', marginBottom: '40px' }}>Deep dives into smart money behavior. Updated daily.</p>
 
-        <a href="/insights/bull-comes-11-mints-wolf-data-2026-08-17" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+        <a href="/insights/newbie-re-alert-curse-broken-wolf-data-2026-08-20" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
           <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #00ff88', cursor: 'pointer' }}>
-            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Aug 17</span>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>🆕 Today - Aug 20</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🔄 The Re-Alert Curse Broken: NEWBIE Went 5/5 Green on One Mint. The 6th Got Killed.</h2>
+            <p style={{ color: '#aaa' }}>Day 23 of the Wolf Pack tracking experiment: 565 alerts, 99 with full 24h track — win rate 10.1%. NEWBIE fired 6 alerts on a single mint: first 5 all green (+552%, +422%, +355%, +147%, +107%), the 6th at $541K got SYBIL-tagged and killed. First re-alert case in 23 days where multiple entries all won — because mcap stayed below $150K. The kill filter suppressed 60% of alerts (up from 24% a week ago); top 3 prints (MONKEY +1,007%, 67COIN +766%, GORIKUN +267%) were all killed. 67COIN: 4 mints, $11K entry +766%, $4M entry -98%. Score 70+ went 0/18. $200K+ wall: 0/34. Score 100 extinct 22 days.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Data Case Study • Wolf Pack • Re-Alert Pattern • Kill Filter →</p>
+          </article>
+        </a>
+
+        <a href="/insights/basecat-red-start-32x-wolf-data-2026-08-19" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #222', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Aug 19</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>🚀 The Red-Start Moonshot: BASECAT Was Down 15% at 1H. Then It Did 32x.</h2>
+            <p style={{ color: '#aaa' }}>Day 22 of the Wolf Pack tracking experiment: 599 alerts, 256 with full 24h track — win rate 10.2%. BASECAT (score 73, SYBIL, $193K mcap) was red at 1h (-15.1%), flagged cluster_killed — then did +3,166% at 24h (32x). The two biggest winners of the last two sessions were both suppressed by the same filter. The $9K Entry Club: 7 of 26 winners entered below $12K mcap. 牛来 wave 2.0: 13 mints in 35h, only the $30K entry survived. 1h candle check: green@1h 25.0% WR vs red@1h 3.4% — but the 3.4% included the 32x winner.</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Data Case Study • Wolf Pack • Red-Start Pattern • $9K Entry Club →</p>
+          </article>
+        </a>
+
+        <a href="/insights/dgai-87x-mcap-gap-wolf-data-2026-08-18" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #222', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Aug 18</span>
+            <h2 style={{ marginTop: '15px', color: '#fff' }}>💸 The 33x Mcap Gap: DGAI Did 87x From $113K. Every $500K+ Token Died.</h2>
+            <p style={{ color: '#aaa' }}>Day 21 of the Wolf Pack tracking experiment: 535 alerts, 187 with full 24h track — win rate 10.2%. DGAI (score 83, SYBIL, $113K mcap): +8,616% at 24h (87x) — single alert, zero re-alerts, cleanest play of the experiment. Winners avg $63K mcap vs losers $2.1M (33x gap, widest on record). GREG perfect identity split: same minute, different mint — score 84 fresh mint +120%, score 74 old mint -97%. Score 80-89 best band fifth session running. ORGANIC absent entirely (first time).</p>
+            <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>8 min read • Data Case Study • Wolf Pack • Mcap Gap • Identity Split →</p>
+          </article>
+        </a>
+
+        <a href="/insights/bull-comes-11-mints-wolf-data-2026-08-17" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+          <article style={{ padding: '30px', marginBottom: '30px', background: '#111', borderRadius: '16px', border: '2px solid #222', cursor: 'pointer' }}>
+            <span style={{ padding: '4px 12px', background: '#00ff8833', color: '#00ff88', borderRadius: '20px', fontSize: '12px' }}>Aug 17</span>
             <h2 style={{ marginTop: '15px', color: '#fff' }}>🐂 The Bull Comes 11 Times: 牛来 Spawned 11 Mints in 44 Hours. Only the First Survived.</h2>
             <p style={{ color: '#aaa' }}>Day 20 of the Wolf Pack tracking experiment: 508 alerts, 222 with full 24h track — win rate 16.7%. 牛来 (&ldquo;bull comes&rdquo;) fired 11 alerts across 11 different contract mints in 44 hours — only mint #1 (BUNDLE, $303K) survived at +658% at 24h. The bull family spans 6 tickers and 17 mints since July: exactly 2 winners. The new cluster_killed filter suppressed 29% of alerts with 97.1% precision. Score 80-89 best band fourth session running. ORGANIC went extinct again (0/7). Score 100: 0/2, all-time 2/171.</p>
             <p style={{ color: '#00ff88', fontSize: '12px', marginTop: '10px' }}>9 min read • Data Case Study • Wolf Pack • Ticker Farm • Cluster Filter →</p>
